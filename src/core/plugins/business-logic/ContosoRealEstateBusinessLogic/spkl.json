@@ -1,0 +1,9 @@
+{
+    "plugins": [
+        {
+            "profile": "default,debug",
+            "solution": "PowerProDevSolution",
+            "assemblypath": "bin\\Debug\\net462\\publish"
+        }
+    ]
+}

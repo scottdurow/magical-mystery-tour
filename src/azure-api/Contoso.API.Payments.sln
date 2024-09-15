@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contoso.API.Payments", "Contoso.API.Payments\Contoso.API.Payments.csproj", "{81DECB0F-86D4-4D90-94CE-9819C2011A93}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contoso.API.Payments.Tests", "Contoso.API.Payments.Tests\Contoso.API.Payments.Tests.csproj", "{E0927A4D-E6BE-4A1A-8691-59EA0272A115}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81DECB0F-86D4-4D90-94CE-9819C2011A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DECB0F-86D4-4D90-94CE-9819C2011A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DECB0F-86D4-4D90-94CE-9819C2011A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DECB0F-86D4-4D90-94CE-9819C2011A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0927A4D-E6BE-4A1A-8691-59EA0272A115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0927A4D-E6BE-4A1A-8691-59EA0272A115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0927A4D-E6BE-4A1A-8691-59EA0272A115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0927A4D-E6BE-4A1A-8691-59EA0272A115}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {277FF812-69A8-4C4B-AD5A-65AB4E208BF0}
+	EndGlobalSection
+EndGlobal

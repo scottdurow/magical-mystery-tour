@@ -1,0 +1,23 @@
+<powerpagecomponent powerpagecomponentid="f2036d83-1657-c846-d1e8-5b63e2537b8e">
+  <content>{
+  "displayorder": 4,
+  "parentweblinkid": "bd7dccf3-d63c-4864-872f-097405370548",
+  "weblinksetid": "f841de81-9ccf-4051-807e-87c8ac214f82",
+  "pageid": "1ae78dc6-2c17-14c6-d247-9e22de4b4771",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "displaypagevalidation": false,
+  "displayimageonly": false,
+  "displaypagechildlinks": false,
+  "openinnewwindow": false,
+  "robotsfollowlink": true,
+  "copy": "undefined"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Listings (Table)</name>
+  <powerpagecomponenttype>5</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

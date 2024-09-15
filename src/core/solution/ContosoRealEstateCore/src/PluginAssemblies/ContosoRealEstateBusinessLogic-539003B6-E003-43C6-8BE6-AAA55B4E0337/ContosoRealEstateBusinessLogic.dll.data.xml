@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="ContosoRealEstate.BusinessLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginAssemblyId="539003b6-e003-43c6-8be6-aaa55b4e0337" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0.0.1</IntroducedVersion>
+  <FileName>/PluginAssemblies/ContosoRealEstateBusinessLogic-539003B6-E003-43C6-8BE6-AAA55B4E0337/ContosoRealEstateBusinessLogic.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="ContosoRealEstate.BusinessLogic.Plugins.IsListingAvailable, ContosoRealEstate.BusinessLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginTypeId="8e4032ff-9fb2-445a-9e9d-c14fe7ef32ee" Name="ContosoRealEstate.BusinessLogic.Plugins.IsListingAvailable">
+      <FriendlyName>1d16ab5f-5dad-48a1-9951-2faf2b523513</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="ContosoRealEstate.BusinessLogic.Plugins.ReservationOnCreatePreValidation, ContosoRealEstate.BusinessLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginTypeId="7b1d44b9-56e1-4f15-ad9c-a2bd5bb6e0a2" Name="ContosoRealEstate.BusinessLogic.Plugins.ReservationOnCreatePreValidation">
+      <FriendlyName>1a91d1ff-a563-487e-be1b-646ba685a8a7</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="ContosoRealEstate.BusinessLogic.Plugins.ReservationOnUpdatePreValidation, ContosoRealEstate.BusinessLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginTypeId="a5ef5faa-70e7-4a45-8eb8-6e1226651ea2" Name="ContosoRealEstate.BusinessLogic.Plugins.ReservationOnUpdatePreValidation">
+      <FriendlyName>f14c628c-fe77-4b4a-afac-9bfe068fe007</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="ContosoRealEstate.BusinessLogic.Plugins.ReserveListing, ContosoRealEstate.BusinessLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginTypeId="05b30ad1-cad4-4da0-8b7c-3ec998344769" Name="ContosoRealEstate.BusinessLogic.Plugins.ReserveListing">
+      <FriendlyName>2fda024f-f434-4b22-bc6e-5cefac641273</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Plugins.Plugin1, ContosoRealEstate.BusinessLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginTypeId="6f8d022f-9c7c-465d-8bff-f4d21750d117" Name="Plugins.Plugin1">
+      <FriendlyName>2b817f7c-bb93-498d-8210-5389aacd213f</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

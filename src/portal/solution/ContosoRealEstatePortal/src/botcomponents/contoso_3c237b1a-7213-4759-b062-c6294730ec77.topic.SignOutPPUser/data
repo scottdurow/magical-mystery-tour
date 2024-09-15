@@ -1,0 +1,13 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnEventActivity
+  id: main
+  eventName: powerPagesSignOutUserEvent
+  actions:
+    - kind: SignOutUser
+      id: ugf4er
+
+    - kind: OAuthInput
+      id: a6y5Tb
+      title: Login
+      text: To continue, please login

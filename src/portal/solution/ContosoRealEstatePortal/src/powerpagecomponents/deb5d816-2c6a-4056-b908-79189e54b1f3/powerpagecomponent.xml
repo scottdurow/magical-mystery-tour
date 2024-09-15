@@ -1,0 +1,30 @@
+<powerpagecomponent powerpagecomponentid="deb5d816-2c6a-4056-b908-79189e54b1f3">
+  <content>{
+  "entityname": "Environment Variable Value",
+  "entitylogicalname": "environmentvariablevalue",
+  "scope": 756150000,
+  "append": false,
+  "appendto": false,
+  "delete": false,
+  "read": true,
+  "create": false,
+  "write": false,
+  "parentrelationship": null,
+  "parententitypermission": null,
+  "contactrelationship": null,
+  "accountrelationship": null,
+  "childTablePermissions": [],
+  "adx_entitypermission_webrole": [
+    "dc2b1fc1-27fd-4af6-b084-0dee12022fcc"
+  ],
+  "copy": "undefined"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Environment Variable Value</name>
+  <powerpagecomponenttype>18</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

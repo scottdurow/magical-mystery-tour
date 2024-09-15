@@ -1,0 +1,12 @@
+{
+  "fxexpression": {
+    "@uniquename": "contoso_IsListingAvailable",
+    "category": "0",
+    "context": "{\"Tables\":[\"contoso_reservation\",\"contoso_listing\"],\"CustomApis\":[],\"ConnectionReferences\":[]}",
+    "iscustomizable": "1",
+    "name": "Is Listing Available",
+    "parameters": "{\"InputParameter\":[{\"name\":\"From\",\"type\":10,\"required\":true,\"entityLogicalName\":null},{\"name\":\"To\",\"type\":10,\"required\":true,\"entityLogicalName\":null},{\"name\":\"ListingID\",\"type\":10,\"required\":true,\"entityLogicalName\":null},{\"name\":\"ExcludeReservation\",\"type\":10,\"required\":true,\"entityLogicalName\":null}],\"OutputParameter\":[{\"name\":\"Available\",\"type\":0,\"required\":true,\"entityLogicalName\":null}]}",
+    "statecode": "0",
+    "statuscode": "1"
+  }
+}

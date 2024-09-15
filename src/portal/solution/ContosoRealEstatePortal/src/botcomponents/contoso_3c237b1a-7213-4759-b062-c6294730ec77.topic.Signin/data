@@ -1,0 +1,9 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnSignIn
+  id: main
+  actions:
+    - kind: OAuthInput
+      id: gOjhZA
+      title: Login
+      text: To continue, please login

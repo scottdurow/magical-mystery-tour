@@ -1,0 +1,32 @@
+<powerpagecomponent powerpagecomponentid="241477d1-f27d-4e9f-9090-c990aab69a64">
+  <content>{
+  "lcid": 1033,
+  "entityname": "contact",
+  "formname": "Contoso Real Estate Portal Profile",
+  "mode": 100000001,
+  "onsuccess": 756150000,
+  "successmessage": "[{\"LCID\":1033,\"Value\":\"Your profile has been updated\"}]",
+  "hideformonsuccess": false,
+  "redirectwebpage": null,
+  "redirecturl": null,
+  "captcharequired": false,
+  "showcaptchaforauthenticatedusers": false,
+  "entitypermissionsenabled": true,
+  "maximumnooffiles": 5,
+  "attachfilestoragelocation": 756150000,
+  "attachfilemaxsize": null,
+  "entitysourcetype": 756150002,
+  "recordidquerystringparametername": "id",
+  "copy": "undefined",
+  "geolocation_maptype": 756150000,
+  "settings": "{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.FormActionMetadata, Adxstudio.Xrm\",\"Actions\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.SubmitAction, Adxstudio.Xrm\",\"ButtonBusyLabel\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"SuccessMessage\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"Saved\"}],\"ButtonLabel\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"Update Profile\"}],\"ButtonTooltip\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"ButtonCssClass\":\"\",\"ActionButtonStyle\":0,\"ActionButtonPlacement\":1,\"ActionButtonAlignment\":0,\"ShowModal\":0,\"Confirmation\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"FilterCriteria\":\"\"}],\"DeleteDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.DeleteModal, Adxstudio.Xrm\",\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":0,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"WorkflowDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.WorkflowModal, Adxstudio.Xrm\",\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":0,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"ActionDropDownButtonLabel\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"TopContainerCssClass\":\"\",\"BottomContainerCssClass\":\"\",\"ShowSaveChangesWarningOnExit\":false,\"SaveChangesWarningMessage\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"ActivateDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.ActivateModal,\\tAdxstudio.Xrm\",\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":0,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"DeactivateDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.DeactivateModal,\\tAdxstudio.Xrm\",\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":0,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"CreateRelatedRecordDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.CreateRelatedRecordModal, Adxstudio.Xrm\",\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\",\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":0,\"CssClass\":\"\",\"TitleCssClass\":\"\"}}"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Contoso Real Estate Portal Profile</name>
+  <powerpagecomponenttype>15</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

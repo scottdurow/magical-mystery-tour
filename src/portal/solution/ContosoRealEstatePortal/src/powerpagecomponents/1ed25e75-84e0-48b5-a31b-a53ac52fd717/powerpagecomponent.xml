@@ -1,0 +1,60 @@
+<powerpagecomponent powerpagecomponentid="1ed25e75-84e0-48b5-a31b-a53ac52fd717">
+  <content>{
+  "filecontent": null,
+  "copy": "&lt;div data-component-theme=\"portalThemeColor1\" id=\"i88py\" class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px; background-image: url(&amp;quot;/Bedroom-overlooking-beach-and-ocean.jpg&amp;quot;); background-position: center center; background-repeat: no-repeat; background-size: cover;\"&gt;\n  &lt;div id=\"i1m1j\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"iv8ge\" class=\"col-lg-12 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;\"&gt;\n      &lt;h1 id=\"i7uj1b\" style=\"text-align: left;\"&gt;Welcome to Contoso Real Estate&lt;/h1&gt;\n      &lt;h4 id=\"i9izsz\" style=\"text-align: left;\"&gt;Find Your Dream Rental Property&lt;/h4&gt;\n      &lt;button onclick=\"window.location.href='/Search-Listings/Search-Listings-PCF/'\" type=\"button\" value=\"Search-Listings-PCF\" id=\"in3xp\" class=\"button1\"&gt;Search Rentals Now&lt;/button&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div data-component-theme=\"portalThemeColor7\" id=\"iszyic\" class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"ifj935\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"iyk0y6\" class=\"col-lg-12 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;\"&gt;\n      &lt;h2 id=\"iwt3p7\" style=\"text-align: left;\"&gt;About Us&lt;/h2&gt;\n      &lt;p id=\"ijvozd\" style=\"text-align: left;\"&gt;Contoso Real Estate is a leading platform for finding rental properties. We provide a wide range of listings with detailed information about each property's amenities. Whether you're looking for a cozy apartment or a spacious house, we have the perfect rental property for you.&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div data-component-theme=\"portalThemeColor3\" id=\"iqmmx3\" class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"i8q4ln\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"i7gtuf\" class=\"col-lg-6 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;\"&gt;&lt;img src=\"/Two-people-slow-dancing-in-home.jpg\" alt=\"Two-people-slow-dancing-in-home\" name=\"Two-people-slow-dancing-in-home.jpg\" id=\"ifl1nk\" style=\"width: 100%; height: auto; max-width: 100%;\"&gt;&lt;/div&gt;\n    &lt;div id=\"i48ka9\" class=\"col-lg-6 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;\"&gt;\n      &lt;h2 id=\"iox83h\"&gt;Why Choose Us&lt;/h2&gt;\n      &lt;p id=\"iu02b9\"&gt;At Contoso Real Estate, we are committed to providing the best rental property listings with detailed information about each property's amenities. Our user-friendly platform makes it easy to find your dream rental property. Start your search today!&lt;/p&gt;\n      &lt;button onclick=\"window.location.href='/Search-Listings/Search-Listings-PCF/'\" type=\"button\" value=\"Search-Listings-PCF\" id=\"in2d9l\" class=\"button1\"&gt;Find Your Dream Rental&lt;/button&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n",
+  "displayorder": 1,
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "feedbackpolicy": 756150005,
+  "hiddenfromsitemap": false,
+  "isroot": false,
+  "pagetemplateid": "cabe5d40-f0c1-4676-9f87-8972abcdd2da",
+  "partialurl": "/",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "rootwebpageid": "72039cc9-7b49-4773-91e6-9820290aecce",
+  "sharedpageconfiguration": false,
+  "summary": "&lt;p&gt;This is a sample landing page for you to start creating your website.&lt;/p&gt;\r\n",
+  "title": "Home",
+  "parentpageid": null
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Home</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>f81f1fb6-ea27-423b-85a9-56d1c6f61823</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Home&lt;div data-component-theme="portalThemeColor1" id="i88py" class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px; background-image: url(&amp;quot;/Bedroom-overlooking-beach-and-ocean.jpg&amp;quot;); background-position: center center; background-repeat: no-repeat; background-size: cover;"&gt;
+  &lt;div id="i1m1j" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="iv8ge" class="col-lg-12 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"&gt;
+      &lt;h1 id="i7uj1b" style="text-align: left;"&gt;Welcome to Contoso Real Estate&lt;/h1&gt;
+      &lt;h4 id="i9izsz" style="text-align: left;"&gt;Find Your Dream Rental Property&lt;/h4&gt;
+      &lt;button onclick="window.location.href='/Search-Listings/Search-Listings-PCF/'" type="button" value="Search-Listings-PCF" id="in3xp" class="button1"&gt;Search Rentals Now&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-component-theme="portalThemeColor7" id="iszyic" class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="ifj935" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="iyk0y6" class="col-lg-12 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"&gt;
+      &lt;h2 id="iwt3p7" style="text-align: left;"&gt;About Us&lt;/h2&gt;
+      &lt;p id="ijvozd" style="text-align: left;"&gt;Contoso Real Estate is a leading platform for finding rental properties. We provide a wide range of listings with detailed information about each property's amenities. Whether you're looking for a cozy apartment or a spacious house, we have the perfect rental property for you.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-component-theme="portalThemeColor3" id="iqmmx3" class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="i8q4ln" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="i7gtuf" class="col-lg-6 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"&gt;&lt;img src="/Two-people-slow-dancing-in-home.jpg" alt="Two-people-slow-dancing-in-home" name="Two-people-slow-dancing-in-home.jpg" id="ifl1nk" style="width: 100%; height: auto; max-width: 100%;"&gt;&lt;/div&gt;
+    &lt;div id="i48ka9" class="col-lg-6 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"&gt;
+      &lt;h2 id="iox83h"&gt;Why Choose Us&lt;/h2&gt;
+      &lt;p id="iu02b9"&gt;At Contoso Real Estate, we are committed to providing the best rental property listings with detailed information about each property's amenities. Our user-friendly platform makes it easy to find your dream rental property. Start your search today!&lt;/p&gt;
+      &lt;button onclick="window.location.href='/Search-Listings/Search-Listings-PCF/'" type="button" value="Search-Listings-PCF" id="in2d9l" class="button1"&gt;Find Your Dream Rental&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+Home</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

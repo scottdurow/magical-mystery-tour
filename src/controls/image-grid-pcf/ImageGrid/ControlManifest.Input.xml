@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="Contoso" constructor="ImageGrid" version="0.0.11" display-name-key="ImageGrid" description-key="Images Grid Display" control-type="virtual" >
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <!-- dataset node represents a set of entity records on CDS; allow more than one datasets -->
+    <data-set name="Images" display-name-key="Images">
+      <property-set name="ImageName"
+                    display-name-key="ImageName"
+                    of-type="SingleLine.Text"
+                    usage="bound"
+                    required="true" />
+      <property-set name="ImageContent"
+                    display-name-key="ImageContent"
+                    of-type="SingleLine.Text"
+                    usage="bound"
+                    required="false" />
+    </data-set>
+    <!-- Property to store the overridden height in a model driven form -->
+    <property name="SubGridHeight" display-name-key="Sub Grid Height for Model Driven Forms" of-type="Whole.None" usage="input" required="false" />
+
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.8.6" />
+      <css path="image-grid.css" order="1" />
+    </resources>
+  </control>
+</manifest>

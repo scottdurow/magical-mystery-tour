@@ -1,0 +1,65 @@
+<powerpagecomponent powerpagecomponentid="6962e2c4-6267-4ec5-9125-972060c8a300">
+  <content>{
+  "lcid": 1033,
+  "entityname": "contoso_payment",
+  "view": "928a3c14-4948-45e0-bc25-7dc6c227d9e6",
+  "createRecordTargetType": 0,
+  "createRecordTargetValue": "",
+  "createRecordDisplayLabel": "",
+  "viewRecordTargetType": 0,
+  "viewRecordTargetValue": "",
+  "viewRecordDisplayLabel": "",
+  "editRecordTargetType": 0,
+  "editRecordTargetValue": "",
+  "editRecordDisplayLabel": "",
+  "deleteRecordDisplayLabel": "",
+  "downloadRecordsDisplayLabel": "",
+  "successSaveRecordMessage": "Saved successfully",
+  "successDeleteRecordMessage": "Deleted successfully",
+  "emptyListTextMessage": "",
+  "pagesize": 10,
+  "searchenabled": false,
+  "filter_enabled": true,
+  "filter_definition": "{\"xmlns.adx\":\"http://schemas.adxstudio.com/fetch/\",\"distinct\":true,\"entity\":{\"name\":\"contoso_payment\",\"all-attributes\":true,\"filters\":[{\"adx.filtertype\":\"fetchfilter\",\"adx.id\":0,\"adx.uiorder\":0,\"adx.rawfetch\":\"&lt;filter type=\\\"or\\\" adx:uiinputtype=\\\"dynamic\\\" adx:uiname=\\\"Filter\\\"&gt;\\n      &lt;condition value=\\\"startdatefilter\\\" attribute=\\\"contoso_createdon\\\" operator=\\\"ne\\\" adx:uiinputtype=\\\"dynamic\\\" /&gt;\\n&lt;/filter&gt;\",\"type\":\"or\",\"adx.uiinputtype\":\"dynamic\",\"adx.uiname\":\"Filter\",\"filters\":[],\"conditions\":[{\"value\":\"startdatefilter\",\"attribute\":\"contoso_createdon\",\"operator\":\"ne\",\"adx.uiinputtype\":\"dynamic\",\"adx.id\":\"0\"}]}],\"links\":[]}}",
+  "settingsDetails": {
+    "createRecordEntityFormId": "",
+    "createRecordRedirectUrl": "",
+    "createRecordTargetType": 0,
+    "createRecordWebpageId": "",
+    "editRecordEntityFormId": "",
+    "editRecordRedirectUrl": "",
+    "editRecordTargetType": 0,
+    "editRecordWebpageId": "",
+    "viewRecordEntityFormId": "",
+    "viewRecordRedirectUrl": "",
+    "viewRecordTargetType": 0,
+    "viewRecordWebpageId": ""
+  },
+  "views": "{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.ViewMetadata, Adxstudio.Xrm\",\"Views\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.View, Adxstudio.Xrm\",\"DisplayName\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"ViewId\":\"928a3c14-4948-45e0-bc25-7dc6c227d9e6\"}]}",
+  "idquerystringparametername": "id",
+  "map_distancevalues": "5,10,25,50,100",
+  "mapinfoboxoffsetx": 25,
+  "map_infoboxoffsety": 46,
+  "map_pushpinheight": 39,
+  "map_resturl": "https://dev.virtualearth.net/REST/v1/Locations",
+  "map_zoom": 12,
+  "settings": "{\"$type\":\"Adxstudio.Xrm.Web.UI.CrmEntityListView.GridMetadata, Adxstudio.Xrm\",\"ViewFormats\":[],\"ViewActions\":[],\"ExtendedViewActions\":[],\"ItemActions\":[],\"ExtendedItemActions\":[],\"ColumnOverrides\":[],\"LoadingMessage\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"ErrorMessage\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"AccessDeniedMessage\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"EmptyMessage\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DetailsFormDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.CrmEntityListView.GridMetadata+DetailsFormModal, Adxstudio.Xrm\",\"LoadingMessage\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":1,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"EditFormDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.CrmEntityListView.GridMetadata+EditFormModal, Adxstudio.Xrm\",\"LoadingMessage\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":1,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"CreateRelatedRecordDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.CreateRelatedRecordModal, Adxstudio.Xrm\",\"LoadingMessage\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":1,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"CreateFormDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.CrmEntityListView.GridMetadata+CreateFormModal, Adxstudio.Xrm\",\"LoadingMessage\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":1,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"DeleteDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.CrmEntityListView.GridMetadata+DeleteModal, Adxstudio.Xrm\",\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":0,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"WorkflowDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.WorkflowModal, Adxstudio.Xrm\",\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":0,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"ErrorDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.CrmEntityListView.GridMetadata+ErrorModal, Adxstudio.Xrm\",\"Body\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":0,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"CssClass\":\"\",\"GridCssClass\":\"table-striped\",\"GridColumnWidthStyle\":1,\"ActivateDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.ActivateModal,\\tAdxstudio.Xrm\",\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":0,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"DeactivateDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.DeactivateModal,\\tAdxstudio.Xrm\",\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":0,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"},\"GetDirectionsDialog\":{\"$type\":\"Adxstudio.Xrm.Web.UI.JsonConfiguration.GetDirectionsModal,\\tAdxstudio.Xrm\",\"Title\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"PrimaryButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"CloseButtonText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"DismissButtonSrText\":[{\"$type\":\"Adxstudio.Xrm.Web.UI.WebForms.LanguageResources, Adxstudio.Xrm\",\"LCID\":1033,\"Value\":\"\"}],\"Size\":1,\"CssClass\":\"\",\"TitleCssClass\":\"\",\"PrimaryButtonCssClass\":\"\",\"CloseButtonCssClass\":\"\"}}",
+  "copy": "undefined",
+  "calendar_initialview": 756150001,
+  "calendar_style": 756150000,
+  "calendar_timezonemode": 756150000,
+  "map_distanceunits": 756150001,
+  "map_type": 756150000,
+  "map_infoboxoffsetx": 25,
+  "map_pushpinwidth": 32,
+  "filter_orientation": 756150000
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>All Payments</name>
+  <powerpagecomponenttype>17</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

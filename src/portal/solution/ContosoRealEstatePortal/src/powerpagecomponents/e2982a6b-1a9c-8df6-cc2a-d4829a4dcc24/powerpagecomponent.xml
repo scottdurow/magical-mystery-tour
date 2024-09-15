@@ -1,0 +1,22 @@
+<powerpagecomponent powerpagecomponentid="e2982a6b-1a9c-8df6-cc2a-d4829a4dcc24">
+  <content>{
+  "displayorder": 3,
+  "parentweblinkid": "bd7dccf3-d63c-4864-872f-097405370548",
+  "weblinksetid": "f841de81-9ccf-4051-807e-87c8ac214f82",
+  "pageid": "37916fc8-5cb1-06f7-55f6-73ac7bb733e9",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "displaypagevalidation": false,
+  "displayimageonly": false,
+  "displaypagechildlinks": false,
+  "openinnewwindow": false,
+  "robotsfollowlink": true
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Search Listings (PCF)</name>
+  <powerpagecomponenttype>5</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

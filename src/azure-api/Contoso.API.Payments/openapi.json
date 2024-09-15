@@ -1,0 +1,309 @@
+﻿{
+  "swagger": "2.0",
+  "info": {
+    "title": "OpenAPI Document on Azure Functions",
+    "description": "This is the OpenAPI Document on Azure Functions",
+    "version": "1.0.0"
+  },
+  "host": "localhost:7292",
+  "basePath": "/api",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/payments": {
+      "get": {
+        "tags": [
+          "payment"
+        ],
+        "summary": "Get payments",
+        "description": "Returns a JSON array of Payments",
+        "operationId": "listPayments",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "$filter",
+            "description": "Filter the results",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "$orderby",
+            "description": "Order the results",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "$top",
+            "description": "Limit the number of results",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "$skip",
+            "description": "Skip a number of results",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns array of Payments",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/payment"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "payment"
+        ],
+        "summary": "Add a payment",
+        "description": "Adds a payment to the database",
+        "operationId": "addPayment",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Payment object to be added",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/payment"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns Payment object",
+            "schema": {
+              "$ref": "#/definitions/payment"
+            }
+          }
+        }
+      }
+    },
+    "/payments/{id}": {
+      "get": {
+        "tags": [
+          "payment"
+        ],
+        "summary": "Get payment by id",
+        "description": "Return Payment record matching {id}",
+        "operationId": "findPaymentById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the payment",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns Payment object",
+            "schema": {
+              "$ref": "#/definitions/payment"
+            }
+          }
+        }
+      }
+    },
+    "/stripe/checkout": {
+      "post": {
+        "tags": [
+          "Creates a Stripe checkout session"
+        ],
+        "operationId": "Create Checkout Session",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The request body for creating a checkout session",
+            "schema": {
+              "$ref": "#/definitions/checkoutRequest"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/stripe/webhook": {
+      "post": {
+        "tags": [
+          "Processes Stripe webhook events"
+        ],
+        "operationId": "Stripe Webhook",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The Stripe webhook event",
+            "schema": {
+              "$ref": "#/definitions/event"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    }
+  },
+  "definitions": {
+    "checkoutRequest": {
+      "type": "object",
+      "properties": {
+        "clientReferenceNumber": {
+          "type": "string"
+        },
+        "customerNumber": {
+          "type": "string"
+        },
+        "customerEmail": {
+          "type": "string"
+        },
+        "productName": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "expiryRedirectUrl": {
+          "type": "string"
+        },
+        "successUrl": {
+          "type": "string"
+        },
+        "cancelUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "object": {
+          "type": "string"
+        },
+        "account": {
+          "type": "string"
+        },
+        "api_version": {
+          "type": "string"
+        },
+        "created": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/eventData"
+        },
+        "livemode": {
+          "type": "boolean"
+        },
+        "pending_webhooks": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "request": {
+          "$ref": "#/definitions/eventRequest"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    },
+    "eventData": {
+      "type": "object",
+      "properties": {
+        "object": {
+          "$ref": "#/definitions/iHasObject"
+        },
+        "previous_attributes": {
+          "type": "object"
+        }
+      }
+    },
+    "eventRequest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "idempotency_key": {
+          "type": "string"
+        }
+      }
+    },
+    "payment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "reservationId": {
+          "type": "string"
+        },
+        "provider": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "status": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

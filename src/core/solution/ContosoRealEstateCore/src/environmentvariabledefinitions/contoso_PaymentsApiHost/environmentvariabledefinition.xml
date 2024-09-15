@@ -1,0 +1,14 @@
+<environmentvariabledefinition schemaname="contoso_PaymentsApiHost">
+  <defaultvalue>contosoapipayments.azurewebsites.net</defaultvalue>
+  <description default="E.g. contosoapipayments.azurewebsites.net">
+    <label description="E.g. contosoapipayments.azurewebsites.net" languagecode="1033" />
+  </description>
+  <displayname default="PaymentsApi Host">
+    <label description="PaymentsApi Host" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDataSource EntityDataSourceId="{b2f016fb-a008-ef11-9f8a-0022480c5a42}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Payments Data Source</Name>
+  <ConnectionDefinition>%7B%0D%0A++%22Name%22%3A+%22Payments+Data+Source%22%2C%0D%0A++%22Payments+Data+Source%22%3A+%22b2f016fb-a008-ef11-9f8a-0022480c5a42%22%0D%0A%7D</ConnectionDefinition>
+  <EntityDataProviderId>{24b7ef90-a008-ef11-9f8a-0022480c5a42}</EntityDataProviderId>
+  <IsCustomizable>1</IsCustomizable>
+</EntityDataSource>

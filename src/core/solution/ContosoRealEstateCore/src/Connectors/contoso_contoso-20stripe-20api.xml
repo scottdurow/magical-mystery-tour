@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Connector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <connectorid>40698eb9-0663-43a9-ac72-9ef1a635570b</connectorid>
+  <description>This is the Stripe integration server for Contoso Real Estate company.</description>
+  <displayname>Contoso Stripe API</displayname>
+  <iconbrandcolor>#007ee5</iconbrandcolor>
+  <name>contoso_contoso-20stripe-20api</name>
+  <connectortype>1</connectortype>
+  <openapidefinition>/Connector/contoso_contoso-20stripe-20api_openapidefinition.json</openapidefinition>
+  <connectionparameters>/Connector/contoso_contoso-20stripe-20api_connectionparameters.json</connectionparameters>
+  <connectionparametersets>/Connector/contoso_contoso-20stripe-20api_connectionparametersets.json</connectionparametersets>
+  <policytemplateinstances>/Connector/contoso_contoso-20stripe-20api_policytemplateinstances.json</policytemplateinstances>
+  <iconblob>/Connector/contoso_contoso-20stripe-20api_iconblob.Png</iconblob>
+</Connector>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDataProvider xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityDataProviderId>{24b7ef90-a008-ef11-9f8a-0022480c5a42}</EntityDataProviderId>
+  <Name>PaymentsProvider</Name>
+  <DataSourceLogicalName>contoso_paymentsdatasource</DataSourceLogicalName>
+  <IsCustomizable>1</IsCustomizable>
+  <RetrievePluginTypeId>e1fac7ee-bd3d-4f99-92cf-5765cf2fd4cc</RetrievePluginTypeId>
+  <RetrieveMultiplePluginTypeId>a4737a08-1cee-4948-ae5b-7bc251f6be08</RetrieveMultiplePluginTypeId>
+  <CreatePluginTypeId>7330cb97-5d38-45a8-b776-877408eb5432</CreatePluginTypeId>
+  <UpdatePluginTypeId>c1919979-0021-4f11-a587-a8f904bdfdf9</UpdatePluginTypeId>
+  <DeletePluginTypeId>c1919979-0021-4f11-a587-a8f904bdfdf9</DeletePluginTypeId>
+</EntityDataProvider>

@@ -1,0 +1,11 @@
+<botcomponent schemaname="contoso_3c237b1a-7213-4759-b062-c6294730ec77.topic.OnError">
+  <componenttype>9</componenttype>
+  <description>This system topic triggers when the bot encounters an error. When using the test chat pane, the full error description is displayed.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>On Error</name>
+  <parentbotid>
+    <schemaname>contoso_3c237b1a-7213-4759-b062-c6294730ec77</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

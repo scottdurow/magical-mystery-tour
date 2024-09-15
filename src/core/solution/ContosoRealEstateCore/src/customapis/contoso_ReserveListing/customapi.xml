@@ -1,0 +1,21 @@
+<customapi uniquename="contoso_ReserveListing">
+  <allowedcustomprocessingsteptype>1</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Create a reservation for a listing">
+    <label description="Create a reservation for a listing" languagecode="1033" />
+  </description>
+  <displayname default="Reserve Listing">
+    <label description="Reserve Listing" languagecode="1033" />
+  </displayname>
+  <fxexpressionid>
+    <uniquename>contoso_ReserveListing</uniquename>
+  </fxexpressionid>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Reserve Listing</name>
+  <plugintypeid>
+    <plugintypeexportkey>462b3e8f-beb4-4981-9b87-a60c2162a9f7</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

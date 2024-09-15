@@ -1,0 +1,28 @@
+// Validate that the reservation is not for a period that is already booked
+{
+    Available: With(
+        {
+            FromDateValue:DateValue(From),
+            ToDateValue:DateValue(To),
+            ExcludeReservationGuid: GUID(If(ExcludeReservation="None","{00000000-0000-0000-0000-000000000000}",ExcludeReservation))
+             },
+        CountRows(
+            Filter(
+                contoso_reservation As record, 
+                // There is a bug currently when you can't import expressions that use global optionsets - it gives the error "Name isn't valid."
+                // There is workaround to compare the optionset value as a string 
+                // e.g. Text(record.'Reservation Status) <> "Cancelled"
+                // but this is not delegable so we have to filter after the initial search
+                //record.'Reservation Status' <> [@'Reservation Status'].Pending
+                //&&
+                (
+                    record.contoso_from < ToDateValue && record.contoso_to >FromDateValue
+                )
+                &&
+                record.contoso_Listing.contoso_listingid1 = ListingID
+                &&
+                record.contoso_reservationid <> ExcludeReservationGuid
+            ) 
+        )=0
+    )
+}

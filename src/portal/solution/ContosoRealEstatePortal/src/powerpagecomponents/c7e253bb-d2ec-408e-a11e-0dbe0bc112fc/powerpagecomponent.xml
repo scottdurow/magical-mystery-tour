@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="c7e253bb-d2ec-408e-a11e-0dbe0bc112fc">
+  <content>{"source":"&lt;ul class=\"dropdown-menu\" role=\"menu\"&gt;\r\n  {% assign ordered_languages = page.languages | order_by: \"name\" %}\r\n  {% for language in ordered_languages %}\r\n    &lt;li role=\"menuitem\"&gt;\r\n        &lt;a class=\"dropdown-item\"  href=\"/{{ language.url_substitution }}\" title=\"{{ language.name }}\" data-code=\"{{ language.code }}\"&gt;{{ language.name }}&lt;/a&gt;\r\n    &lt;/li&gt;\r\n  {% endfor %}\r\n&lt;/ul&gt;"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Languages Dropdown</name>
+  <powerpagecomponenttype>8</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

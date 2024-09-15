@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entities />
+  <Roles />
+  <Workflows />
+  <FieldSecurityProfiles />
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <EntityDataProviders />
+  <AIModels>
+    <AIModel>
+      <msdyn_aimodelid>{db30ad2e-2ec3-4840-aff0-af9e0e3c654d}</msdyn_aimodelid>
+      <msdyn_name>Portal Bot Search Terms Extraction</msdyn_name>
+      <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
+      <statecode>1</statecode>
+      <statuscode>1</statuscode>
+      <IsCustomizable>1</IsCustomizable>
+      <msdyn_activerunconfigurationid>{36ddd89f-306b-ef11-a670-0022480a2deb}</msdyn_activerunconfigurationid>
+      <AIConfigurations>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{36ddd89f-306b-ef11-a670-0022480a2deb}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"You are a real estate agent. Your task is to understand queries about property listings and extract specific information. The information you need to extract includes:\n\n- Geographical information (e.g., city)\n- Features (e.g., Pool, Gym, Security, Washing Machine)\n- Maximum Price per month in USD\n- Number of bedrooms\n- Number of bathrooms\n- Simplified description with keywords for searching\n\nOutput the extracted information in the following JSON schema:\n\n{\n  \"city\": \"\",\n  \"features\": [],\n  \"max_price_per_month_usd\": 0,\n  \"bedrooms\": 0,\n  \"bathrooms\": 0,\n  \"description_keywords\": []\n}\nExamples:\n\n1. User Query: \"I'm looking for a house in San Francisco with a pool and gym, under $1,000 per month, with at least 3 bedrooms and 2 bathrooms. It should be close to public transport.\"\n   Output:\n   {\n     \"city\": \"San Francisco\",\n     \"features\": [\"Pool\", \"Gym\"],\n     \"max_price_per_month_usd\": 1000,\n     \"bedrooms\": 3,\n     \"bathrooms\": 2,\n     \"description_keywords\": [\"public transport\"]\n   }\n\nExtract from the following user query: "},{"type":"inputVariable","id":"text"},{"type":"literal","text":" "}],"definitions":{"inputs":[{"id":"text","text":"text","type":"text","quickTestValue":"I'm looking for a house in Redmond with a pool and gym, under $1,000 per month, with at least 3 bedrooms and 2 bathrooms. It should be close to a beach"}],"data":[],"output":{"formats":["text"]}},"modelParameters":{"modelType":"gpt-35-turbo","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>3</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_name>db30ad2e-2ec3-4840-aff0-af9e0e3c654d_2024-09-05T02:43:26.509Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACq2QzQrCMBCEX0X2nIsgHnKrPwUvFtrifbWpBtokJBuwlL67aasoxqPXnZlvd7aHwohLqm2LdBLWSa2ALxkclPGUa017RZI64D3spDMNdkdsBXAABgmRlWdPwo0yiTvFtmnKIDMUyNgAr7FxgkHZmVEuAkFdYWCAVSVnz1ar36wksnyCyfo3d4NOrFcv+hD4maf/NCrnxVGBWirpbrlAN77wO5VO6uIpR/Fw4gMCZ5rqigEAAA==</msdyn_modelrundataspecification>
+          <msdyn_type>190690001</msdyn_type>
+          <msdyn_aimodelid>{db30ad2e-2ec3-4840-aff0-af9e0e3c654d}</msdyn_aimodelid>
+          <msdyn_trainedmodelaiconfigurationpareid>{ae8cc903-306b-ef11-a670-0022480a2deb}</msdyn_trainedmodelaiconfigurationpareid>
+          <statecode>2</statecode>
+          <statuscode>7</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{ae8cc903-306b-ef11-a670-0022480a2deb}</msdyn_aiconfigurationid>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_modeldata>f61b86a4-0cca-4322-9050-ba0f8a109338</msdyn_modeldata>
+          <msdyn_name>db30ad2e-2ec3-4840-aff0-af9e0e3c654d_2024-09-05T02:39:03.882Z</msdyn_name>
+          <msdyn_modelrundataspecification>
+        {
+          "schemaVersion": 2,
+          "input": {},
+          "output": {}
+        }
+      </msdyn_modelrundataspecification>
+          <msdyn_type>190690000</msdyn_type>
+          <msdyn_aimodelid>{db30ad2e-2ec3-4840-aff0-af9e0e3c654d}</msdyn_aimodelid>
+          <statecode>2</statecode>
+          <statuscode>6</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+      </AIConfigurations>
+    </AIModel>
+  </AIModels>
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="contoso_PortalBotQueries">
+      <connectionreferencedisplayname>PortalBotQueries</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <description>Connection for Contoso Real Estate Public Portal</description>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="contoso_StripeAPI">
+      <connectionreferencedisplayname>Contoso Real Estate Stripe API Functions</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_contoso-5fcontoso-20stripe-20api-5f6a4f91c8025d1333</connectorid>
+      <customconnectorid>
+        <connectorid>40698eb9-0663-43a9-ac72-9ef1a635570b</connectorid>
+      </customconnectorid>
+      <description>Connection to the Azure Stripe API</description>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

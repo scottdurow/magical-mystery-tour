@@ -1,0 +1,19 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnConversationStart
+  id: main
+  actions:
+    - kind: ConditionGroup
+      id: conditionGroup_e1a4tF
+      conditions:
+        - id: conditionItem_VpCDbf
+          condition: =IsBlank(System.User.DisplayName)
+          actions:
+            - kind: SendActivity
+              id: sendActivity_OBPxZv
+              activity: Hi, I'm {System.Bot.Name}! How can I help you today?
+
+      elseActions:
+        - kind: SendActivity
+          id: sendActivity_Vn7IMe
+          activity: Hi {System.User.DisplayName}, I'm {System.Bot.Name}! How can I help you today?

@@ -1,0 +1,231 @@
+name: Build
+
+permissions:
+  id-token: write
+  packages: write
+  contents: write
+  
+on:
+  workflow_dispatch:
+    inputs:
+      forceRebuild:
+        description: 'Force rebuild even if there are no changes'
+        required: false
+        type: boolean
+        default: false
+
+  # Run build on pull requests but don't create a release yet
+  pull_request:
+    branches-ignore:
+      - release/*
+      - releases/*
+
+  # Run build on push to a release branch
+  push:
+    branches:
+      - main
+      - release/*
+      - releases/*
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+  
+jobs:
+  Build:
+    # Needs to be windows so that the nuget package inclusion of the .NET Framework will resolve
+    runs-on: windows-latest
+    name: ${{ matrix.solutionName }}
+    environment: solution-checker
+    strategy:
+      matrix:
+        include: ${{ fromJson(vars.SOLUTIONS_CONFIG) }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Semantic Versioning
+      uses: paulhatch/semantic-version@v5.3.0
+      id: get_version
+      with:
+        tag_prefix: "v"
+        major_pattern: "(MAJOR-${{ matrix.solutionName }})"
+        minor_pattern: "(MINOR-${{ matrix.solutionName }})"
+        namespace: "${{ matrix.solutionName }}"
+        # Optional path to check for changes. If any changes are detected in the path the
+        # 'changed' output will true. Enter multiple paths separated by spaces.
+        change_path: "${{ matrix.changeScope}}"
+        user_format_type: "csv"
+        debug: true
+
+      
+    - name: Check if changes detected
+      if: steps.get_version.outputs.changed == 'false'
+      run: |
+        echo "No changes detected in '${{ matrix.changeScope}}/${{ matrix.solutionSubFolder}}', build cancelled."
+      shell: pwsh
+
+    - name: Check that there is not already a release that is deployed with this tag
+      # This is a check to ensure that the release is not already deployed
+      # Skip if the build is forced
+      if: github.event_name != 'pull_request' && (steps.get_version.outputs.changed == 'true' || github.event.inputs.forceRebuild == 'true')
+      uses: actions/github-script@v7
+      with:
+        debug: true
+        script: |
+          const releaseTag = '${{ steps.get_version.outputs.version_tag }}';
+          const repo = context.repo;
+          // Find the release by tag name
+          const { data: releases } = await github.rest.repos.listReleases(repo);
+          const release = releases.find(r => r.tag_name === releaseTag);
+          if (release && !release.draft) {
+            console.log(`Release ${releaseTag} is already deployed.`);
+            core.setFailed(`Release ${releaseTag} is already deployed.`);
+          }
+
+    - name: Install pac
+      uses: microsoft/powerplatform-actions/actions-install@v1
+      with:
+        add-tools-to-path: true
+
+    - name: Update Solution Versions (within the scope)
+      if: steps.get_version.outputs.changed == 'true' || github.event.inputs.forceRebuild == 'true'
+      run: |
+        $major = ${{ steps.get_version.outputs.major }}
+        $minor = ${{ steps.get_version.outputs.minor }}
+        $patch = ${{ steps.get_version.outputs.patch }}
+        $increment = ${{ steps.get_version.outputs.increment }}
+        $path = "${{ github.workspace }}/${{ matrix.changeScope }}"
+
+        $paddedPatch = "{0:000}" -f $patch
+        $paddedIncrement = "{0:000}" -f $increment
+
+
+        function UpdateFileContent($fileFilter, $matchPattern, $replacePattern) {
+            Write-Output "Update File Content: $fileFilter, $matchPattern, $replacePattern"
+            $filesToUpdate = Get-ChildItem -Path $path -Recurse -Filter $fileFilter
+            foreach ($file in $filesToUpdate) {
+                Write-Output "Updating version in $($file.FullName)"
+                $content = Get-Content -Path $file.FullName -Raw
+                $updatedContent = $content -replace $matchPattern, $replacePattern
+                Set-Content -Path $file.FullName -Value $updatedContent
+              }
+        }
+
+        # Find all .csproj and update AssemblyVersion
+        # Information on versioning plugins:
+        # https://learn.microsoft.com/en-us/power-apps/developer/data-platform/register-plug-in#assembly-versioning
+        UpdateFileContent "*.csproj" "<AssemblyVersion>[0-9]+(\.[0-9]+)*</AssemblyVersion>" "<AssemblyVersion>$($major).$($minor).$($patch).$($increment)</AssemblyVersion>"
+
+        # Find all .dll.data.xml and update version
+        UpdateFileContent "*.dll.data.xml" ' Version=[0-9]+(\.[0-9]+)*,' " Version=$($major).$($minor).$($patch).$($increment),"
+
+        # Find all RootComponents in Solution.Xml and update version
+        # <RootComponent type="91" id="{539003b6-e003-43c6-8be6-aaa55b4e0337}" schemaName="ContosoRealEstate.BusinessLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" behavior="0" />
+        UpdateFileContent "Solution.xml" '(?<=<RootComponent type="91"[^>]*?Version=)[0-9]+(\.[0-9]+)*,' "$($major).$($minor).$($patch).$($increment),"
+
+        # Find all ControlManifest.Input.xml and update version
+        # Alternatives are to use the following - but cannot control the entire version
+        # pac can be used, but throws an error if no manifest found - and doesn't update the whole version
+        # pac pcf version --allmanifests --patchversion ${{ steps.get_version.outputs.patch }} --updatetarget project
+        UpdateFileContent "ControlManifest.Input.xml" '(?<!(resx" )|(css" )|(React" )|(Fluent" )|(xml ))version="[0-9]+(\.[0-9]+)*"' "version=""$($major).$($minor).$($paddedPatch)$($paddedIncrement)"""
+
+        # Find all solution.xml and update version
+        # pac can be used, but doesn't update the whole version
+        # pac solution version --revisionversion <number> --solutionPath "./<folder>"
+        # pac solution version --buildversion <number> --solutionPath "./<folder>"
+        UpdateFileContent "Solution.xml" "<Version>[0-9]+(\.[0-9]+)*</Version>" "<Version>$($major).$($minor).$($patch).$($increment)</Version>"  
+      shell: pwsh
+      working-directory: "./${{ matrix.changeScope}}"
+
+    - name: Setup .NET
+      if: steps.get_version.outputs.changed == 'true' || github.event.inputs.forceRebuild == 'true'
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Build
+      if: steps.get_version.outputs.changed == 'true' || github.event.inputs.forceRebuild == 'true'
+      run: dotnet build -c Release
+      working-directory: "./${{ matrix.changeScope}}/${{ matrix.solutionSubFolder}}"
+
+    - name: Auth pac
+      if: steps.get_version.outputs.changed == 'true' || github.event.inputs.forceRebuild == 'true'
+      run: |
+        pac auth create --githubFederated --tenant ${{ secrets.PAC_DEPLOY_AZURE_TENANT_ID }} --applicationId ${{ secrets.PAC_DEPLOY_CLIENT_ID }} --environment ${{ secrets.PAC_DEPLOY_ENV_URL }}
+      shell: pwsh
+
+    - name: Run pac solution check
+      if: steps.get_version.outputs.changed == 'true' || github.event.inputs.forceRebuild == 'true'
+      run: |
+        $solutionPath = "${{ github.workspace }}/${{ matrix.changeScope}}/${{ matrix.solutionSubFolder}}/bin/"
+        $solutionFile = "${{ matrix.solutionName }}.zip"
+        $outputPath = "$solutionPath/SolutionChecker"
+        if (Test-Path $outputPath) {
+          Remove-Item -Path $outputPath -Recurse -Force
+        }
+        # Run pac solution check - exclude bundle.js from the check due to false positives with transpiled code
+        pac solution check -p $solutionPath/$solutionFile -ef bundle.js -o $outputPath 
+        $sarifFilePath = Get-ChildItem -Path $outputPath -Filter "*.zip" -Recurse | Select-Object -First 1
+        Expand-Archive -Path $sarifFilePath.FullName -DestinationPath $outputPath
+        $sarifFilePath = Get-ChildItem -Path $outputPath -Filter "*.sarif" -Recurse | Select-Object -First 1
+        $sarifContent = Get-Content -Path $sarifFilePath.FullName -Raw | ConvertFrom-Json
+        $criticalIssues = 0
+        $highIssues = 0
+        foreach ($run in $sarifContent.runs) {
+            foreach ($result in $run.results) {
+                $severity = $result.properties.severity
+                if ($severity -eq "Critical") {
+                    $criticalIssues++
+                } elseif ($severity -eq "High") {
+                    $highIssues++
+                }
+            }
+        }
+        Write-Output "Critical Issues: $criticalIssues"
+        Write-Output "High Issues: $highIssues"
+        if ($criticalIssues -gt 0 -or $highIssues -gt 0) {
+            Write-Error "Build failed due to critical or high severity issues from Solution Checker."
+            exit 1
+        }
+      shell: pwsh
+      working-directory: "."
+    
+    - name: Publish Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-artifacts-${{ matrix.solutionName }}
+        path: '${{ matrix.changeScope }}/${{ matrix.solutionSubFolder }}/bin/**'
+        overwrite: true
+
+    - name: Create release artifact list
+      if: github.event_name != 'pull_request' && (steps.get_version.outputs.changed == 'true' || github.event.inputs.forceRebuild == 'true')
+      id: get_artifacts
+      run: |
+        $files = Get-ChildItem -Path "./${{ matrix.changeScope }}/data" -Filter "*data.zip" -Recurse | ForEach-Object { $_.FullName }
+        if ($null -eq $files) {
+          $files = @()  # Initialize as an empty array if it is null
+        }
+        $files += "${{ matrix.changeScope }}/${{ matrix.solutionSubFolder }}/bin/${{ matrix.solutionName }}_managed.zip"
+        $files += "${{ matrix.changeScope }}/${{ matrix.solutionSubFolder }}/bin/${{ matrix.solutionName }}.zip"
+        $filesOutput = $files -join "`n"
+        echo "RELEASE_ARTIFACTS<<EOF" >> $env:GITHUB_OUTPUT
+        echo $filesOutput >> $env:GITHUB_OUTPUT
+        echo "EOF" >> $env:GITHUB_OUTPUT
+      shell: powershell
+
+    - name: Create Release
+      if: github.event_name != 'pull_request' && startsWith(github.ref, 'refs/heads/release') && (steps.get_version.outputs.changed == 'true' || github.event.inputs.forceRebuild == 'true')
+      uses: softprops/action-gh-release@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        files: ${{ steps.get_artifacts.outputs.RELEASE_ARTIFACTS}}
+        tag_name: ${{ steps.get_version.outputs.version_tag }}
+        name: ${{ steps.get_version.outputs.version_tag }}
+        draft: ${{ github.event_name == 'pull_request' }} ## Create a draft release if this is just a pull request
+        target_commitish: ${{ github.sha }}
+        prerelease: false

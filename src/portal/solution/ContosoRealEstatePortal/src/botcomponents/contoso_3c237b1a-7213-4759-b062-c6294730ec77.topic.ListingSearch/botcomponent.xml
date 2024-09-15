@@ -1,0 +1,10 @@
+<botcomponent schemaname="contoso_3c237b1a-7213-4759-b062-c6294730ec77.topic.ListingSearch">
+  <componenttype>9</componenttype>
+  <iscustomizable>0</iscustomizable>
+  <name>Listing Search</name>
+  <parentbotid>
+    <schemaname>contoso_3c237b1a-7213-4759-b062-c6294730ec77</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

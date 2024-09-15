@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{577c8ba5-84bf-49ed-bcbc-95a0ef835f0a}</savedqueryid>
+    <layoutxml>
+      <grid name="contoso_payments" jump="contoso_name" select="1" icon="1" preview="1">
+        <row name="contoso_payment" id="contoso_paymentid">
+          <cell name="contoso_name" width="108" />
+          <cell name="contoso_createdon" width="118" />
+          <cell name="contoso_portaluser" width="104" />
+          <cell name="contoso_userid" width="100" />
+          <cell name="contoso_reservation" width="270" />
+          <cell name="contoso_amount" width="100" />
+          <cell name="contoso_currencycode" width="126" />
+          <cell name="contoso_provider" width="100" />
+          <cell name="contoso_status" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="contoso_payment">
+          <attribute name="contoso_paymentid" />
+          <attribute name="contoso_userid" />
+          <attribute name="contoso_amount" />
+          <attribute name="contoso_currencycode" />
+          <attribute name="contoso_provider" />
+          <attribute name="contoso_status" />
+          <attribute name="contoso_createdon" />
+          <attribute name="contoso_portaluser" />
+          <attribute name="contoso_reservation" />
+          <order attribute="contoso_createdon" descending="false" />
+          <attribute name="contoso_name" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Payment Associated View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

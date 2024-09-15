@@ -1,0 +1,448 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "contoso_PortalBotQueries"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_contoso-5fcontoso-20stripe-20api-5f9fd17285088bf5cb": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "contoso_StripeAPI"
+        },
+        "api": {
+          "name": "shared_contoso-5fcontoso-20stripe-20api-5f6a4f91c8025d1333",
+          "logicalName": "contoso_contoso-20stripe-20api"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "f1c0ba9a-fc01-44d1-b59b-9810256888d6"
+          },
+          "type": "Request",
+          "kind": "PowerPages",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text_1": {
+                  "title": "from",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "From (yyyy-mm-dd)",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "text_2": {
+                  "title": "to",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "To (yyyy-mm-dd)",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "number": {
+                  "title": "guests",
+                  "type": "number",
+                  "x-ms-dynamically-added": true,
+                  "description": "1",
+                  "x-ms-content-hint": "NUMBER"
+                },
+                "text": {
+                  "title": "listingID",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Listing ID",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "text_4": {
+                  "title": "reservationId",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "text_3": {
+                  "title": "operation",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "checkout/complete",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text_3"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Switch_Operation": {
+          "runAfter": {},
+          "cases": {
+            "Checkout": {
+              "case": "checkout",
+              "actions": {
+                "Try_Checkout": {
+                  "actions": {
+                    "Create_Reservation": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "faf718d4-0053-4e92-9bb2-db18c1b26d5b"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "contoso_ReserveListing",
+                          "item/To": "@triggerBody()['text_2']",
+                          "item/DataverseUserId": "@triggerBody()['userId']",
+                          "item/ListingID": "@triggerBody()['text']",
+                          "item/From": "@triggerBody()['text_1']",
+                          "item/Guests": "@triggerBody()['number']"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    },
+                    "Get_User": {
+                      "runAfter": {
+                        "Create_Reservation": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "b2bced16-b64b-41b8-9d32-42b16b9046c3"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "GetItem",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "entityName": "contacts",
+                          "recordId": "@triggerBody()['userId']",
+                          "$select": "emailaddress1"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    },
+                    "Create_Stripe_Checkout_Session": {
+                      "runAfter": {
+                        "Get_User": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "969a8f7a-e0f1-4c84-9ac0-082f2e9857c5"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_contoso-5fcontoso-20stripe-20api-5f9fd17285088bf5cb",
+                          "operationId": "CreateCheckoutSession",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_contoso-5fcontoso-20stripe-20api-5f6a4f91c8025d1333"
+                        },
+                        "parameters": {
+                          "body/ClientReferenceNumber": "portal-reservation-@{outputs('Create_Reservation')?['body/ReservationId']}",
+                          "body/CustomerNumber": "portal-@{triggerBody()['userId']}",
+                          "body/ProductName": "Listing Reservation",
+                          "body/Description": "Listing Reservation",
+                          "body/Amount": "@outputs('Create_Reservation')?['body/Amount']",
+                          "body/Currency": "USD",
+                          "body/CreatedAt": "@formatDateTime(utcNow(), 'yyyy-MM-ddTHH:mm:ssZ')",
+                          "body/ExpiryRedirectUrl": "@triggerBody()['siteUrl']",
+                          "body/SuccessUrl": "@{triggerBody()['siteUrl']}/Checkout-Complete?id=@{outputs('Create_Reservation')?['body/ReservationId']}",
+                          "body/CancelUrl": "@triggerBody()['siteUrl']",
+                          "body/CustomerEmail": "@outputs('Get_User')?['body/emailaddress1']"
+                        },
+                        "authentication": "@parameters('$authentication')",
+                        "retryPolicy": {
+                          "type": "fixed",
+                          "count": 5,
+                          "interval": "PT5S"
+                        }
+                      }
+                    }
+                  },
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "af685271-bfc2-47c1-96a9-034b9b55a956"
+                  },
+                  "type": "Scope"
+                },
+                "Checkout_Session_Return": {
+                  "runAfter": {
+                    "Try_Checkout": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "0624d774-e5f1-4446-be1d-d18e4b61fa42"
+                  },
+                  "type": "Response",
+                  "kind": "PowerPages",
+                  "inputs": {
+                    "statusCode": 200,
+                    "body": {
+                      "errormessage": "@{''}",
+                      "sessionurl": "@outputs('Create_Stripe_Checkout_Session')?['body/sessionUrl']",
+                      "sessionexpiry": "@outputs('Create_Stripe_Checkout_Session')?['body/sessionExpiry']"
+                    },
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "errormessage": {
+                          "title": "errorMessage",
+                          "x-ms-dynamically-added": true,
+                          "type": "string"
+                        },
+                        "sessionurl": {
+                          "title": "sessionUrl",
+                          "x-ms-dynamically-added": true,
+                          "type": "string"
+                        },
+                        "sessionexpiry": {
+                          "title": "sessionExpiry",
+                          "x-ms-dynamically-added": true,
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "Checkout_failed": {
+                  "runAfter": {
+                    "Try_Checkout": [
+                      "Failed",
+                      "Skipped",
+                      "TimedOut"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "f8a1a13b-e0c9-46f3-8542-810a2f145098"
+                  },
+                  "type": "Response",
+                  "kind": "PowerPages",
+                  "inputs": {
+                    "statusCode": 200,
+                    "body": {
+                      "errormessage": "@{concat(actions('Create_Reservation')?['outputs']?['body']?['error']?['message'], actions('Create_Stripe_Checkout_Session')?['outputs']?['body']?['error']?['message'])}",
+                      "sessionurl": "@{''}",
+                      "sessionexpiry": "@{''}"
+                    },
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "errormessage": {
+                          "title": "errorMessage",
+                          "x-ms-dynamically-added": true,
+                          "type": "string"
+                        },
+                        "sessionurl": {
+                          "title": "sessionUrl",
+                          "x-ms-dynamically-added": true,
+                          "type": "string"
+                        },
+                        "sessionexpiry": {
+                          "title": "sessionExpiry",
+                          "x-ms-dynamically-added": true,
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "Complete": {
+              "case": "complete",
+              "actions": {
+                "Complete_Checkout": {
+                  "actions": {
+                    "Get_a_row_by_ID": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "3a9e26f9-817d-4f14-af9e-51759c6d0e27"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "GetItem",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "entityName": "contoso_reservations",
+                          "recordId": "@triggerBody()?['text_4']",
+                          "$select": "contoso_reservationstatus"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    },
+                    "Condition": {
+                      "actions": {
+                        "Mark_Reservation_as_Pending": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "b60e7e12-667d-4776-bc4d-5d869947b928"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_commondataserviceforapps",
+                              "operationId": "UpdateRecord",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                            },
+                            "parameters": {
+                              "entityName": "contoso_reservations",
+                              "recordId": "@triggerBody()?['text_4']",
+                              "item/contoso_reservationstatus": 2
+                            },
+                            "authentication": "@parameters('$authentication')"
+                          }
+                        }
+                      },
+                      "runAfter": {
+                        "Get_a_row_by_ID": [
+                          "Succeeded"
+                        ]
+                      },
+                      "expression": {
+                        "equals": [
+                          "@outputs('Get_a_row_by_ID')?['body/contoso_reservationstatus']",
+                          1
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "aa08377c-4487-457a-b421-564f91370109"
+                      },
+                      "type": "If"
+                    }
+                  },
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "e53be434-bd69-46e1-8e32-d4b047eadc2e"
+                  },
+                  "type": "Scope"
+                },
+                "Complete_Checkout_Return": {
+                  "runAfter": {
+                    "Complete_Checkout": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "eee57c75-16ee-4a13-96a7-192ff73ab0d5"
+                  },
+                  "type": "Response",
+                  "kind": "PowerPages",
+                  "inputs": {
+                    "statusCode": 200,
+                    "body": {
+                      "errormessage": "@{''}",
+                      "sessionurl": "@{''}",
+                      "sessionexpiry": "@{''}"
+                    },
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "errormessage": {
+                          "title": "errorMessage",
+                          "x-ms-dynamically-added": true,
+                          "type": "string"
+                        },
+                        "sessionurl": {
+                          "title": "sessionUrl",
+                          "x-ms-dynamically-added": true,
+                          "type": "string"
+                        },
+                        "sessionexpiry": {
+                          "title": "sessionExpiry",
+                          "x-ms-dynamically-added": true,
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "actions": {
+              "Invalid_Operation": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "43f78931-4caf-42ac-8b98-76e905214ff5"
+                },
+                "type": "Response",
+                "kind": "PowerPages",
+                "inputs": {
+                  "statusCode": 200,
+                  "body": {
+                    "errormessage": "Invalid Operation",
+                    "sessionurl": "@{''}",
+                    "sessionexpiry": "@{''}"
+                  },
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "errormessage": {
+                        "title": "errorMessage",
+                        "x-ms-dynamically-added": true,
+                        "type": "string"
+                      },
+                      "sessionurl": {
+                        "title": "sessionUrl",
+                        "x-ms-dynamically-added": true,
+                        "type": "string"
+                      },
+                      "sessionexpiry": {
+                        "title": "sessionExpiry",
+                        "x-ms-dynamically-added": true,
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "expression": "@triggerBody()['text_3']",
+          "metadata": {
+            "operationMetadataId": "10a94df7-b34e-4ba7-97c6-6e892d635312"
+          },
+          "type": "Switch"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

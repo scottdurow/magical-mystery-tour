@@ -1,0 +1,12 @@
+<powerpagecomponent powerpagecomponentid="910f78c1-3945-4733-a69c-a47647084f97">
+  <content>{"createdOn":"2024-05-10T00:43:28.851Z","parentpageid":"72039cc9-7b49-4773-91e6-9820290aecce","publishingstateid":"3de66291-24a2-45a8-8ed9-3714e0e9d453","partialurl":"PWAManifest.json","enabletracking":false,"excludefromsearch":false,"hiddenfromsitemap":false}</content>
+  <filecontent mimetype="application/json">PWAManifest.json</filecontent>
+  <iscustomizable>1</iscustomizable>
+  <name>PWAManifest.json</name>
+  <powerpagecomponenttype>3</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

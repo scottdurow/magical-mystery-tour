@@ -1,0 +1,510 @@
+kind: AdaptiveDialog
+modelDescription: This topic enables users to search for property listings on the Contoso Real Estate Portal site. Users can specify criteria such as free text search, location, price range, property type, and other relevant filters to find suitable properties.
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent: {}
+  actions:
+    - kind: InvokeFlowAction
+      id: invokeFlowAction_JKtA7H
+      displayName: Can be replaced by Prompt Node when working in Public Bots
+      input:
+        binding:
+          text: =System.LastMessage.Text
+
+      output:
+        binding:
+          searchterms: Topic.SearchTerms
+
+      flowId: 420a877a-376b-ef11-a670-0022480a2deb
+
+    - kind: ParseValue
+      id: CYiZjl
+      variable: Topic.SearchParsed
+      valueType:
+        kind: Record
+        properties:
+          bathrooms: Number
+          bedrooms: Number
+          city: String
+          description_keywords:
+            type:
+              kind: Table
+              properties:
+                Value: String
+
+          features:
+            type:
+              kind: Table
+              properties:
+                Value: String
+
+          max_price_per_month_usd: Number
+
+      value: =Topic.SearchTerms
+
+    - kind: SetVariable
+      id: setVariable_X4vsEv
+      variable: Topic.ODataFilter
+      value: |-
+        =
+            With({searchTerms:Topic.SearchParsed},
+                With({
+                    city_search: If(!IsBlank(searchTerms.city),"contains(contoso_address,'" & EncodeUrl(searchTerms.city) & "')"),
+                    description_search: Concat(
+                        ForAll(
+                            searchTerms.description_keywords,
+                            // Can't use string interpolation for some reason
+                            "contains(contoso_description,'" & EncodeUrl(Value) & "')"
+                        )
+                    ,Value," or "),
+                    name_search: Concat(
+                        ForAll(
+                            searchTerms.description_keywords,
+                            "contains(contoso_name,'" & EncodeUrl(Value) & "')"
+                        ),Value," or "),
+                    feature_search: If(CountRows(searchTerms.features)>0,"(Microsoft.Dynamics.CRM.ContainValues(PropertyName='contoso_features',PropertyValues=[" & Concat(
+                        Filter(ForAll(
+                            searchTerms.features,
+                            
+                            Switch(Lower(Value),"parking","'330650000'","washing machine","'330650001'","pool","'330650002'","garden","'330650003'","gym","'330650004'","security","'330650005'",Blank()) 
+                            
+                        ),!IsBlank(Value)),Value," , ") &
+                            "]))")
+                    },
+                        With({
+                            textSearch:  Filter([description_search,name_search],!IsBlank(Value)),
+                            otherSearches:  Filter([feature_search,city_search],!IsBlank(Value))
+                        },
+                            If(CountRows(textSearch)>0, "(" & Concat(textSearch,Value, " or ") & ")")
+                            &
+                            If(CountRows(otherSearches)>0," and " & Concat(otherSearches,Value," and "))
+                        )
+                )
+            )
+
+    - kind: ConditionGroup
+      id: conditionGroup_4bIBLP
+      conditions:
+        - id: conditionItem_gW1oLI
+          condition: =IsBlank(Topic.ODataFilter)
+          actions:
+            - kind: SendActivity
+              id: sendActivity_Mfbpiu
+              activity: I need a little more information, e.g. "I'm looking for a house with a pool and gym, under $1,000 per month, with at least 3 bedrooms and 2 bathrooms. It should be close to a beach"
+
+            - kind: EndDialog
+              id: YI7i5O
+
+    - kind: InvokeConnectorAction
+      id: invokeConnectorAction_5y1IHR
+      displayName: Get first 3 matches
+      input:
+        binding:
+          $filter: =Topic.ODataFilter
+          $top: 3
+          entityName: contoso_listings
+          organization: current
+
+      output:
+        binding:
+          value: Topic.MatchingListings
+
+      connectionReference: contoso_PortalBotQueries
+      connectionProperties:
+        mode: Maker
+
+      operationId: ListRecordsWithOrganization
+      dynamicOutputSchema:
+        kind: Record
+        properties:
+          @odata.nextLink:
+            displayName: Next link
+            description: The url to fetch next page data.
+            visibility: Advanced
+            order: 1
+            type: String
+
+          value:
+            order: 0
+            type:
+              kind: Table
+              properties:
+                _contoso_primaryimage_value:
+                  displayName: Primary Image (Value)
+                  description: The primary image
+                  visibility: Advanced
+                  order: 39
+                  type: String
+
+                _contoso_primaryimage_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+                  displayName: Primary Image (Type)
+                  description: The primary image
+                  visibility: Advanced
+                  order: 38
+                  type: String
+
+                _createdby_value:
+                  displayName: Created By (Value)
+                  description: Unique identifier of the user who created the record.
+                  visibility: Advanced
+                  order: 5
+                  type: String
+
+                _createdby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+                  displayName: Created By (Type)
+                  description: Unique identifier of the user who created the record.
+                  visibility: Advanced
+                  order: 4
+                  type: String
+
+                _createdonbehalfby_value:
+                  displayName: Created By (Delegate) (Value)
+                  description: Unique identifier of the delegate user who created the record.
+                  visibility: Advanced
+                  order: 3
+                  type: String
+
+                _createdonbehalfby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+                  displayName: Created By (Delegate) (Type)
+                  description: Unique identifier of the delegate user who created the record.
+                  visibility: Advanced
+                  order: 2
+                  type: String
+
+                _modifiedby_value:
+                  displayName: Modified By (Value)
+                  description: Unique identifier of the user who modified the record.
+                  visibility: Advanced
+                  order: 22
+                  type: String
+
+                _modifiedby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+                  displayName: Modified By (Type)
+                  description: Unique identifier of the user who modified the record.
+                  visibility: Advanced
+                  order: 21
+                  type: String
+
+                _modifiedonbehalfby_value:
+                  displayName: Modified By (Delegate) (Value)
+                  description: Unique identifier of the delegate user who modified the record.
+                  visibility: Advanced
+                  order: 20
+                  type: String
+
+                _modifiedonbehalfby_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+                  displayName: Modified By (Delegate) (Type)
+                  description: Unique identifier of the delegate user who modified the record.
+                  visibility: Advanced
+                  order: 19
+                  type: String
+
+                _ownerid_value:
+                  displayName: Owner (Value)
+                  description: Owner Id
+                  visibility: Advanced
+                  order: 29
+                  type: String
+
+                _ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+                  displayName: Owner (Type)
+                  description: Owner Id
+                  visibility: Advanced
+                  order: 28
+                  type: String
+
+                _owningbusinessunit_value:
+                  displayName: Owning Business Unit (Value)
+                  description: Unique identifier for the business unit that owns the record
+                  visibility: Advanced
+                  order: 31
+                  type: String
+
+                _owningbusinessunit_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+                  displayName: Owning Business Unit (Type)
+                  description: Unique identifier for the business unit that owns the record
+                  visibility: Advanced
+                  order: 30
+                  type: String
+
+                _owningteam_value:
+                  displayName: Owning Team (Value)
+                  description: Unique identifier for the team that owns the record.
+                  visibility: Advanced
+                  order: 33
+                  type: String
+
+                _owningteam_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+                  displayName: Owning Team (Type)
+                  description: Unique identifier for the team that owns the record.
+                  visibility: Advanced
+                  order: 32
+                  type: String
+
+                _owninguser_value:
+                  displayName: Owning User (Value)
+                  description: Unique identifier for the user that owns the record.
+                  visibility: Advanced
+                  order: 35
+                  type: String
+
+                _owninguser_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+                  displayName: Owning User (Type)
+                  description: Unique identifier for the user that owns the record.
+                  visibility: Advanced
+                  order: 34
+                  type: String
+
+                _transactioncurrencyid_value:
+                  displayName: Currency (Value)
+                  description: Unique identifier of the currency associated with the entity.
+                  visibility: Advanced
+                  order: 8
+                  type: String
+
+                _transactioncurrencyid_value@Microsoft.Dynamics.CRM.lookuplogicalname:
+                  displayName: Currency (Type)
+                  description: Unique identifier of the currency associated with the entity.
+                  visibility: Advanced
+                  order: 7
+                  type: String
+
+                @odata.id:
+                  displayName: OData Id
+                  description: OData row id
+                  order: 27
+                  type: String
+
+                contoso_address:
+                  displayName: Address
+                  visibility: Advanced
+                  order: 0
+                  type: String
+
+                contoso_description:
+                  displayName: Description
+                  visibility: Advanced
+                  order: 9
+                  type: String
+
+                contoso_displayname:
+                  displayName: Display Name
+                  visibility: Advanced
+                  order: 10
+                  type: String
+
+                contoso_features:
+                  displayName: Features
+                  visibility: Advanced
+                  order: 12
+                  dynamicValuesConfig:
+                    capability: List
+
+                  type: String
+
+                contoso_image:
+                  displayName: Image
+                  visibility: Advanced
+                  order: 13
+                  type: String
+
+                contoso_imageid:
+                  displayName: contoso_ImageId
+                  visibility: Advanced
+                  order: 1
+                  type: String
+
+                contoso_listingid:
+                  displayName: Listing
+                  description: Unique identifier for entity instances
+                  visibility: Advanced
+                  order: 15
+                  type: String
+
+                contoso_listingid1:
+                  displayName: Listing ID
+                  visibility: Advanced
+                  order: 16
+                  type: String
+
+                contoso_lock:
+                  displayName: Lock
+                  visibility: Advanced
+                  order: 17
+                  type: String
+
+                contoso_maximumguests:
+                  displayName: Maximum Guests
+                  description: Maximum guests that the property can accommodate
+                  visibility: Advanced
+                  order: 18
+                  type: Number
+
+                contoso_name:
+                  displayName: Name
+                  visibility: Advanced
+                  order: 24
+                  type: String
+
+                contoso_numberofbathrooms:
+                  displayName: Number of Bathrooms
+                  visibility: Advanced
+                  order: 25
+                  type: Number
+
+                contoso_numberofbedrooms:
+                  displayName: Number of Bedrooms
+                  visibility: Advanced
+                  order: 26
+                  type: Number
+
+                contoso_pricepermonth:
+                  displayName: Price per Month
+                  visibility: Advanced
+                  order: 36
+                  type: Number
+
+                contoso_pricepermonth_base:
+                  displayName: Price per Month (Base)
+                  description: Value of the Price per Month in base currency.
+                  visibility: Advanced
+                  order: 37
+                  type: Number
+
+                contoso_summary:
+                  displayName: Summary
+                  visibility: Advanced
+                  order: 43
+                  type: String
+
+                createdon:
+                  displayName: Created On
+                  description: Date and time when the record was created.
+                  visibility: Advanced
+                  order: 6
+                  type: DateTime
+
+                exchangerate:
+                  displayName: Exchange Rate
+                  description: Exchange rate for the currency associated with the entity with respect to the base currency.
+                  visibility: Advanced
+                  order: 11
+                  type: Number
+
+                importsequencenumber:
+                  displayName: Import Sequence Number
+                  description: Sequence number of the import that created this record.
+                  visibility: Advanced
+                  order: 14
+                  type: Number
+
+                modifiedon:
+                  displayName: Modified On
+                  description: Date and time when the record was modified.
+                  visibility: Advanced
+                  order: 23
+                  type: DateTime
+
+                overriddencreatedon:
+                  displayName: Record Created On
+                  description: Date and time that the record was migrated.
+                  visibility: Advanced
+                  order: 40
+                  type: DateTime
+
+                statecode:
+                  displayName: Status
+                  description: Status of the Listing
+                  visibility: Advanced
+                  order: 41
+                  dynamicValuesConfig:
+                    capability: List
+
+                  type: Number
+
+                statuscode:
+                  displayName: Status Reason
+                  description: Reason for the status of the Listing
+                  visibility: Advanced
+                  order: 42
+                  dynamicValuesConfig:
+                    capability: List
+
+                  type: Number
+
+                timezoneruleversionnumber:
+                  displayName: Time Zone Rule Version Number
+                  description: For internal use only.
+                  visibility: Advanced
+                  order: 44
+                  type: Number
+
+                utcconversiontimezonecode:
+                  displayName: UTC Conversion Time Zone Code
+                  description: Time zone code that was in use when the record was created.
+                  visibility: Advanced
+                  order: 45
+                  type: Number
+
+                versionnumber:
+                  displayName: Version Number
+                  description: Version Number
+                  visibility: Advanced
+                  order: 46
+                  type: Number
+
+    - kind: SendActivity
+      id: sendActivity_RY7gLT
+      activity:
+        text:
+          - "Here are some matching listings:"
+        attachments:
+          - kind: AdaptiveCardTemplate
+            cardContent: |-
+              ={
+                type: "AdaptiveCard",
+                body: ForAll(Topic.MatchingListings,
+                  {
+                    type: "ColumnSet",
+                    columns: [
+                      {
+                        type: "Column",
+                        width: "auto",
+                        items: [ 
+                          {
+                            type: "Image",
+                            url:  "/Image/download.aspx?entity=contoso_listingimage&attribute=contoso_image&ID=" &ThisRecord._contoso_primaryimage_value & "&Full=true",
+                            size: "Small"
+                          }
+                        ]
+                      },
+                      {
+                        type: "Column",
+                        width: "stretch",
+                        items: [
+                          {
+                            type: "TextBlock",
+                            text: ThisRecord.contoso_displayname,
+                            weight: "Bolder",
+                            wrap: true
+                          },
+                           {
+                            type: "TextBlock",
+                            text: ThisRecord.contoso_description,
+                            wrap: true
+                          },
+                          {
+                        type: "TextBlock",
+                        text: "[View](/Listing-Details-PCF/?id=" & ThisRecord.contoso_listingid & ")",
+                        wrap: true
+                      }
+                          
+                        ]
+                      }
+                    ]
+                  }
+                ),
+                '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+                version: "1.3"
+              }

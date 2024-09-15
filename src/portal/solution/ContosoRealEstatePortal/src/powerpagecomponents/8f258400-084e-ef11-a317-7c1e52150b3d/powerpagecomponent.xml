@@ -1,0 +1,14 @@
+<powerpagecomponent powerpagecomponentid="8f258400-084e-ef11-a317-7c1e52150b3d">
+  <content>{
+  "description": "Trigger Url for checkout. This will be the same in all deployments - however the trigger must be re-saved in the target to point it at the correct version of the flow.",
+  "value": "/_api/cloudflow/v1.0/trigger/aab06feb-994b-ef11-a317-7c1e52150b3d"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Checkout/FlowUrl</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

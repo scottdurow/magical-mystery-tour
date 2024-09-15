@@ -1,0 +1,34 @@
+{
+  "EnvironmentVariables": [
+    {
+      "SchemaName": "contoso_ContosoRealEstatePortalUrl",
+      "Value": "",
+      "Name": {
+        "Default": "Contoso Real Estate Portal Url",
+        "ByLcid": {
+          "1033": "Contoso Real Estate Portal Url"
+        }
+      },
+      "TypeId": 100000000,
+      "Description": {
+        "Default": "e.g. https://site-xyz.powerappsportals.com",
+        "ByLcid": {
+          "1033": "e.g. https://site-xyz.powerappsportals.com"
+        }
+      },
+      "IsRequired": false
+    }
+  ],
+  "ConnectionReferences": [
+    {
+      "LogicalName": "contoso_PortalBotQueries",
+      "ConnectionId": "",
+      "ConnectorId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+    },
+    {
+      "LogicalName": "contoso_StripeAPI",
+      "ConnectionId": "",
+      "ConnectorId": "/providers/Microsoft.PowerApps/apis/shared_contoso-5fcontoso-20stripe-20api-5f6a4f91c8025d1333"
+    }
+  ]
+}

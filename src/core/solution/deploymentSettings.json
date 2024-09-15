@@ -1,0 +1,103 @@
+{
+  "EnvironmentVariables": [
+    {
+      "SchemaName": "contoso_PaymentsApiAppId",
+      "Value": "",
+      "Name": {
+        "Default": "PaymentsApi AppId",
+        "ByLcid": {
+          "1033": "PaymentsApi AppId"
+        }
+      },
+      "TypeId": 100000000,
+      "IsRequired": false
+    },
+    {
+      "SchemaName": "contoso_PaymentsApiBaseUrl",
+      "Value": "",
+      "DefaultValue": "/api",
+      "Name": {
+        "Default": "PaymentsApi BaseUrl",
+        "ByLcid": {
+          "1033": "PaymentsApi BaseUrl"
+        }
+      },
+      "TypeId": 100000000,
+      "Description": {
+        "Default": "E.g. /api",
+        "ByLcid": {
+          "1033": "E.g. /api"
+        }
+      },
+      "IsRequired": false
+    },
+    {
+      "SchemaName": "contoso_PaymentsApiHost",
+      "Value": "",
+      "DefaultValue": "contosoapipayments.azurewebsites.net",
+      "Name": {
+        "Default": "PaymentsApi Host",
+        "ByLcid": {
+          "1033": "PaymentsApi Host"
+        }
+      },
+      "TypeId": 100000000,
+      "Description": {
+        "Default": "E.g. contosoapipayments.azurewebsites.net",
+        "ByLcid": {
+          "1033": "E.g. contosoapipayments.azurewebsites.net"
+        }
+      },
+      "IsRequired": false
+    },
+    {
+      "SchemaName": "contoso_PaymentsApiResourceUrl",
+      "Value": "",
+      "Name": {
+        "Default": "PaymentsApi Resource Url",
+        "ByLcid": {
+          "1033": "PaymentsApi Resource Url"
+        }
+      },
+      "TypeId": 100000000,
+      "IsRequired": false
+    },
+    {
+      "SchemaName": "contoso_PaymentsApiScope",
+      "Value": "",
+      "Name": {
+        "Default": "PaymentsApi Scope",
+        "ByLcid": {
+          "1033": "PaymentsApi Scope"
+        }
+      },
+      "TypeId": 100000000,
+      "IsRequired": false
+    },
+    {
+      "SchemaName": "contoso_PaymentsApiSecret",
+      "Value": "",
+      "Name": {
+        "Default": "PaymentsApi Secret",
+        "ByLcid": {
+          "1033": "PaymentsApi Secret"
+        }
+      },
+      "TypeId": 100000005,
+      "IsRequired": false
+    },
+    {
+      "SchemaName": "contoso_PaymentsApiTenantId",
+      "Value": "",
+      "Name": {
+        "Default": "PaymentsApi Tenant Id",
+        "ByLcid": {
+          "1033": "PaymentsApi Tenant Id"
+        }
+      },
+      "TypeId": 100000000,
+      "IsRequired": false
+    }
+  ],
+  "ConnectionReferences": []
+}

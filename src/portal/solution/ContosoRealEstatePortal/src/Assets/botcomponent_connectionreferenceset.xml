@@ -1,0 +1,5 @@
+<botcomponent_connectionreferenceset>
+  <botcomponent_connectionreference botcomponentid.schemaname="contoso_3c237b1a-7213-4759-b062-c6294730ec77.topic.ListingSearch" connectionreferenceid.connectionreferencelogicalname="contoso_PortalBotQueries">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_connectionreference>
+</botcomponent_connectionreferenceset>

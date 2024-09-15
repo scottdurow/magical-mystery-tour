@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="To">
+  <description default="To">
+    <label description="To" languagecode="1033" />
+  </description>
+  <displayname default="To">
+    <label description="To" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>To</name>
+  <type>10</type>
+</customapirequestparameter>

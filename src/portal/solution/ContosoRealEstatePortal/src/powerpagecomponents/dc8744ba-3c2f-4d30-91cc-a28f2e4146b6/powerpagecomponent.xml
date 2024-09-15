@@ -1,0 +1,21 @@
+<powerpagecomponent powerpagecomponentid="dc8744ba-3c2f-4d30-91cc-a28f2e4146b6">
+  <content>{
+  "createdOn": "2024-07-23T16:05:05.255Z",
+  "parentpageid": "72039cc9-7b49-4773-91e6-9820290aecce",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "partialurl": "contoso-rea-estate-logo.png",
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": false,
+  "contentdisposition": 756150000
+}</content>
+  <filecontent mimetype="image/png">contoso-rea-estate-logo.png</filecontent>
+  <iscustomizable>1</iscustomizable>
+  <name>contoso-rea-estate-logo.png</name>
+  <powerpagecomponenttype>3</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

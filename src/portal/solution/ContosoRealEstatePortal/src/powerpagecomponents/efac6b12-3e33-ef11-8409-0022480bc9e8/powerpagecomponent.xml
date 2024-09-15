@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="efac6b12-3e33-ef11-8409-0022480bc9e8">
+  <content>{"adx_flowapiurl":"https://contosorealestate-iyss8.powerappsportals.com/_api/cloudflow/v1.0/trigger/73e911f7-561d-ff85-7315-9bdb7f0845df","adx_flowtriggerurl":"https://unitedstates-002.azure-apim.net:443/apim/logicflows/73E911F7561DFF8573159BDB7F0845DF-277E02CD246E674C/triggers/manual/run?api-version=2016-06-01","adx_metadata":"73e911f7-561d-ff85-7315-9bdb7f0845df","adx_CloudFlowConsumer_adx_webrole":["dc2b1fc1-27fd-4af6-b084-0dee12022fcc","cdefbb53-dda6-4f5d-a6c9-90c14224e417"],"_adx_processid_value":"eb20bdeb-e231-ef11-8409-0022480bc9e8"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Portal - Checkout</name>
+  <powerpagecomponenttype>33</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

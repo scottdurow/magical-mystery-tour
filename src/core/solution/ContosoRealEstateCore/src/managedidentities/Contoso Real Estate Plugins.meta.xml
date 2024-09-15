@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<managedidentity managedidentityid="fcdb7ca6-8d5e-ef11-bfe2-002248083aae" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <applicationid>{fd8ec592-ed17-4244-9e3c-47dc268e90e2}</applicationid>
+  <credentialsource>2</credentialsource>
+  <iscustomizable>1</iscustomizable>
+  <name>Contoso Real Estate Plugins</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <subjectscope>1</subjectscope>
+  <tenantid>{57872548-46bd-458e-8ae4-c2a541ea6d1b}</tenantid>
+</managedidentity>

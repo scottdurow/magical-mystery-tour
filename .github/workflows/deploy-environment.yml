@@ -1,0 +1,46 @@
+# This workflow is triggered by the parent workflow and deploys the required solutions to the specified environment
+# The solutions are deployed in sequential order one at a time
+name: _Deploy Environment
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+      stageAndUpgrade:
+          required: false
+          type: string # workflow calls use strings instead of booleans
+          default: 'true'
+    secrets:
+      PAC_DEPLOY_CLIENT_ID:
+        required: true
+      PAC_DEPLOY_ENV_URL:
+        required: true
+      PAC_DEPLOY_AZURE_TENANT_ID:
+        required: true
+      PLUGIN_MANAGED_IDENTITY_APP_ID:
+        required: true
+        
+# Note:   The environment secrets are defined here, but acutally provided by the environment that the
+#         child workflow runs under. They don't exist as repo secrets
+# See: https://github.com/actions/runner/issues/1490
+jobs:
+  Deploy:
+      strategy:
+        max-parallel: 1
+        matrix:
+          include: ${{ fromJson(vars.SOLUTIONS_CONFIG) }}
+    
+      uses: ./.github/workflows/import-solution.yml
+      with:
+          environment: ${{ inputs.environment}}
+          solutionName: ${{ matrix.solutionName }}
+          stageAndUpgrade: ${{ inputs.stageAndUpgrade }}
+      secrets:
+        PAC_DEPLOY_CLIENT_ID: ${{ secrets.PAC_DEPLOY_CLIENT_ID }}
+        PAC_DEPLOY_ENV_URL: ${{ secrets.PAC_DEPLOY_ENV_URL }}
+        PAC_DEPLOY_AZURE_TENANT_ID: ${{ secrets.PAC_DEPLOY_AZURE_TENANT_ID }}
+        PLUGIN_MANAGED_IDENTITY_APP_ID: ${{ secrets.PLUGIN_MANAGED_IDENTITY_APP_ID }}
+      
+      

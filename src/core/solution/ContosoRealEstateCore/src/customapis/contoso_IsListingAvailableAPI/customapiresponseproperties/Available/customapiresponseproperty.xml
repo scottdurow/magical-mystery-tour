@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="Available">
+  <description default="Available">
+    <label description="Available" languagecode="1033" />
+  </description>
+  <displayname default="Available">
+    <label description="Available" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>Available</name>
+  <type>0</type>
+</customapiresponseproperty>

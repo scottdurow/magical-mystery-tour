@@ -1,0 +1,40 @@
+<entities >
+  <entity name="contoso_listing" displayname="Listing" etc="10545" primaryidfield="contoso_listingid" primarynamefield="contoso_name" disableplugins="true" skipupdate="false">
+    <fields>
+      <field displayname="Address" name="contoso_address" type="string" customfield="true" />
+      <field displayname="contoso_imageid" name="contoso_imageid" type="guid" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Description" name="contoso_description" type="string" customfield="true" />
+      <field displayname="Display Name" name="contoso_displayname" type="string" customfield="true" />
+      <field displayname="Features" name="contoso_features" type="optionsetvaluecollection" customfield="true" />
+      <field displayname="Image" name="contoso_image" type="imagedata" customfield="true" />
+      <field updateCompare="true" displayname="Listing" name="contoso_listingid" type="guid" primaryKey="true" />
+      <field displayname="Listing ID" name="contoso_listingid1" type="string" customfield="true" />
+      <field displayname="Name" name="contoso_name" type="string" customfield="true" />
+      <field displayname="Number of Bathrooms" name="contoso_numberofbathrooms" type="number" customfield="true" />
+      <field displayname="Number of Bedrooms" name="contoso_numberofbedrooms" type="number" customfield="true" />
+      <field displayname="Price per Month" name="contoso_pricepermonth" type="money" customfield="true" />
+      <field displayname="Primary Image" name="contoso_primaryimage" type="entityreference" lookupType="contoso_listingimage" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="contoso_listingfee" displayname="Listing Fee" etc="10609" primaryidfield="contoso_listingfeeid" primarynamefield="contoso_fee" disableplugins="true" skipupdate="false">
+    <fields>
+      <field displayname="Fee" name="contoso_fee" type="string" customfield="true" />
+      <field displayname="Fee Amount" name="contoso_feeamount" type="money" customfield="true" />
+      <field displayname="Fee Type" name="contoso_feetype" type="entityreference" lookupType="contoso_listingfeetype" customfield="true" />
+      <field displayname="Listing" name="contoso_listing" type="entityreference" lookupType="contoso_listing" customfield="true" />
+      <field updateCompare="true" displayname="Listing Fee" name="contoso_listingfeeid" type="guid" primaryKey="true" />
+      <field displayname="Per Guest" name="contoso_perguest" type="bool" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+    </fields>
+  </entity>
+  <entity name="contoso_listingimage" displayname="Listing Image" etc="10516" primaryidfield="contoso_listingimageid" primarynamefield="contoso_name" disableplugins="true" skipupdate="false">
+    <fields>
+      <field displayname="Image" name="contoso_image" type="imagedata" customfield="true" />
+      <field displayname="contoso_imageid" name="contoso_imageid" type="guid" customfield="true" />
+      <field displayname="Listing" name="contoso_listing" type="entityreference" lookupType="contoso_listing" customfield="true" />
+      <field updateCompare="true" displayname="Listing Image" name="contoso_listingimageid" type="guid" primaryKey="true" />
+      <field displayname="Name" name="contoso_name" type="string" customfield="true" />
+    </fields>
+  </entity>
+</entities>

@@ -1,0 +1,88 @@
+// Reserve a listing if it is available
+With(
+    {
+        NewReservationId: With(
+            {
+                ListingRecordGuid: LookUp([@contoso_listing], contoso_listingid1 = ListingID).contoso_listingid,
+                ListingRecord: LookUp([@contoso_listing], contoso_listingid1 = ListingID),
+                FromDate: DateValue(From),
+                ToDate: DateValue(To),
+                SessionID: Text(GUID()),
+                DataverseUserIdGuid: GUID(DataverseUserId)
+            },
+            // Lock the Listing
+            Patch(contoso_listing, ListingRecord, { contoso_lock: SessionID });
+
+            // Check the reservation dates
+            If(
+                // Ideally we would call the IsListingAvailable instant plugin here, but it's not supported because you can't import
+                // a Power Fx Plugin that calls another Power Fx Plugin in the same solution
+                CountRows(
+                    Filter(
+                        contoso_reservation As record,
+                        // There is a bug currently when you can't import expressions that use global optionsets - it gives the error "Name isn't valid."
+                        // There is workaround to compare the optionset value as a string 
+                        // e.g. Text(record.'Reservation Status) <> "Cancelled"
+                        // but this is not delegable so we have to filter after the initial search
+                        //record.'Reservation Status' <> 'Reservation Status'.'Cancelled'
+                        //&&
+                        (
+                            record.contoso_from < ToDate && record.contoso_to > FromDate
+                        )
+                        &&
+                        record.contoso_Listing.contoso_listingid1 = ListingID
+                    )
+                ) > 0,
+                // Show error message that the listing is not available for the selected dates
+                //Notify($"The listing is not available for these dates");
+                Error(
+                    { 
+                        Kind: ErrorKind.Validation, 
+                        Message: $"The listing is not available for these dates" 
+                    }
+                );
+                "",
+                // Calculate the Total by summing the fees
+                With(
+                    {
+                        Nights: DateDiff(FromDate, ToDate, TimeUnit.Days),
+                        monthsFraction: RoundDown(DateDiff(FromDate, ToDate, TimeUnit.Days) / 30, 2),
+                        totalFeesPerDay: Sum(FirstN(Filter([@contoso_listingfee], contoso_Listing.contoso_listingid1 = ListingID And contoso_perguest = contoso_listingfee_contoso_listingfee_contoso_perguest.'0'), 100), contoso_feeamount),
+                        totalFeesPerDayPerGuest: Sum(FirstN(Filter([@contoso_listingfee], contoso_Listing.contoso_listingid1 = ListingID And contoso_perguest = contoso_listingfee_contoso_listingfee_contoso_perguest.'1'), 100), contoso_feeamount),
+                        customer: LookUp(contact, contactid = DataverseUserIdGuid)
+                    },
+                    // Create a reservation
+                    Text(
+                        Collect(
+                            [@contoso_reservation],
+                            {
+                                contoso_name: "",
+                                contoso_sessionid: SessionID,
+                                contoso_Customer: customer,
+                                contoso_reservationdate: Now(),
+                                contoso_Listing: ListingRecord,
+                                contoso_from: FromDate,
+                                contoso_to: ToDate,
+                                contoso_guests: Guests,
+                                contoso_amount: (ListingRecord.contoso_pricepermonth * monthsFraction) + (totalFeesPerDay * Nights) + (totalFeesPerDayPerGuest * Nights * Guests),
+                                contoso_reservationstatus: global_contoso_reservationstatus.'1',
+                                contoso_reservationnumber: ""
+                            }
+                        ).contoso_reservationid
+                    );
+                    //LookUp([@'Listing Reservations'],'Session ID' = SessionID).'Reservation Number';
+                )
+            )
+        )
+    },
+    With(
+        {
+            NewReservation: LookUp([@contoso_reservation], contoso_reservationid = GUID(NewReservationId))
+        },
+        {
+            ReservationId: NewReservation.contoso_reservationid,
+            ReservationNumber: NewReservation.contoso_reservationnumber,
+            Amount: NewReservation.contoso_amount
+        }
+    )
+)

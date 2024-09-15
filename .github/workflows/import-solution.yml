@@ -1,0 +1,185 @@
+# This workflow will deploy a solution to a Power Platform environment
+name: _Deploy Solution
+permissions:
+  id-token: write
+  packages: write
+  contents: write
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+      solutionName:
+        required: true
+        type: string
+      overrideVersionTag:
+        required: false
+        type: string # rather than using the latest release - use a specific release as defined by it's tag
+      stageAndUpgrade:
+        required: false
+        type: string # workflow calls use strings instead of booleans
+        default: 'true'
+    secrets:
+      PAC_DEPLOY_CLIENT_ID:
+        required: true
+      PAC_DEPLOY_ENV_URL:
+        required: true
+      PAC_DEPLOY_AZURE_TENANT_ID:
+        required: true
+      PLUGIN_MANAGED_IDENTITY_APP_ID:
+        required: true
+
+jobs:
+  deploy:
+    runs-on: windows-latest # Need windows for the data import command - everything else can run on ubuntu
+    environment: ${{ inputs.environment }}
+    name: ${{ inputs.solutionName}} 
+    steps: 
+    - name: Checkout
+      uses: actions/checkout@v4
+        
+    - name: Install semver
+      run: npm install semver 
+      
+    - name: Get Most Recent Release Matching Regex
+      id: get_release
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const path = require('path');
+          const semver = require('semver');
+          const solutionName = '${{ inputs.solutionName}}';
+          const overrideVersionTag = '${{ inputs.overrideVersionTag }}';
+          // Use the overrideVersionTag if it is provided - otherwise the regex will use the solution name
+          const regexPattern = overrideVersionTag ? `^${overrideVersionTag}$` : `^v\\d+\\.\\d+\\.\\d+(-${solutionName})$`;
+          console.log(regexPattern);
+          const regex = new RegExp(regexPattern);
+          const { data: releases } = await github.rest.repos.listReleases({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+          });
+          console.log(`Found ${releases.length} releases.`);
+          
+          const matchingReleases = releases.filter(release => !release.draft && regex.test(release.tag_name));
+          console.log(`Found ${matchingReleases.length} matching releases.`);
+          const mostRecentRelease = matchingReleases.sort((a, b) => semver.compare(a.tag_name, b.tag_name)).pop();
+ 
+           if (mostRecentRelease) {
+            core.setOutput('release_id', mostRecentRelease.id);
+            core.setOutput('tag_name', mostRecentRelease.tag_name);
+            console.log(`Found release: ${mostRecentRelease.tag_name}`);
+
+            // Create folder for release assets
+            fs.mkdirSync(solutionName, { recursive: true });
+
+            // Download the release assets using a for...of loop
+            for (const asset of mostRecentRelease.assets) {
+              const assetData = await github.request('GET ' + asset.url, {
+                headers: {
+                  Accept: 'application/octet-stream',
+                },
+              });
+              const outputPath = path.join(process.env.GITHUB_WORKSPACE, solutionName, asset.name);
+              fs.writeFileSync(outputPath, Buffer.from(assetData.data));
+              console.log(`Downloaded ${asset.name} to ${outputPath}`);
+            }
+          } else {
+            core.setFailed('No matching release found.');
+          }
+
+    - name: Inject Deployment Settings (Work around for some configuration not updatable in deployment Settings)
+      run: |
+        $solutionFilePath = '${{ inputs.solutionName }}/${{ inputs.solutionName }}_managed.zip'
+        $pluginManagedIdentityAppId = '${{ secrets.PLUGIN_MANAGED_IDENTITY_APP_ID }}'
+        $tenantId = '${{ secrets.PAC_DEPLOY_AZURE_TENANT_ID }}'
+        $scriptPath = '.\src\core\solution\deployment-scripts\inject-configuration-into-solution.ps1'
+
+        # The following works around MANAGED_IDENTITY_IMPORT_BUG
+        # If vars.OVERRIDE_PLUGIN_MANAGED_IDENTITY_ID is set, pass in a parameter to the script called -overridePluginManagedIdentityId
+        $overrideManagedIdentityParameter = ''
+        if ('${{ vars.OVERRIDE_PLUGIN_MANAGED_IDENTITY_ID }}' -ne '') {
+          $overrideManagedIdentityParameter = ' -overridePluginManagedIdentityId "${{ vars.OVERRIDE_PLUGIN_MANAGED_IDENTITY_ID }}"'
+        }
+        $expression = "$scriptPath -solutionFilePath ""$solutionFilePath"" -pluginManagedIdentityAppId ""$pluginManagedIdentityAppId"" -tenantId ""$tenantId"" $overrideManagedIdentityParameter"
+        Write-Host "Running script: $expression"
+        Invoke-Expression $expression 
+      shell: pwsh
+      working-directory: ${{ github.workspace }}
+
+    - name: Install pac
+      uses: microsoft/powerplatform-actions/actions-install@v1
+      with:
+        add-tools-to-path: true
+        
+    - name: Auth pac
+      run: |
+        pac auth create --githubFederated --tenant ${{ secrets.PAC_DEPLOY_AZURE_TENANT_ID }} --applicationId ${{ secrets.PAC_DEPLOY_CLIENT_ID }} --environment ${{ secrets.PAC_DEPLOY_ENV_URL }}
+      shell: pwsh
+
+    - name: Set Environment Settings
+      run: |
+        $configJson = '${{ vars.PAC_DEPLOY_CONFIG }}'
+        $configObj = ConvertFrom-Json $configJson
+        $solutionName = '${{ inputs.solutionName }}'
+        $environmentSettings = $configObj.$solutionName.environmentSettings
+        if ($environmentSettings -ne $null -and $environmentSettings -ne '') {
+          # Loop over each property, and call update-settings with the value
+          foreach ($setting in $environmentSettings.PSObject.Properties) {
+              Write-Host "Updating setting '$($setting.Name)' to '$($setting.Value)'" -ForegroundColor Green
+              pac env update-settings --name $setting.Name --value $setting.Value
+          }
+        } else {
+          Write-Host "No environment settings found" -ForegroundColor Yellow
+        }
+
+    - name: Import Solution
+      run: |
+        $configJson = '${{ vars.PAC_DEPLOY_CONFIG }}'
+        $configObj = ConvertFrom-Json $configJson
+        $solutionName = '${{ inputs.solutionName }}'
+        $deploymentSettings = $configObj.$solutionName.deploymentSettings
+        if ($deploymentSettings -ne $null -and $deploymentSettings -ne '') {
+          $deploymentSettingsJson = $deploymentSettings | ConvertTo-Json
+          $deploymentSettingsFileName = "./$solutionName/deployment_settings.json"
+          Write-Host "Deployment settings file: $deploymentSettingsFileName"
+          Write-Host $deploymentSettingsJson
+          
+          $deploymentSettingsJson | Out-File -FilePath $deploymentSettingsFileName -Encoding UTF8
+          $settingsFileArg = "--settings-file $deploymentSettingsFileName"
+        } else {
+          Write-Host "No deployment settings found"
+          $settingsFileArg = ""
+        }
+    
+        $stageAndUpgradeArg = ""
+        if ("${{ inputs.stageAndUpgrade }}" -eq "true") {
+          $stageAndUpgradeArg = "--stage-and-upgrade"
+        }
+
+        $command = "pac solution import $stageAndUpgradeArg --activate-plugins --skip-lower-version --async --path ${{ inputs.solutionName }}/${{ inputs.solutionName }}_managed.zip $settingsFileArg"
+        Write-Host "Running command: $command"
+        Invoke-Expression $command
+      shell: pwsh
+      working-directory: "."
+
+    - name: Import Data Files
+      run: |
+        $configJson = '${{ vars.PAC_DEPLOY_CONFIG }}'
+        $configObj = ConvertFrom-Json $configJson
+        $solutionName = '${{ inputs.solutionName }}'
+        $dataFiles = $configObj.$solutionName.data
+        if ($dataFiles -ne $null -and $dataFiles -ne '') {
+           foreach ($file in $dataFiles) {
+            $filePath = "$solutionName/$file".Trim()
+            Write-Host "Importing data from $filePath"
+            pac data import --data $filePath
+          }
+        } else {
+          Write-Host "No data files found"
+          $settingsFileArg = ""
+        }
+      shell: pwsh
+      working-directory: "."
+      

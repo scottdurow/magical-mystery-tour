@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="5ee2c889-f4f9-48d5-9bd9-0d123f222c80">
+  <content>{"pageid":"cf959809-0719-e791-f22a-ee7a8b9d6263"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>contoso_listing_SearchResultPage</name>
+  <powerpagecomponenttype>13</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

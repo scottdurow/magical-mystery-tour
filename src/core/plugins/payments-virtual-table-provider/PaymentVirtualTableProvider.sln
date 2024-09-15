@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentVirtualTableProvider", "PaymentVirtualTableProvider\PaymentVirtualTableProvider.csproj", "{FF7F3606-BF44-40DA-9EC4-CA663C4B4B94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentVirtualTableProvider.Tests", "PaymentVirtualTableProvider.Tests\PaymentVirtualTableProvider.Tests.csproj", "{A1CEA55E-6AAD-42E9-A740-C02CA5173636}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF7F3606-BF44-40DA-9EC4-CA663C4B4B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7F3606-BF44-40DA-9EC4-CA663C4B4B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7F3606-BF44-40DA-9EC4-CA663C4B4B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7F3606-BF44-40DA-9EC4-CA663C4B4B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1CEA55E-6AAD-42E9-A740-C02CA5173636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1CEA55E-6AAD-42E9-A740-C02CA5173636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1CEA55E-6AAD-42E9-A740-C02CA5173636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1CEA55E-6AAD-42E9-A740-C02CA5173636}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BA97181-33AE-4189-8C6A-ED256B58E25B}
+	EndGlobalSection
+EndGlobal

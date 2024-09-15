@@ -1,0 +1,30 @@
+name: Validate
+# Validate every push to check everything builds
+on:
+  push:
+    # For main and release branches, the build will be triggered and we don't need this validataion
+    branches-ignore:
+      - main
+      - release/*
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Needs to be windows for nuget package inclusion of the .NET Framework
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Find and Build .cdsproj Projects
+      run: |
+        Get-ChildItem -Path . -Filter '*.cdsproj' -Recurse | ForEach-Object {
+          $dir = $_.DirectoryName
+          Write-Host "Building project in $dir"
+          dotnet build -c release $dir
+        }
+      shell: pwsh
+      working-directory: "./src/"

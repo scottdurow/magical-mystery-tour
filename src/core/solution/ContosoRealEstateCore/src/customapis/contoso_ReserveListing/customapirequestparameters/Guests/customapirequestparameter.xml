@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Guests">
+  <description default="Guests">
+    <label description="Guests" languagecode="1033" />
+  </description>
+  <displayname default="Guests">
+    <label description="Guests" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>Guests</name>
+  <type>7</type>
+</customapirequestparameter>

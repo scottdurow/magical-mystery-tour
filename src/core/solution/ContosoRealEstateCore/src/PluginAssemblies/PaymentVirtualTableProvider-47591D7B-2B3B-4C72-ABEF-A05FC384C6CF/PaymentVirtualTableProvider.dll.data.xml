@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="PaymentVirtualTableProvider, Version=1.0.0.25, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginAssemblyId="47591d7b-2b3b-4c72-abef-a05fc384c6cf" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <ManagedIdentityId>fcdb7ca6-8d5e-ef11-bfe2-002248083aae</ManagedIdentityId>
+  <FileName>/PluginAssemblies/PaymentVirtualTableProvider-47591D7B-2B3B-4C72-ABEF-A05FC384C6CF/PaymentVirtualTableProvider.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="PaymentProvider.CreatePlugin, PaymentVirtualTableProvider, Version=1.0.0.25, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginTypeId="7330cb97-5d38-45a8-b776-877408eb5432" Name="PaymentProvider.CreatePlugin">
+      <FriendlyName>66c219a4-a957-4bfb-b087-148365303989</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="PaymentProvider.DeletePlugin, PaymentVirtualTableProvider, Version=1.0.0.25, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginTypeId="f3245599-69ea-4640-9a87-78fb894805dd" Name="PaymentProvider.DeletePlugin">
+      <FriendlyName>d274a6b1-3fee-4d0a-ac82-3173218fcfbd</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="PaymentProvider.RetrieveMultiplePlugin, PaymentVirtualTableProvider, Version=1.0.0.25, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginTypeId="a4737a08-1cee-4948-ae5b-7bc251f6be08" Name="PaymentProvider.RetrieveMultiplePlugin">
+      <FriendlyName>76d37436-a130-44b7-af60-2022912ce85f</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="PaymentProvider.RetrievePlugin, PaymentVirtualTableProvider, Version=1.0.0.25, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginTypeId="e1fac7ee-bd3d-4f99-92cf-5765cf2fd4cc" Name="PaymentProvider.RetrievePlugin">
+      <FriendlyName>289e5b54-ac7a-415d-9a67-1059c6d5048f</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="PaymentProvider.UpdatePlugin, PaymentVirtualTableProvider, Version=1.0.0.25, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" PluginTypeId="aba938e2-c6de-4980-97a9-55cd325ad561" Name="PaymentProvider.UpdatePlugin">
+      <FriendlyName>706f6de8-f16a-4772-a72e-e6dd93fdbc2c</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

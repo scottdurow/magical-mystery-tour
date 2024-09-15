@@ -1,0 +1,67 @@
+# This workflow is triggered manually
+# It will deploy the latest solutions to the development, testing, and production environments
+name: Deploy
+    
+permissions:
+  id-token: write
+  packages: write
+  contents: write
+  
+on:
+  workflow_dispatch:
+    inputs:
+      stageAndUpgrade:
+        description: 'Stage and Upgrade'
+        type: boolean
+        default: false
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Note:   The environment secrets are defined here, but acutally provided by the environment that the
+#         child workflow runs under. They don't exist as repo secrets
+# See: https://github.com/actions/runner/issues/1490
+jobs:
+    development:
+      uses: ./.github/workflows/deploy-environment.yml
+      with:
+          environment: 'development'
+          stageAndUpgrade: ${{ github.event.inputs.stageAndUpgrade }}
+      secrets:
+        PAC_DEPLOY_CLIENT_ID: ${{ secrets.PAC_DEPLOY_CLIENT_ID }}
+        PAC_DEPLOY_ENV_URL: ${{ secrets.PAC_DEPLOY_ENV_URL }}
+        PAC_DEPLOY_AZURE_TENANT_ID: ${{ secrets.PAC_DEPLOY_AZURE_TENANT_ID }}
+        PLUGIN_MANAGED_IDENTITY_APP_ID: ${{ secrets.PLUGIN_MANAGED_IDENTITY_APP_ID }}
+      name: Development
+      
+    testing:
+      if: false
+      uses: ./.github/workflows/deploy-environment.yml
+      with:
+          environment: 'testing'
+          stageAndUpgrade: ${{ github.event.inputs.stageAndUpgrade }}
+      secrets:
+        PAC_DEPLOY_CLIENT_ID: ${{ secrets.PAC_DEPLOY_CLIENT_ID }}
+        PAC_DEPLOY_ENV_URL: ${{ secrets.PAC_DEPLOY_ENV_URL }}
+        PAC_DEPLOY_AZURE_TENANT_ID: ${{ secrets.PAC_DEPLOY_AZURE_TENANT_ID }}
+        PLUGIN_MANAGED_IDENTITY_APP_ID: ${{ secrets.PLUGIN_MANAGED_IDENTITY_APP_ID }}
+      needs: development
+      name: Testing
+      
+    production:
+      if: false
+      uses: ./.github/workflows/deploy-environment.yml
+      with:
+          environment: 'production'
+          stageAndUpgrade: ${{ github.event.inputs.stageAndUpgrade =='true' }}
+      secrets:    
+        PAC_DEPLOY_CLIENT_ID: ${{ secrets.PAC_DEPLOY_CLIENT_ID }}
+        PAC_DEPLOY_ENV_URL: ${{ secrets.PAC_DEPLOY_ENV_URL }}
+        PAC_DEPLOY_AZURE_TENANT_ID: ${{ secrets.PAC_DEPLOY_AZURE_TENANT_ID }}
+        PLUGIN_MANAGED_IDENTITY_APP_ID: ${{ secrets.PLUGIN_MANAGED_IDENTITY_APP_ID }}
+      needs: [testing, development]
+      name: Production
+
+    
+

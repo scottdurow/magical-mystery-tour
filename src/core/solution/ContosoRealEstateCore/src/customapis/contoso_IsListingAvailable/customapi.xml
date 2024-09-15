@@ -1,0 +1,21 @@
+<customapi uniquename="contoso_IsListingAvailable">
+  <allowedcustomprocessingsteptype>1</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Determines if a listing is available between two dates">
+    <label description="Determines if a listing is available between two dates" languagecode="1033" />
+  </description>
+  <displayname default="Is Listing Available">
+    <label description="Is Listing Available" languagecode="1033" />
+  </displayname>
+  <fxexpressionid>
+    <uniquename>contoso_IsListingAvailable</uniquename>
+  </fxexpressionid>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Is Listing Available</name>
+  <plugintypeid>
+    <plugintypeexportkey>462b3e8f-beb4-4981-9b87-a60c2162a9f7</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

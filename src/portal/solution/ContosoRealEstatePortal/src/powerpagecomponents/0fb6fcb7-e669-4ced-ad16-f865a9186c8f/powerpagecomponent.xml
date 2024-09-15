@@ -1,0 +1,20 @@
+<powerpagecomponent powerpagecomponentid="0fb6fcb7-e669-4ced-ad16-f865a9186c8f">
+  <content>{
+  "filecontent": null,
+  "display_name": "Logo URL",
+  "type": 756150000,
+  "value": "/contoso-rea-estate-logo.png",
+  "copy": "undefined"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Logo URL</name>
+  <powerpagecomponenttype>7</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>f81f1fb6-ea27-423b-85a9-56d1c6f61823</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

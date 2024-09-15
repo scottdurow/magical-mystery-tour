@@ -1,0 +1,32 @@
+<powerpagecomponent powerpagecomponentid="efedd1b9-ded7-4fb4-b77a-882fed5ea668">
+  <content>{
+  "entityname": "Listing Fee - Read",
+  "entitylogicalname": "contoso_listingfee",
+  "scope": 756150000,
+  "append": false,
+  "appendto": false,
+  "delete": false,
+  "read": true,
+  "create": false,
+  "write": false,
+  "parentrelationship": null,
+  "parententitypermission": null,
+  "contactrelationship": null,
+  "accountrelationship": null,
+  "childTablePermissions": [],
+  "adx_entitypermission_webrole": [
+    "c9a8de89-e8e6-4e82-b7e7-03e87b05bad2",
+    "dc2b1fc1-27fd-4af6-b084-0dee12022fcc",
+    "cdefbb53-dda6-4f5d-a6c9-90c14224e417"
+  ],
+  "copy": "undefined"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Listing Fee - Read</name>
+  <powerpagecomponenttype>18</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

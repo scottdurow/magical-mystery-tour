@@ -1,0 +1,11 @@
+<botcomponent schemaname="contoso_3c237b1a-7213-4759-b062-c6294730ec77.topic.MultipleTopicsMatched">
+  <componenttype>9</componenttype>
+  <description>This system topic triggers when the bot matches multiple Topics with the incoming message and needs to clarify which one should be triggered.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Multiple Topics Matched</name>
+  <parentbotid>
+    <schemaname>contoso_3c237b1a-7213-4759-b062-c6294730ec77</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

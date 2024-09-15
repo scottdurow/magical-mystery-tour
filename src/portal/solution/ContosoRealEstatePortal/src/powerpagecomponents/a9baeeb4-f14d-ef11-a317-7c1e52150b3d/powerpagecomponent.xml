@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="a9baeeb4-f14d-ef11-a317-7c1e52150b3d">
+  <content>{"adx_flowapiurl":"/_api/cloudflow/v1.0/trigger/aab06feb-994b-ef11-a317-7c1e52150b3d","adx_flowtriggerurl":"https://unitedstates-002.azure-apim.net:443/apim/logicflows/DAF4E3555F8A90D6BF7A110280F8D31C-BAD8F153DFA6AC4E/triggers/manual/run?api-version=2016-06-01","adx_metadata":"daf4e355-5f8a-90d6-bf7a-110280f8d31c","adx_CloudFlowConsumer_adx_webrole":["dc2b1fc1-27fd-4af6-b084-0dee12022fcc","cdefbb53-dda6-4f5d-a6c9-90c14224e417"],"_adx_processid_value":"aab06feb-994b-ef11-a317-7c1e52150b3d"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Contoso Real Estate Portal - Checkout</name>
+  <powerpagecomponenttype>33</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

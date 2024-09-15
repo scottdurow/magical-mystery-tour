@@ -1,0 +1,16 @@
+{
+  "ContosoRealEstateCore":{
+    "EnvironmentVariables": [
+      {
+        "SchemaName": "contoso_PaymentsApiBaseUrl",
+        "Value": ""
+      },
+      {
+        "SchemaName": "contoso_PaymentsApiHost",
+        "Value": ""
+      }
+    ],
+    "ConnectionReferences": [],
+    "ImportData": ["src/core/data/reference-data/data.zip","src/core/data/sample-data/data.zip"]
+  }
+}

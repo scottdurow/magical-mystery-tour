@@ -1,0 +1,29 @@
+<powerpagecomponent powerpagecomponentid="1ae78dc6-2c17-14c6-d247-9e22de4b4771">
+  <content>{
+  "displayorder": 4,
+  "customcss": "",
+  "customjavascript": "",
+  "pagetemplateid": "cabe5d40-f0c1-4676-9f87-8972abcdd2da",
+  "parentpageid": "435d2a33-2b59-420f-a537-ca97fb2cf115",
+  "partialurl": "Listings-Table",
+  "isroot": true,
+  "title": "Listings (Table)",
+  "summary": "&lt;p&gt;This is a sample landing page designed to be a starting point for your website&lt;/p&gt;",
+  "copy": "",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": true,
+  "sharedpageconfiguration": false
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Listings (Table)</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <searchcontent>Listings (Table)Listings (Table)</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

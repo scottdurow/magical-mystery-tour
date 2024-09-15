@@ -1,0 +1,18 @@
+<powerpagecomponent powerpagecomponentid="dea6e5af-62ca-2f12-f990-f7f6123d4b36">
+  <content>{
+  "webpageid": "2d6d247d-77ea-221f-4384-55cb8c2d9d32",
+  "right": 2,
+  "scope": 1,
+  "adx_webpageaccesscontrolrule_webrole": [
+    "cdefbb53-dda6-4f5d-a6c9-90c14224e417"
+  ]
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Restrict Read on Admin</name>
+  <powerpagecomponenttype>10</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

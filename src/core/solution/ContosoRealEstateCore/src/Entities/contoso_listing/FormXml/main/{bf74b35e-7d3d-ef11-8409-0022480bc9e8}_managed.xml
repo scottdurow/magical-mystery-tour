@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{bf74b35e-7d3d-ef11-8409-0022480bc9e8}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{0e92c4c2-fcdf-4841-a603-d2f3d9cdee64}" IsUserDefined="1" labelid="{1465ba50-5eaa-4809-98be-ef7d758ee7a3}">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{a04a3f25-43f7-44c1-a11e-c50963fe078c}" labelid="{01256ca8-6ffd-4d14-98de-5b30a50fcd3a}" columns="11">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5006ad70-f58d-4fe0-9beb-669c44aa6edb}" labelid="{6b20f4e8-6440-4694-9662-7908b2175010}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="contoso_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="contoso_name" />
+                      </cell>
+                      <cell id="{f3b4c67d-42e2-49c2-969a-953637e63c6f}" locklevel="0" colspan="1" rowspan="1" labelid="{a44a1de4-6c95-4f3b-b006-26d0c182a57a}">
+                        <labels>
+                          <label description="Number of Bedrooms" languagecode="1033" />
+                        </labels>
+                        <control id="contoso_numberofbedrooms" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="contoso_numberofbedrooms" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{208d01d8-f642-4e6b-bc1e-466273d7657d}" labelid="{282dbc77-f3a2-494f-a8f0-3eea4417148a}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell id="{a345d622-677e-4c7a-9dc3-409af5ea7b35}" labelid="{81c3dad1-bdf0-4fef-b943-4ba70599f2d7}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Features" languagecode="1033" />
+                        </labels>
+                        <control id="contoso_features" classid="{4aa28ab7-9c13-4f57-a73d-ad894d048b5f}" datafieldname="contoso_features" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dacdcb3d-87c4-498b-8271-aba8baa798a3}" labelid="{ac326cfa-0185-4648-99a8-1295a22797fc}">
+                        <labels>
+                          <label description="Listing ID" languagecode="1033" />
+                        </labels>
+                        <control id="contoso_listingid1" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="contoso_listingid1" />
+                      </cell>
+                      <cell id="{00b55ca0-e590-4bac-b6c9-740d25169bc0}" labelid="{c7a28371-cb0b-4163-b14e-4c15456466fa}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Price per Month" languagecode="1033" />
+                        </labels>
+                        <control id="contoso_pricepermonth" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="contoso_pricepermonth" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3ec6ede1-c975-4485-a3ab-fb41def678ea}" locklevel="0" colspan="1" rowspan="1" labelid="{e0706814-6223-4b04-a6e3-10a4e5bbc76f}">
+                        <labels>
+                          <label description="Primary Image" languagecode="1033" />
+                        </labels>
+                        <control id="contoso_primaryimage" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="contoso_primaryimage" disabled="false">
+                          <parameters>
+                            <DependentAttributeName>contoso_listingimage.contoso_listing</DependentAttributeName>
+                            <DependentAttributeType>contoso_listing</DependentAttributeType>
+                            <FilterRelationshipName>contoso_listingimage_listing</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2d09e994-9219-4dc8-b346-2b8547766d91}" labelid="{171d670c-1af9-456e-83d1-a7f92fc0abcd}">
+                        <labels>
+                          <label description="Address" languagecode="1033" />
+                        </labels>
+                        <control id="contoso_address" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="contoso_address" />
+                      </cell>
+                      <cell locklevel="0" id="{615db49a-02c0-4dd7-8143-4ccebc6d763f}" labelid="{8aba7a65-961d-4bdd-bea9-5786284c32ed}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7e002e4c-59cb-4b9d-818e-c222c4defcdd}" labelid="{1c022e81-c584-474a-b8f1-2e10c65b6415}">
+                        <labels>
+                          <label description="Display Name" languagecode="1033" />
+                        </labels>
+                        <control id="contoso_displayname" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="contoso_displayname" />
+                      </cell>
+                      <cell locklevel="0" id="{79783711-695b-4edc-8667-90c3677b9293}" labelid="{e9855eb0-f7f4-4f36-a716-074d9a8dfb18}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{341f047d-fa50-47a1-a571-35e7195a31a5}" labelid="{8cd1c684-cf4e-48bb-ba11-8d6b3a9e4be4}" colspan="2">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="contoso_description" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="contoso_description" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{b5d52766-42c4-47ba-a360-0124134aee68}" rowspan="4" colspan="2" auto="false" labelid="{37f49d78-7d12-4920-971b-774354d96534}">
+                        <labels>
+                          <label description="Fees" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="subgrid_fees" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{0cc3eff1-33d7-4e14-9884-1ac55b3f9fae}">
+                          <parameters>
+                            <RecordsPerPage>10</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>false</EnableChartPicker>
+                            <ChartGridMode>Grid</ChartGridMode>
+                            <TargetEntityType>contoso_listingfee</TargetEntityType>
+                            <ViewId>{3BD82687-3634-43FF-A95B-4E993CE68EB6}</ViewId>
+                            <ViewIds>{3BD82687-3634-43FF-A95B-4E993CE68EB6}</ViewIds>
+                            <RelationshipName>contoso_listingfee_listing</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="85bd2341-3b4c-4020-a4d3-d6c06ec09680" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false" labelid="{b4c6a778-52f6-41f1-9530-63d00b8c7aee}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{7023049f-9a79-41d2-a850-7f1f9f4dfbf2}" rowspan="4" colspan="1" auto="false" labelid="{08d11fa2-58bb-46ab-bbe0-97a8f147c0f5}">
+                        <labels>
+                          <label description="New SG control 1713225685192" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_2" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>contoso_listingimage</TargetEntityType>
+                            <ViewId>{CEEF7CC8-25F9-EE11-A1FE-6045BD05A326}</ViewId>
+                            <ViewIds>{5DAA40ED-A6DF-4062-89D9-4782C0C0BB14},{6ED9DAFB-AFFA-EE11-A1FE-6045BD05A326},{CEEF7CC8-25F9-EE11-A1FE-6045BD05A326}</ViewIds>
+                            <RelationshipName>contoso_listingimage_listing</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="_section_590" id="add648b0-2537-4d0e-8839-ca55f307bdc8" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{bb8fda81-646f-49af-8d6c-3015fe2a351c}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{e9438316-525f-4872-a9d3-5021b2cd4867}" rowspan="4" colspan="1" auto="true" labelid="{4f52917e-4aaf-42b5-8e18-7e3ecca5179b}" showlabel="false">
+                        <labels>
+                          <label description="Images" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{8f116496-0a2f-4b70-9234-12b4ccdd111a}">
+                          <parameters>
+                            <RecordsPerPage>10</RecordsPerPage>
+                            <AutoExpand>Auto</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>false</EnableChartPicker>
+                            <ChartGridMode>Grid</ChartGridMode>
+                            <TargetEntityType>contoso_listingimage</TargetEntityType>
+                            <ViewId>{6CC83970-1D04-EF11-9F89-0022480C5A42}</ViewId>
+                            <ViewIds>{5DAA40ED-A6DF-4062-89D9-4782C0C0BB14},{CEEF7CC8-25F9-EE11-A1FE-6045BD05A326},{6CC83970-1D04-EF11-9F89-0022480C5A42}</ViewIds>
+                            <RelationshipName>contoso_listingimage_listing</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_reservations" id="a47cd45f-9569-4496-b651-cc9056a60ac9" IsUserDefined="0" locklevel="0" showlabel="true" contenttype="singleComponent" labelid="{82ec5080-f598-458e-b625-8081a344fe10}">
+          <labels>
+            <label description="Reservations" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_2_section_1" id="d4abe6c4-7d41-4b30-b7fb-9d2199dd1214" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{07abb8f6-e44e-49aa-9d44-4404f34a5de8}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{568d9e73-c184-4afc-8be2-59fa27a6038a}" rowspan="4" colspan="1" auto="false" showlabel="false" labelid="{ee7c3483-bf97-41dc-b947-b39830363161}">
+                        <labels>
+                          <label description="Listing Images" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_3" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{3cd3c490-351e-4a7d-b5e8-f7c2da6425bd}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>contoso_reservation</TargetEntityType>
+                            <ViewId>{98ED897F-3967-4A0B-A194-587F690CACCB}</ViewId>
+                            <ViewIds>{98ED897F-3967-4A0B-A194-587F690CACCB}</ViewIds>
+                            <RelationshipName>contoso_reservation_listing</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_3" id="fef7f6d7-a0a8-45cf-9749-885584ef6a4f" IsUserDefined="0" locklevel="0" showlabel="true" labelid="{818659b5-ee08-41cb-9628-6d374213223f}">
+          <labels>
+            <label description="AI Summary" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_3_section_1" id="883e72c2-56ae-4848-b818-44b008b838bd" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{e057946e-c48b-4ca6-8d14-29e89f29c0fc}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{01acde11-a925-4d44-8694-71a9ffb8236f}" locklevel="0" colspan="1" rowspan="7" labelid="{6aa4f820-4cd9-40b7-8b7a-ef8be1e89194}">
+                        <labels>
+                          <label description="Summary" languagecode="1033" />
+                        </labels>
+                        <control id="contoso_summary" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="contoso_summary" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{ef1e2e08-c374-44ef-a607-6b73e7c914d3}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{3a2f8982-d80b-4431-b11a-781247b01ac5}" showlabel="false" labelid="{90900bba-144b-47cb-89c6-969681486988}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c9464b69-5057-48ff-a502-430bc2771a9b}" showlabel="false" labelid="{5613b465-6c0f-49a2-873c-9afcac5598af}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{8e37d186-c240-408a-afc4-e2530f149180}" showlabel="false" labelid="{7dbdfe43-051f-4b45-9106-4cac7c81b943}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{c36afb3f-14df-495a-874c-4439f5ee6f29}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{6edb154c-aff6-403c-acf0-a3a040291b9b}" showlabel="false" labelid="{7fef2908-3be0-4de4-8f15-0b40c514fc6e}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{3aef7b40-97ba-4769-82ce-d4cef98d96a0}" showlabel="false" labelid="{29967976-1c7c-46b6-82ea-5e0634cbd862}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{9d1e26be-9428-4ce2-8e3a-a290be6fc446}" showlabel="false" labelid="{18c3ad4c-4bcb-48c5-af3a-8e02da8b9714}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="4" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+      <controlDescriptions>
+        <controlDescription forControl="{3cd3c490-351e-4a7d-b5e8-f7c2da6425bd}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters>
+              <RecordsPerPage>4</RecordsPerPage>
+              <AutoExpand>Fixed</AutoExpand>
+              <EnableQuickFind>false</EnableQuickFind>
+              <EnableViewPicker>true</EnableViewPicker>
+              <EnableChartPicker>true</EnableChartPicker>
+              <ChartGridMode>All</ChartGridMode>
+              <TargetEntityType>contoso_reservation</TargetEntityType>
+              <ViewId>{98ED897F-3967-4A0B-A194-587F690CACCB}</ViewId>
+              <ViewIds>{98ED897F-3967-4A0B-A194-587F690CACCB}</ViewIds>
+              <RelationshipName>contoso_reservation_listing</RelationshipName>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ActivityCalendarControl.ActivityCalendarControl">
+            <parameters>
+              <data-set name="Calendar">
+                <ViewId>{98ed897f-3967-4a0b-a194-587f690caccb}</ViewId>
+                <TargetEntityType>contoso_reservation</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>contoso_reservation_listing</RelationshipName>
+                <FilteredViewIds>{98ED897F-3967-4A0B-A194-587F690CACCB}</FilteredViewIds>
+                <StartDate>contoso_from</StartDate>
+                <Description>contoso_name</Description>
+                <EndDate>contoso_to</EndDate>
+                <Color>contoso_reservationstatus</Color>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.ActivityCalendarControl.ActivityCalendarControl">
+            <parameters>
+              <data-set name="Calendar">
+                <ViewId>{98ed897f-3967-4a0b-a194-587f690caccb}</ViewId>
+                <TargetEntityType>contoso_reservation</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>contoso_reservation_listing</RelationshipName>
+                <FilteredViewIds>{98ED897F-3967-4A0B-A194-587F690CACCB}</FilteredViewIds>
+                <StartDate>contoso_from</StartDate>
+                <Description>contoso_name</Description>
+                <EndDate>contoso_to</EndDate>
+                <Color>contoso_reservationstatus</Color>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ActivityCalendarControl.ActivityCalendarControl">
+            <parameters>
+              <data-set name="Calendar">
+                <ViewId>{98ed897f-3967-4a0b-a194-587f690caccb}</ViewId>
+                <TargetEntityType>contoso_reservation</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>true</EnableViewPicker>
+                <RelationshipName>contoso_reservation_listing</RelationshipName>
+                <FilteredViewIds>{98ED897F-3967-4A0B-A194-587F690CACCB}</FilteredViewIds>
+                <StartDate>contoso_from</StartDate>
+                <Description>contoso_name</Description>
+                <EndDate>contoso_to</EndDate>
+                <Color>contoso_reservationstatus</Color>
+              </data-set>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{0cc3eff1-33d7-4e14-9884-1ac55b3f9fae}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters>
+              <RecordsPerPage>10</RecordsPerPage>
+              <AutoExpand>Fixed</AutoExpand>
+              <EnableQuickFind>false</EnableQuickFind>
+              <EnableViewPicker>false</EnableViewPicker>
+              <EnableChartPicker>false</EnableChartPicker>
+              <ChartGridMode>Grid</ChartGridMode>
+              <TargetEntityType>contoso_listingfee</TargetEntityType>
+              <ViewId>{3BD82687-3634-43FF-A95B-4E993CE68EB6}</ViewId>
+              <ViewIds>{3BD82687-3634-43FF-A95B-4E993CE68EB6}</ViewIds>
+              <RelationshipName>contoso_listingfee_listing</RelationshipName>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.Grid.PCFGridControl">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{3BD82687-3634-43FF-A95B-4E993CE68EB6}</ViewId>
+                <TargetEntityType>contoso_listingfee</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>contoso_listingfee_listing</RelationshipName>
+                <FilteredViewIds>{3BD82687-3634-43FF-A95B-4E993CE68EB6}</FilteredViewIds>
+              </data-set>
+              <ColumnResizing type="Enum" static="true">Enable</ColumnResizing>
+              <ColumnMoving type="Enum" static="true">Disable</ColumnMoving>
+              <ColumnPinning type="Enum" static="true">Disable</ColumnPinning>
+              <RowStyle type="Enum" static="true">Flat</RowStyle>
+              <RowSelection type="Enum" static="true">Multiple</RowSelection>
+              <SelectionColumn type="Enum" static="true">Enable</SelectionColumn>
+              <JumpBar type="Enum" static="true">Disable</JumpBar>
+              <Footer type="Enum" static="true">Enable</Footer>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+              <EnableFiltering type="Enum" static="true">Disable</EnableFiltering>
+              <EnableRangeSelection type="Enum" static="true">no</EnableRangeSelection>
+              <NavigationTypesAllowed type="Enum" static="true">primaryOnly</NavigationTypesAllowed>
+              <RowHeight type="Whole.None" static="true">42</RowHeight>
+              <RowHeightMobile type="Whole.None" static="true">72</RowHeightMobile>
+              <HeaderHeight type="Whole.None" static="true">42</HeaderHeight>
+              <GridInnerLeftPadding type="Whole.None" static="true">32</GridInnerLeftPadding>
+              <GridInnerRightPadding type="Whole.None" static="true">32</GridInnerRightPadding>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Grid.PCFGridControl">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{3BD82687-3634-43FF-A95B-4E993CE68EB6}</ViewId>
+                <TargetEntityType>contoso_listingfee</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>contoso_listingfee_listing</RelationshipName>
+                <FilteredViewIds>{3BD82687-3634-43FF-A95B-4E993CE68EB6}</FilteredViewIds>
+              </data-set>
+              <ColumnResizing type="Enum" static="true">Enable</ColumnResizing>
+              <ColumnMoving type="Enum" static="true">Disable</ColumnMoving>
+              <ColumnPinning type="Enum" static="true">Disable</ColumnPinning>
+              <RowStyle type="Enum" static="true">Flat</RowStyle>
+              <RowSelection type="Enum" static="true">Multiple</RowSelection>
+              <SelectionColumn type="Enum" static="true">Enable</SelectionColumn>
+              <JumpBar type="Enum" static="true">Disable</JumpBar>
+              <Footer type="Enum" static="true">Enable</Footer>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+              <EnableFiltering type="Enum" static="true">Disable</EnableFiltering>
+              <EnableRangeSelection type="Enum" static="true">no</EnableRangeSelection>
+              <NavigationTypesAllowed type="Enum" static="true">primaryOnly</NavigationTypesAllowed>
+              <RowHeight type="Whole.None" static="true">42</RowHeight>
+              <RowHeightMobile type="Whole.None" static="true">72</RowHeightMobile>
+              <HeaderHeight type="Whole.None" static="true">42</HeaderHeight>
+              <GridInnerLeftPadding type="Whole.None" static="true">32</GridInnerLeftPadding>
+              <GridInnerRightPadding type="Whole.None" static="true">32</GridInnerRightPadding>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Grid.PCFGridControl">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{3BD82687-3634-43FF-A95B-4E993CE68EB6}</ViewId>
+                <TargetEntityType>contoso_listingfee</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>contoso_listingfee_listing</RelationshipName>
+                <FilteredViewIds>{3BD82687-3634-43FF-A95B-4E993CE68EB6}</FilteredViewIds>
+              </data-set>
+              <ColumnResizing type="Enum" static="true">Enable</ColumnResizing>
+              <ColumnMoving type="Enum" static="true">Disable</ColumnMoving>
+              <ColumnPinning type="Enum" static="true">Disable</ColumnPinning>
+              <RowStyle type="Enum" static="true">Flat</RowStyle>
+              <RowSelection type="Enum" static="true">Multiple</RowSelection>
+              <SelectionColumn type="Enum" static="true">Enable</SelectionColumn>
+              <JumpBar type="Enum" static="true">Disable</JumpBar>
+              <Footer type="Enum" static="true">Enable</Footer>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+              <EnableFiltering type="Enum" static="true">Disable</EnableFiltering>
+              <EnableRangeSelection type="Enum" static="true">no</EnableRangeSelection>
+              <NavigationTypesAllowed type="Enum" static="true">primaryOnly</NavigationTypesAllowed>
+              <RowHeight type="Whole.None" static="true">42</RowHeight>
+              <RowHeightMobile type="Whole.None" static="true">72</RowHeightMobile>
+              <HeaderHeight type="Whole.None" static="true">42</HeaderHeight>
+              <GridInnerLeftPadding type="Whole.None" static="true">32</GridInnerLeftPadding>
+              <GridInnerRightPadding type="Whole.None" static="true">32</GridInnerRightPadding>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{8f116496-0a2f-4b70-9234-12b4ccdd111a}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters />
+          </customControl>
+          <customControl formFactor="0" name="contoso_Contoso.ImageGrid">
+            <parameters>
+              <data-set name="Images">
+                <ViewId>{6cc83970-1d04-ef11-9f89-0022480c5a42}</ViewId>
+                <TargetEntityType>contoso_listingimage</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>contoso_listingimage_listing</RelationshipName>
+                <FilteredViewIds>{5DAA40ED-A6DF-4062-89D9-4782C0C0BB14},{CEEF7CC8-25F9-EE11-A1FE-6045BD05A326},{6CC83970-1D04-EF11-9F89-0022480C5A42}</FilteredViewIds>
+                <ImageName>contoso_name</ImageName>
+              </data-set>
+              <SubGridHeight type="Whole.None" static="true">500</SubGridHeight>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="contoso_Contoso.ImageGrid">
+            <parameters>
+              <data-set name="Images">
+                <ViewId>{6cc83970-1d04-ef11-9f89-0022480c5a42}</ViewId>
+                <TargetEntityType>contoso_listingimage</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>contoso_listingimage_listing</RelationshipName>
+                <FilteredViewIds>{5DAA40ED-A6DF-4062-89D9-4782C0C0BB14},{CEEF7CC8-25F9-EE11-A1FE-6045BD05A326},{6CC83970-1D04-EF11-9F89-0022480C5A42}</FilteredViewIds>
+                <ImageName>contoso_name</ImageName>
+              </data-set>
+              <SubGridHeight type="Whole.None" static="true">500</SubGridHeight>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="contoso_Contoso.ImageGrid">
+            <parameters>
+              <data-set name="Images">
+                <ViewId>{6cc83970-1d04-ef11-9f89-0022480c5a42}</ViewId>
+                <TargetEntityType>contoso_listingimage</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>contoso_listingimage_listing</RelationshipName>
+                <FilteredViewIds>{5DAA40ED-A6DF-4062-89D9-4782C0C0BB14},{CEEF7CC8-25F9-EE11-A1FE-6045BD05A326},{6CC83970-1D04-EF11-9F89-0022480C5A42}</FilteredViewIds>
+                <ImageName>contoso_name</ImageName>
+              </data-set>
+              <SubGridHeight type="Whole.None" static="true">500</SubGridHeight>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <Navigation>
+        <NavBar>
+          <NavBarByRelationshipItem Area="Info" Show="true" RelationshipName="contoso_listingimage_listing" Id="nav_contoso_listingimage_listing" Sequence="9001">
+            <Titles>
+              <Title Text="Listing Images" LCID="1033" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem Area="ProcessCenter" Show="false" RelationshipName="hardcoded_{B7196B13-6B9D-42CD-BD58-B19A3953126F}navAsyncOperations" Id="navAsyncOperations" Sequence="9500">
+            <Titles>
+              <Title Text="Background Processes" LCID="1033" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem Area="Info" Show="true" RelationshipName="hardcoded_{B7196B13-6B9D-42CD-BD58-B19A3953126F}navAudit" Id="navAudit" Sequence="9002">
+            <Titles>
+              <Title Text="Audit History" LCID="1033" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem Area="Info" Show="true" RelationshipName="contoso_reservation_listing" Id="nav_contoso_reservation_listing" Sequence="9000">
+            <Titles>
+              <Title Text="Reservations" LCID="1033" />
+            </Titles>
+          </NavBarByRelationshipItem>
+        </NavBar>
+      </Navigation>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Listing (Portal)" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

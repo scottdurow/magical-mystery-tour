@@ -1,0 +1,5 @@
+<botcomponent_environmentvariabledefinitionset>
+  <botcomponent_environmentvariabledefinition botcomponentid.schemaname="contoso_3c237b1a-7213-4759-b062-c6294730ec77.topic.Search" environmentvariabledefinitionid.schemaname="contoso_ContosoRealEstatePortalUrl">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_environmentvariabledefinition>
+</botcomponent_environmentvariabledefinitionset>

@@ -1,0 +1,40 @@
+<powerpagecomponent powerpagecomponentid="ceee8d16-12d5-7837-abc1-315d60e06b64">
+  <content>{
+  "displayorder": 3,
+  "pagetemplateid": "cabe5d40-f0c1-4676-9f87-8972abcdd2da",
+  "parentpageid": "435d2a33-2b59-420f-a537-ca97fb2cf115",
+  "partialurl": "Search-Listings-PCF",
+  "isroot": false,
+  "rootwebpageid": "37916fc8-5cb1-06f7-55f6-73ac7bb733e9",
+  "title": "Search Listings (PCF)",
+  "summary": "&lt;p&gt;Search listings&lt;/p&gt;",
+  "copy": "&lt;div id=\"i7d04\" class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; min-height: 361px; padding: 8px; margin: 0px;\"&gt;\n  &lt;div id=\"icysd\" class=\"container\" style=\"display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"i8oxn\" class=\"col-lg-12 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; min-width: 300px; display: flex; flex-direction: column; margin: 20px 0px; padding: 16px;\"&gt;\n      &lt;h2 id=\"i58ri\"&gt;Search Listings&lt;/h2&gt;\n      &lt;p id=\"igt0n\"&gt;Check out our latest featured listings and find your dream home today!&lt;/p&gt;\n      {% include \"PortalUIComponent\" input_route:\"SearchListings\" %}\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": true,
+  "sharedpageconfiguration": false,
+  "feedbackpolicy": 756150000
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Search Listings (PCF)</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>f81f1fb6-ea27-423b-85a9-56d1c6f61823</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Search Listings (PCF)&lt;div id="i7d04" class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; min-height: 361px; padding: 8px; margin: 0px;"&gt;
+  &lt;div id="icysd" class="container" style="display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="i8oxn" class="col-lg-12 columnBlockLayout" style="word-break: break-word; flex-grow: 1; min-width: 300px; display: flex; flex-direction: column; margin: 20px 0px; padding: 16px;"&gt;
+      &lt;h2 id="i58ri"&gt;Search Listings&lt;/h2&gt;
+      &lt;p id="igt0n"&gt;Check out our latest featured listings and find your dream home today!&lt;/p&gt;
+      {% include "PortalUIComponent" input_route:"SearchListings" %}
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;Search Listings (PCF)</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

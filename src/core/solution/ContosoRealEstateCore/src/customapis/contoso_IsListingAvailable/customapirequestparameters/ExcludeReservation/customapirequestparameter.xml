@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="ExcludeReservation">
+  <description default="ExcludeReservation">
+    <label description="ExcludeReservation" languagecode="1033" />
+  </description>
+  <displayname default="ExcludeReservation">
+    <label description="ExcludeReservation" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>ExcludeReservation</name>
+  <type>10</type>
+</customapirequestparameter>

@@ -1,0 +1,11 @@
+<botcomponent schemaname="contoso_3c237b1a-7213-4759-b062-c6294730ec77.topic.SignOutPPUser">
+  <componenttype>9</componenttype>
+  <description>This system topic triggers when the bot needs to sign out Power Pages user</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Sign Out PowerPages User </name>
+  <parentbotid>
+    <schemaname>contoso_3c237b1a-7213-4759-b062-c6294730ec77</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

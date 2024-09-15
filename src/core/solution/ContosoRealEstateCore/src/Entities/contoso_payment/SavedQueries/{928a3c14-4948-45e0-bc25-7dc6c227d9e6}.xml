@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{928a3c14-4948-45e0-bc25-7dc6c227d9e6}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="contoso_name" select="1" icon="1" preview="1">
+        <row name="result" id="contoso_paymentid">
+          <cell name="contoso_name" width="100" />
+          <cell name="contoso_createdon" width="105" />
+          <cell name="contoso_portaluser" width="187" />
+          <cell name="contoso_reservation" width="270" />
+          <cell name="contoso_amount" width="100" />
+          <cell name="contoso_currencycode" width="126" />
+          <cell name="contoso_provider" width="100" />
+          <cell name="contoso_status" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="contoso_payment">
+          <attribute name="contoso_paymentid" />
+          <attribute name="contoso_amount" />
+          <attribute name="contoso_currencycode" />
+          <attribute name="contoso_provider" />
+          <attribute name="contoso_status" />
+          <attribute name="contoso_createdon" />
+          <attribute name="contoso_portaluser" />
+          <attribute name="contoso_reservation" />
+          <order attribute="contoso_createdon" descending="false" />
+          <attribute name="contoso_name" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Payments" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

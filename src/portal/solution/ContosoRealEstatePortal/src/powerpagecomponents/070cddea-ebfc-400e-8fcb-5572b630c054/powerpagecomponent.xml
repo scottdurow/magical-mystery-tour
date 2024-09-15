@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="070cddea-ebfc-400e-8fcb-5572b630c054">
+  <content>{"adx_websiteaccess_webrole":["cdefbb53-dda6-4f5d-a6c9-90c14224e417"],"managecontentsnippets":true,"managesitemarkers":true,"manageweblinksets":true,"previewunpublishedentities":true}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Administrative permissions for Site design 005</name>
+  <powerpagecomponenttype>12</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

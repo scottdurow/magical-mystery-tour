@@ -1,0 +1,31 @@
+<powerpagecomponent powerpagecomponentid="5518505f-6c64-4e0a-9952-61a04b625c81">
+  <content>{
+  "entityname": "User Reservations",
+  "entitylogicalname": "contoso_reservation",
+  "scope": 756150001,
+  "append": false,
+  "appendto": false,
+  "delete": false,
+  "read": true,
+  "create": false,
+  "write": false,
+  "parentrelationship": null,
+  "parententitypermission": null,
+  "contactrelationship": "contoso_reservation_Customer_contact",
+  "accountrelationship": null,
+  "childTablePermissions": [],
+  "adx_entitypermission_webrole": [
+    "dc2b1fc1-27fd-4af6-b084-0dee12022fcc",
+    "cdefbb53-dda6-4f5d-a6c9-90c14224e417"
+  ],
+  "copy": "undefined"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>User Reservations</name>
+  <powerpagecomponenttype>18</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

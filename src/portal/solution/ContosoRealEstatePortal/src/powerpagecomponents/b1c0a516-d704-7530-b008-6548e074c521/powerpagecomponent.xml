@@ -1,0 +1,19 @@
+<powerpagecomponent powerpagecomponentid="b1c0a516-d704-7530-b008-6548e074c521">
+  <content>{
+  "webpageid": "7af5dfc1-e24c-36c0-53ba-c965249fc6e2",
+  "right": 2,
+  "scope": 1,
+  "adx_webpageaccesscontrolrule_webrole": [
+    "dc2b1fc1-27fd-4af6-b084-0dee12022fcc"
+  ],
+  "copy": "undefined"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Restrict Read on Checkout Result</name>
+  <powerpagecomponenttype>10</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

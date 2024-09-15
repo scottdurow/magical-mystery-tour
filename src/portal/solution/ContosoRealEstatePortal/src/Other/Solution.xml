@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.24072.202" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>ContosoRealEstatePortal</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Contoso Real Estate Portal" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.0</Version>
+    <Managed>2</Managed>
+    <Publisher>
+      <UniqueName>ContosoRealEstate</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Contoso Real Estate" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>contoso</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>33065</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="contact" behavior="2" />
+      <RootComponent type="1" schemaName="contoso_listing" behavior="2" />
+      <RootComponent type="1" schemaName="contoso_reservation" behavior="2" />
+      <RootComponent type="29" id="{420a877a-376b-ef11-a670-0022480a2deb}" behavior="0" />
+      <RootComponent type="29" id="{aab06feb-994b-ef11-a317-7c1e52150b3d}" behavior="0" />
+      <RootComponent type="401" id="{db30ad2e-2ec3-4840-aff0-af9e0e3c654d}" behavior="0" />
+      <RootComponent type="66" schemaName="contoso_Contoso.PortalReactUI" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="contoso_listing" displayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="1" schemaName="contoso_listing" displayName="Listing" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="contoso_listing" displayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="contoso_listingfee" displayName="Listing Fee" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="contoso_listingimage" displayName="Listing Image" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="contoso_reservation" displayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="1" schemaName="contoso_reservation" displayName="Listing Reservation" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="contoso_reservation" displayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="26" schemaName="My Reservations (Portal)" displayName="My Reservations (Portal)" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" id="{9cb3ccb1-a54f-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="contoso_reservation" displayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="29" displayName="Contoso Real Estate Portal - Checkout" id="{aab06feb-994b-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="contoso_reservation" displayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="contoso_contoso_listingimage" displayName="contoso_contoso_listingimage" parentSchemaName="contoso_listingimage" parentDisplayName="Listing Image" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="contoso_listingimage_listing" displayName="contoso_listingimage_listing" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="contoso_reservation_listing" displayName="contoso_reservation_listing" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_address" displayName="Address" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_amount" displayName="Amount" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="26" schemaName="My Reservations (Portal)" displayName="My Reservations (Portal)" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" id="{9cb3ccb1-a54f-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_description" displayName="Description" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_displayname" displayName="Display Name" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_features" displayName="Features" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_from" displayName="From" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="26" schemaName="My Reservations (Portal)" displayName="My Reservations (Portal)" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" id="{9cb3ccb1-a54f-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_from" displayName="From" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_guests" displayName="Guests" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="26" schemaName="My Reservations (Portal)" displayName="My Reservations (Portal)" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" id="{9cb3ccb1-a54f-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_listing" displayName="Listing" parentSchemaName="contoso_listingimage" parentDisplayName="Listing Image" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_listing" displayName="Listing" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="26" schemaName="My Reservations (Portal)" displayName="My Reservations (Portal)" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" id="{9cb3ccb1-a54f-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_listingid1" displayName="Listing ID" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_name" displayName="Name" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_name" displayName="Name" parentSchemaName="contoso_listingimage" parentDisplayName="Listing Image" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_name" displayName="Name" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_numberofbedrooms" displayName="Number of Bedrooms" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_pricepermonth" displayName="Price per Month" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_primaryimage" displayName="Primary Image" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_reservationid" displayName="Reservation" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="26" schemaName="My Reservations (Portal)" displayName="My Reservations (Portal)" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" id="{9cb3ccb1-a54f-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_reservationnumber" displayName="Reservation Number" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="26" schemaName="My Reservations (Portal)" displayName="My Reservations (Portal)" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" id="{9cb3ccb1-a54f-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_reservationstatus" displayName="Reservation Status" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="26" schemaName="My Reservations (Portal)" displayName="My Reservations (Portal)" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" id="{9cb3ccb1-a54f-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_reservationstatus" displayName="Reservation Status" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_summary" displayName="Summary" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_to" displayName="To" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="26" schemaName="My Reservations (Portal)" displayName="My Reservations (Portal)" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" id="{9cb3ccb1-a54f-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="contoso_to" displayName="To" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="contoso_listing" parentDisplayName="Listing" solution="Active" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Active Listing Fees" displayName="Active Listing Fees" parentSchemaName="contoso_listingfee" parentDisplayName="Listing Fee" solution="ContosoRealEstateCore (1.0.27.3)" id="{3bd82687-3634-43ff-a95b-4e993ce68eb6}" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Active Listing Images" displayName="Active Listing Images" parentSchemaName="contoso_listingimage" parentDisplayName="Listing Image" solution="ContosoRealEstateCore (1.0.27.3)" id="{5daa40ed-a6df-4062-89d9-4782c0c0bb14}" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Active Listing Images (inc. Image)" displayName="Active Listing Images (inc. Image)" parentSchemaName="contoso_listingimage" parentDisplayName="Listing Image" solution="ContosoRealEstateCore (1.0.27.3)" id="{6cc83970-1d04-ef11-9f89-0022480c5a42}" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Active Reservations" displayName="Active Reservations" parentSchemaName="contoso_reservation" parentDisplayName="Listing Reservation" solution="ContosoRealEstateCore (1.0.27.3)" id="{98ed897f-3967-4a0b-a194-587f690caccb}" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Listing Images Slider" displayName="Listing Images Slider" parentSchemaName="contoso_listingimage" parentDisplayName="Listing Image" solution="ContosoRealEstateCore (1.0.27.3)" id="{6ed9dafb-affa-ee11-a1fe-6045bd05a326}" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Portal Listing Images" displayName="Portal Listing Images" parentSchemaName="contoso_listingimage" parentDisplayName="Listing Image" solution="ContosoRealEstateCore (1.0.27.3)" id="{ceef7cc8-25f9-ee11-a1fe-6045bd05a326}" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="372" schemaName="contoso_contoso-20stripe-20api" displayName="Contoso Stripe API" solution="ContosoRealEstateCore (1.0.27.3)" id="{40698eb9-0663-43a9-ac72-9ef1a635570b}" />
+        <Dependent type="29" displayName="Contoso Real Estate Portal - Checkout" id="{aab06feb-994b-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="372" schemaName="contoso_contoso-20stripe-20api" displayName="Contoso Stripe API" solution="ContosoRealEstateCore (1.0.27.3)" id="{40698eb9-0663-43a9-ac72-9ef1a635570b}" />
+        <Dependent type="connectionreference" displayName="contoso_StripeAPI" id.connectionreferencelogicalname="contoso_StripeAPI" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="contoso_Contoso.ImageGrid" displayName="contoso_Contoso.ImageGrid" solution="ContosoRealEstateCustomControls (1.0.4.0)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.ActivityCalendarControl.ActivityCalendarControl" displayName="MscrmControls.ActivityCalendarControl.ActivityCalendarControl" solution="msdyn_UCICalendar (1.0.0.3946)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.Grid.PCFGridControl" displayName="MscrmControls.Grid.PCFGridControl" solution="BaseCustomControlsCore (9.0.2407.2024)" />
+        <Dependent type="60" displayName="Listing (Portal Form)" parentDisplayName="Listing" id="{fde29f11-2454-ef11-a317-7c1e52150b3d}" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

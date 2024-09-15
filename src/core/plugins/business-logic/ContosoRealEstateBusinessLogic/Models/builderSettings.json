@@ -1,0 +1,24 @@
+﻿{
+  "suppressINotifyPattern": true,
+  "suppressGeneratedCodeAttribute": false,
+  "language": "CS",
+  "namespace": "ContosoRealEstate.BusinessLogic.Models",
+  "generateSdkMessages": true,
+  "generateGlobalOptionSets": false,
+  "emitFieldsClasses": true,
+  "entityTypesFolder": "Entities",
+  "messagesTypesFolder": "Messages",
+  "optionSetsTypesFolder": "OptionSets",
+  "entityNamesFilter": [
+    "contact",
+    "contoso_listing",
+    "contoso_listingfee",
+    "contoso_reservation"
+  ],
+  "messageNamesFilter": [
+    "contoso_IsListingAvailableAPI",
+    "contoso_ReserveListingApi"
+  ],
+  "emitEntityETC": false,
+  "emitVirtualAttributes": false
+}

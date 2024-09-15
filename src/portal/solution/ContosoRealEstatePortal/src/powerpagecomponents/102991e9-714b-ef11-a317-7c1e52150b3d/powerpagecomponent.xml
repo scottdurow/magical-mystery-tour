@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="102991e9-714b-ef11-a317-7c1e52150b3d">
+  <content>{"botschemaname":"contoso_3c237b1a-7213-4759-b062-c6294730ec77","configjson":"{\"skillConfigViewName\":\"Contoso Real Estate Portal bot Answers\"}"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Bot Consumer</name>
+  <powerpagecomponenttype>27</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

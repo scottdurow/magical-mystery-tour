@@ -1,0 +1,57 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnUnknownIntent
+  id: main
+  priority: -1
+  actions:
+    - kind: SetVariable
+      id: powerPagesResponse
+      variable: Topic.PowerPagesResponse
+      value: =[]
+
+    - kind: SetVariable
+      id: powerPagesBearerToken
+      variable: Topic.PowerPagesBearerToken
+      value: "=\"Bearer \" & System.User.AccessToken"
+
+    - kind: HttpRequestAction
+      id: powerPagesHttpAction
+      method: Post
+      url: =$"{Env.contoso_ContosoRealEstatePortalUrl}/_services/copilot/QueryTextContext"
+      headers:
+        Authorization: =Topic.PowerPagesBearerToken
+
+      body:
+        kind: JsonRequestContent
+        content: "={userQuery:System.Activity.Text, keyWords:System.Activity.Text}"
+
+      requestTimeoutInMilliseconds: 120000
+      response: Topic.PowerPagesResponse
+      responseSchema:
+        kind: Table
+        properties:
+          Content:
+            displayName: Content
+            type: String
+
+          ContentLocation:
+            displayName: ContentLocation
+            type: String
+
+    - kind: SearchAndSummarizeContent
+      id: search-content
+      userInput: =System.Activity.Text
+      variable: Topic.Answer
+      moderationLevel: Medium
+      customDataSource:
+        searchResults: =Topic.PowerPagesResponse
+
+    - kind: ConditionGroup
+      id: has-answer-conditions
+      conditions:
+        - id: has-answer
+          condition: =!IsBlank(Topic.Answer)
+          actions:
+            - kind: EndDialog
+              id: end-topic
+              clearTopicQueue: true

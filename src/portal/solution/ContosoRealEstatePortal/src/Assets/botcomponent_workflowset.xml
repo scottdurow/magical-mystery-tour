@@ -1,0 +1,5 @@
+<botcomponent_workflowset>
+  <botcomponent_workflow botcomponentid.schemaname="contoso_3c237b1a-7213-4759-b062-c6294730ec77.topic.ListingSearch" workflowid.workflowid="420a877a-376b-ef11-a670-0022480a2deb">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_workflow>
+</botcomponent_workflowset>

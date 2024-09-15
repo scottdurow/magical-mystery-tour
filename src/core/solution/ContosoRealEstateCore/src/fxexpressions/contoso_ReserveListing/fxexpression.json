@@ -1,0 +1,12 @@
+{
+  "fxexpression": {
+    "@uniquename": "contoso_ReserveListing",
+    "category": "0",
+    "context": "{\"Tables\":[\"contoso_listing\",\"contoso_reservation\",\"contoso_listingfee\",\"contact\"],\"CustomApis\":[],\"ConnectionReferences\":[]}",
+    "iscustomizable": "1",
+    "name": "Reserve Listing",
+    "parameters": "{\"InputParameter\":[{\"name\":\"From\",\"type\":10,\"required\":true,\"entityLogicalName\":null},{\"name\":\"To\",\"type\":10,\"required\":true,\"entityLogicalName\":null},{\"name\":\"ListingID\",\"type\":10,\"required\":true,\"entityLogicalName\":null},{\"name\":\"Guests\",\"type\":7,\"required\":true,\"entityLogicalName\":null},{\"name\":\"DataverseUserId\",\"type\":10,\"required\":true,\"entityLogicalName\":null}],\"OutputParameter\":[{\"name\":\"ReservationId\",\"type\":10,\"required\":true,\"entityLogicalName\":null},{\"name\":\"ReservationNumber\",\"type\":10,\"required\":true,\"entityLogicalName\":null},{\"name\":\"Amount\",\"type\":2,\"required\":true,\"entityLogicalName\":null}]}",
+    "statecode": "0",
+    "statuscode": "1"
+  }
+}

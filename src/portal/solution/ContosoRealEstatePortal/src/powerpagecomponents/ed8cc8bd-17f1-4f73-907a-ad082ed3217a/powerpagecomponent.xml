@@ -1,0 +1,30 @@
+<powerpagecomponent powerpagecomponentid="ed8cc8bd-17f1-4f73-907a-ad082ed3217a">
+  <content>{
+  "entityname": "Contact Payments",
+  "entitylogicalname": "contoso_payment",
+  "scope": 756150001,
+  "append": false,
+  "appendto": false,
+  "delete": false,
+  "read": true,
+  "create": false,
+  "write": false,
+  "parentrelationship": null,
+  "parententitypermission": null,
+  "contactrelationship": "contoso_payment_PortalUser_contact",
+  "accountrelationship": null,
+  "childTablePermissions": [],
+  "adx_entitypermission_webrole": [
+    "dc2b1fc1-27fd-4af6-b084-0dee12022fcc"
+  ],
+  "copy": "undefined"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Contact Payments</name>
+  <powerpagecomponenttype>18</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

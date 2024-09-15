@@ -1,0 +1,11 @@
+<powerpagesites>
+  <powerpagesite powerpagesiteid="20f5d326-50b3-492b-aa2f-b29c913c932a">
+    <content>{"defaultlanguage":"f81f1fb6-ea27-423b-85a9-56d1c6f61823","footerwebtemplateid":"a7d8833f-3fbe-4c87-8cd2-48de502003a4","headerwebtemplateid":"0a6e56cd-3027-43b1-a623-8d751fee0d88","statecode":0,"statuscode":1,"website_language":1033,"defaultbotconsumerid":"102991e9-714b-ef11-a317-7c1e52150b3d"}</content>
+    <datamodelversion>2.0</datamodelversion>
+    <iscustomizable>1</iscustomizable>
+    <name>Contoso Real Estate Portal</name>
+    <primarydomainname>contosorealestateportal.powerappsportals.com</primarydomainname>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </powerpagesite>
+</powerpagesites>

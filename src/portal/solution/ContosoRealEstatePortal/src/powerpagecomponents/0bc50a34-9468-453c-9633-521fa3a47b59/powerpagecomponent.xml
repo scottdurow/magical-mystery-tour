@@ -1,0 +1,20 @@
+<powerpagecomponent powerpagecomponentid="0bc50a34-9468-453c-9633-521fa3a47b59">
+  <content>{
+  "powerpagesitelanguageid": "f81f1fb6-ea27-423b-85a9-56d1c6f61823",
+  "filecontent": null,
+  "display_name": "Logo alt text",
+  "type": 756150000,
+  "value": "Contoso Real Estate Logo"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Logo alt text</name>
+  <powerpagecomponenttype>7</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>f81f1fb6-ea27-423b-85a9-56d1c6f61823</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

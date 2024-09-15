@@ -1,0 +1,36 @@
+<powerpagecomponent powerpagecomponentid="ff0b9b6c-ad70-f037-d339-fc3b2226abe6">
+  <content>{
+  "filecontent": null,
+  "displayorder": 4,
+  "pagetemplateid": "cabe5d40-f0c1-4676-9f87-8972abcdd2da",
+  "parentpageid": "72039cc9-7b49-4773-91e6-9820290aecce",
+  "partialurl": "Listing-Details-PCF",
+  "isroot": false,
+  "rootwebpageid": "cf959809-0719-e791-f22a-ee7a8b9d6263",
+  "title": "Listing Details PCF",
+  "summary": "&lt;p&gt;Listings Detail&lt;/p&gt;",
+  "copy": "&lt;div class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div class=\"container\" style=\"display: flex; flex-wrap: wrap;\"&gt;&lt;div class=\"col-lg-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word; padding: 0px; margin: 10px 0px;\"&gt;{% include \"PortalUIComponent\" input_route:\"ListingDetails\" %}&lt;/div&gt;&lt;/div&gt;\n&lt;/div&gt;\n",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": true,
+  "sharedpageconfiguration": false,
+  "feedbackpolicy": 756150000
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Listing Details PCF</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>f81f1fb6-ea27-423b-85a9-56d1c6f61823</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Listing Details PCF&lt;div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div class="container" style="display: flex; flex-wrap: wrap;"&gt;&lt;div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word; padding: 0px; margin: 10px 0px;"&gt;{% include "PortalUIComponent" input_route:"ListingDetails" %}&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+Listing Details PCF</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

@@ -1,0 +1,30 @@
+<powerpagecomponent powerpagecomponentid="35de74f3-e8ea-420d-882d-fd69fd94bed0">
+  <content>{
+  "lcid": 1033,
+  "entityname": "contoso_listing",
+  "formname": "Listing (Portal Form)",
+  "mode": 100000002,
+  "onsuccess": 756150000,
+  "hideformonsuccess": false,
+  "redirectwebpage": null,
+  "redirecturl": null,
+  "captcharequired": false,
+  "showcaptchaforauthenticatedusers": false,
+  "entitypermissionsenabled": true,
+  "maximumnooffiles": 5,
+  "attachfilestoragelocation": 756150000,
+  "attachfilemaxsize": null,
+  "entitysourcetype": 756150001,
+  "recordidquerystringparametername": "id",
+  "copy": "undefined",
+  "geolocation_maptype": 756150000
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Listing (Portal)</name>
+  <powerpagecomponenttype>15</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

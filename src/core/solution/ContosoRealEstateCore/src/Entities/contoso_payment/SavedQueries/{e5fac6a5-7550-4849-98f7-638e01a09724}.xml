@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{e5fac6a5-7550-4849-98f7-638e01a09724}</savedqueryid>
+    <layoutxml>
+      <grid name="contoso_payments" jump="contoso_name" select="1" icon="1" preview="0">
+        <row name="contoso_payment" id="contoso_paymentid">
+          <cell name="contoso_name" width="300" />
+          <cell name="contoso_portaluser" width="104" />
+          <cell name="contoso_reservation" width="107" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="contoso_payment">
+          <attribute name="contoso_paymentid" />
+          <attribute name="contoso_name" />
+          <attribute name="contoso_portaluser" />
+          <attribute name="contoso_reservation" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Payment Lookup View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

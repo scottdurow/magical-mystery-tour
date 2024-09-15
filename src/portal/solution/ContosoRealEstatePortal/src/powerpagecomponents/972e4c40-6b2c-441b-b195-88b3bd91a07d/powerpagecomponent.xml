@@ -1,0 +1,42 @@
+<powerpagecomponent powerpagecomponentid="972e4c40-6b2c-441b-b195-88b3bd91a07d">
+  <content>{
+  "filecontent": null,
+  "copy": "&lt;div id=\"i7d04\" class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; min-height: 361px; padding: 8px; margin: 0px;\"&gt;\n  &lt;div id=\"icysd\" class=\"container\" style=\"display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"i8oxn\" class=\"col-lg-12 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; min-width: 300px; display: flex; flex-direction: column; margin: 20px 0px; padding: 16px;\"&gt;\n      &lt;h2 id=\"i58ri\"&gt;Search Listings&lt;/h2&gt;\n      &lt;p id=\"igt0n\"&gt;Check out our latest featured listings and find your dream home today!&lt;/p&gt;\n      {% include \"SearchListingsLiquid\" %}\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n",
+  "displayorder": 1,
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "feedbackpolicy": 756150000,
+  "hiddenfromsitemap": false,
+  "isroot": false,
+  "pagetemplateid": "cabe5d40-f0c1-4676-9f87-8972abcdd2da",
+  "parentpageid": "435d2a33-2b59-420f-a537-ca97fb2cf115",
+  "partialurl": "Search-Listings-Liquid",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "rootwebpageid": "cd6c6ebf-541c-4ba1-95de-6ab562aaa9b5",
+  "sharedpageconfiguration": true,
+  "summary": "&lt;p&gt;This is a sample landing page designed to be a starting point for your website&lt;/p&gt;",
+  "title": "Search Listings"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Search Listings (Liquid)</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>f81f1fb6-ea27-423b-85a9-56d1c6f61823</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Search Listings&lt;div id="i7d04" class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; min-height: 361px; padding: 8px; margin: 0px;"&gt;
+  &lt;div id="icysd" class="container" style="display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="i8oxn" class="col-lg-12 columnBlockLayout" style="word-break: break-word; flex-grow: 1; min-width: 300px; display: flex; flex-direction: column; margin: 20px 0px; padding: 16px;"&gt;
+      &lt;h2 id="i58ri"&gt;Search Listings&lt;/h2&gt;
+      &lt;p id="igt0n"&gt;Check out our latest featured listings and find your dream home today!&lt;/p&gt;
+      {% include "SearchListingsLiquid" %}
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+Search Listings (Liquid)</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

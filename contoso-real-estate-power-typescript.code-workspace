@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "src/controls/image-grid-pcf"
+		},
+		{
+			"path": "src/core/mda-client-hooks"
+		},
+		{
+			"path": "src/portal/PortalReactUI"
+		}
+	],
+	"settings": {
+		"sarif-viewer.connectToGithubCodeScanning": "off",
+		"dotnet.defaultSolution": "disable"
+	}
+}

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Role id="{3700f46f-8f09-ef11-9f8a-0022480c5a42}" name="Listings Administrator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsCustomizable>1</IsCustomizable>
+  <RolePrivileges>
+    <RolePrivilege name="prvAppendcontoso_listing" level="Global" />
+    <RolePrivilege name="prvAppendcontoso_ListingImage" level="Global" />
+    <RolePrivilege name="prvAppendTocontoso_listing" level="Global" />
+    <RolePrivilege name="prvAppendTocontoso_ListingImage" level="Global" />
+    <RolePrivilege name="prvAssigncontoso_listing" level="Global" />
+    <RolePrivilege name="prvAssigncontoso_ListingImage" level="Global" />
+    <RolePrivilege name="prvCreatecontoso_listing" level="Global" />
+    <RolePrivilege name="prvCreatecontoso_ListingImage" level="Global" />
+    <RolePrivilege name="prvCreateSharePointData" level="Global" />
+    <RolePrivilege name="prvDeletecontoso_listing" level="Global" />
+    <RolePrivilege name="prvDeletecontoso_ListingImage" level="Global" />
+    <RolePrivilege name="prvReadcontoso_listing" level="Global" />
+    <RolePrivilege name="prvReadcontoso_ListingImage" level="Global" />
+    <RolePrivilege name="prvReadPluginAssembly" level="Global" />
+    <RolePrivilege name="prvReadPluginType" level="Global" />
+    <RolePrivilege name="prvReadSdkMessage" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStep" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStepImage" level="Global" />
+    <RolePrivilege name="prvReadSharePointData" level="Global" />
+    <RolePrivilege name="prvReadSharePointDocument" level="Global" />
+    <RolePrivilege name="prvSharecontoso_listing" level="Global" />
+    <RolePrivilege name="prvSharecontoso_ListingImage" level="Global" />
+    <RolePrivilege name="prvWritecontoso_listing" level="Global" />
+    <RolePrivilege name="prvWritecontoso_ListingImage" level="Global" />
+    <RolePrivilege name="prvWriteSharePointData" level="Global" />
+  </RolePrivileges>
+</Role>

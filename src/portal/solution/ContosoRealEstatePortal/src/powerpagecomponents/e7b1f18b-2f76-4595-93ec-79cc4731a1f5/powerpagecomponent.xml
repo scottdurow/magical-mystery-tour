@@ -1,0 +1,67 @@
+<powerpagecomponent powerpagecomponentid="e7b1f18b-2f76-4595-93ec-79cc4731a1f5">
+  <content>{
+  "copy": "&lt;div id=\"igd6n\" class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\r\n  &lt;div id=\"isx4o\" class=\"container\" style=\"display: flex; flex-wrap: wrap;\"&gt;\r\n  &lt;div id=\"izp43\" class=\"col-lg-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word; padding: 16px; margin: 60px 0px;\"&gt;\r\n  &lt;p&gt;Your Profile:&lt;/p&gt;\r\n  {% entityform name: 'Contoso Real Estate Portal Profile'%}\r\n  &lt;p&gt;Reservations:&lt;/p&gt;\r\n  {% include 'entity_list' key: 'My Reservations (Portal)' %}\r\n  &lt;/div&gt;\r\n\r\n  \r\n  &lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n\r\n&lt;style&gt;\r\n  .entitylist-filter {\r\n    display:none !important;\r\n  }\r\n\r\n  .crmEntityFormView .tab {\r\n    padding:0px !important;\r\n    margin:0px !important;\r\n  }\r\n\r\n  .crmEntityFormView .cell {\r\n    padding: 0px 28px 10px 0px !important;\r\n  }\r\n\r\n  .crmEntityFormView fieldset {\r\n    padding: 0px;\r\n    margin: 0px;\r\n  }\r\n\r\n  .crmEntityFormView {\r\n    border: none;\r\n  }\r\n&lt;/style&gt;",
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "feedbackpolicy": 756150000,
+  "hiddenfromsitemap": true,
+  "isroot": false,
+  "pagetemplateid": "cabe5d40-f0c1-4676-9f87-8972abcdd2da",
+  "parentpageid": "72039cc9-7b49-4773-91e6-9820290aecce",
+  "partialurl": "profile",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "rootwebpageid": "b80d306a-a5b9-4f50-8ec0-bc691b56a6b0",
+  "sharedpageconfiguration": false,
+  "title": "Profile",
+  "entityform": "241477d1-f27d-4e9f-9090-c990aab69a64"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Profile</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>f81f1fb6-ea27-423b-85a9-56d1c6f61823</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Profile&lt;div id="igd6n" class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="isx4o" class="container" style="display: flex; flex-wrap: wrap;"&gt;
+  &lt;div id="izp43" class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word; padding: 16px; margin: 60px 0px;"&gt;
+  &lt;p&gt;Your Profile:&lt;/p&gt;
+  {% entityform name: 'Contoso Real Estate Portal Profile'%}
+  &lt;p&gt;Reservations:&lt;/p&gt;
+  {% include 'entity_list' key: 'My Reservations (Portal)' %}
+  &lt;/div&gt;
+
+  
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;style&gt;
+  .entitylist-filter {
+    display:none !important;
+  }
+
+  .crmEntityFormView .tab {
+    padding:0px !important;
+    margin:0px !important;
+  }
+
+  .crmEntityFormView .cell {
+    padding: 0px 28px 10px 0px !important;
+  }
+
+  .crmEntityFormView fieldset {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .crmEntityFormView {
+    border: none;
+  }
+&lt;/style&gt;Profile</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

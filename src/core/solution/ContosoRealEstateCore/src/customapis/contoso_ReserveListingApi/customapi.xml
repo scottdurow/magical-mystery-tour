@@ -1,0 +1,18 @@
+<customapi uniquename="contoso_ReserveListingApi">
+  <allowedcustomprocessingsteptype>1</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Create a reservation for a listing">
+    <label description="Create a reservation for a listing" languagecode="1033" />
+  </description>
+  <displayname default="Reserve Listing API">
+    <label description="Reserve Listing API" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Reserve Listing API</name>
+  <plugintypeid>
+    <plugintypeexportkey>05b30ad1-cad4-4da0-8b7c-3ec998344769</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

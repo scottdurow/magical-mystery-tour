@@ -1,0 +1,22 @@
+<powerpagecomponent powerpagecomponentid="bd7dccf3-d63c-4864-872f-097405370548">
+  <content>{
+  "filecontent": null,
+  "disablepagevalidation": false,
+  "displayimageonly": false,
+  "displayorder": 2,
+  "displaypagechildlinks": false,
+  "openinnewwindow": false,
+  "pageid": "435d2a33-2b59-420f-a537-ca97fb2cf115",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "robotsfollowlink": true,
+  "weblinksetid": "f841de81-9ccf-4051-807e-87c8ac214f82"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Search Listings</name>
+  <powerpagecomponenttype>5</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

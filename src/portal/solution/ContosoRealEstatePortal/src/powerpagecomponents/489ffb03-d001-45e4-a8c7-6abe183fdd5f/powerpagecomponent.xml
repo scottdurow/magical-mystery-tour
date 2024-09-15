@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="489ffb03-d001-45e4-a8c7-6abe183fdd5f">
+  <content>{"source":"{% extends 'Layout 2 Column Wide Left' %}\r\n\r\n{% block title %}\r\n  {% assign rt = snippets[\"Search/ResultsTitle\"] %}\r\n  {% if rt %}\r\n    {% assign title = rt | liquid %}\r\n  {% else %}\r\n    {% assign title = rt %}\r\n  {% endif %}\r\n  {% assign title = title | truncate: 115 %}\r\n  {% include 'Page Header' title: title %}\r\n{% endblock %}\r\n\r\n{% block main %}\r\n  {% assign page_size = 10 %}\r\n  {% assign current_page = request.params.page | default: 1 %}\r\n  {% searchindex query: request.params.q, page: request.params.page, page_size: page_size %}\r\n    {% if searchindex.results.size &gt; 0 %}\r\n      &lt;p class=\"result-count\"&gt;{% assign rc = snippets[\"Search/ResultsCount\"] %}{% if rc %}{{ rc | liquid }}{% else %}{{ current_page }} - {{ page_size }} of {{ searchindex.approximate_total_hits }} Results test{% endif %}&lt;/p&gt;\r\n      &lt;ul class=\"search-results\"&gt;\r\n        {% for result in searchindex.results %}\r\n        &lt;li&gt;\r\n          &lt;h4&gt;\r\n            &lt;a title=\"{{ result.title | escape }}\" href=\"{{ result.url | escape }}\"&gt;{{ result.title | escape }}&lt;/a&gt;\r\n          &lt;/h4&gt;\r\n          &lt;p class=\"fragment\"&gt;{{ result.fragment }}&lt;/p&gt;\r\n        &lt;/li&gt;\r\n        {% endfor %}\r\n      &lt;/ul&gt;\r\n      {% include 'Pagination' current_page: searchindex.page, page_size: page_size, total: searchindex.approximate_total_hits %}\r\n    {% else %}\r\n      {{ snippets[\"Search/NoResults\"] }}\r\n    {% endif %}\r\n  {% endsearchindex %}\r\n{% endblock %}"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Search Results</name>
+  <powerpagecomponenttype>8</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

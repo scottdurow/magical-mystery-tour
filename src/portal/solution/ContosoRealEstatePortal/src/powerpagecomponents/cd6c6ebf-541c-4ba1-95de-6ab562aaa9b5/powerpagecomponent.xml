@@ -1,0 +1,50 @@
+<powerpagecomponent powerpagecomponentid="cd6c6ebf-541c-4ba1-95de-6ab562aaa9b5">
+  <content>{
+  "filecontent": null,
+  "copy": "&lt;div class=\"row sectionBlockLayout sectionPrimaryColor text-start\" style=\"display: flex; flex-wrap: wrap; height: 15px; padding: 8px; margin: 0px;\"&gt;\r\n      &lt;div class=\"container\" style=\"display: flex; flex-wrap: wrap;\"&gt;\r\n      &lt;/div&gt;\r\n    &lt;/div&gt;\r\n    &lt;div class=\"row sectionBlockLayout  text-start\" style=\"display: flex; flex-wrap: wrap; min-height: 361px; padding: 8px; margin: 0px;\"&gt;\r\n      &lt;div class=\"container\" style=\"display: flex; flex-wrap: wrap;\"&gt;\r\n        &lt;div class=\"col-lg-12 columnBlockLayout\" style=\"display: flex; flex-direction: column;\"&gt;\r\n          &lt;h2&gt;FEATURED ITEM 1&lt;/h2&gt;\r\n          &lt;p&gt;Create a short description or engaging message to motivate your audience to take action&lt;/p&gt;\r\n        &lt;/div&gt;\r\n      &lt;/div&gt;\r\n    &lt;/div&gt;\r\n    &lt;div class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; min-height: 100px; padding: 8px; margin: 0px;\"&gt;\r\n      &lt;div class=\"container\" style=\"display: flex; flex-wrap: wrap;\"&gt;\r\n        &lt;div class=\"col-lg-6 columnBlockLayout\" style=\"display: flex; flex-direction: column;\"&gt;&lt;img src=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEwOCIgaGVpZ2h0PSI0NTAiIHZpZXdCb3g9IjAgMCAxMTA4IDQ1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC45NSIgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfYl8xMzQ4XzY0MDMpIj4KPHJlY3Qgd2lkdGg9IjExMDgiIGhlaWdodD0iNDUwIiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSAxMTA4IDApIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSItMSIgeT0iMSIgd2lkdGg9IjExMDYiIGhlaWdodD0iNDQ4IiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSAxMTA2IDApIiBzdHJva2U9IiNEMkQwQ0UiIHN0cm9rZS13aWR0aD0iMiIvPgo8L2c+CjxwYXRoIGQ9Ik01NzcuOTU4IDE4Ny41QzU4NS40MzcgMTg3LjUgNTkxLjUgMTkzLjU2MyA1OTEuNSAyMDEuMDQyVjI0OC45NThDNTkxLjUgMjU2LjQzNyA1ODUuNDM3IDI2Mi41IDU3Ny45NTggMjYyLjVINTMwLjA0MkM1MjIuNTYzIDI2Mi41IDUxNi41IDI1Ni40MzcgNTE2LjUgMjQ4Ljk1OFYyMDEuMDQyQzUxNi41IDE5My41NjMgNTIyLjU2MyAxODcuNSA1MzAuMDQyIDE4Ny41SDU3Ny45NThaTTU4MC4zNzcgMjU1LjgzOUw1NTYuMTg2IDIzMi4xNDVDNTU1LjA4MiAyMzEuMDY0IDU1My4zNzUgMjMwLjk2NSA1NTIuMTYyIDIzMS44NUw1NTEuODEzIDIzMi4xNDVMNTI3LjYxOSAyNTUuODM4QzUyOC4zNzcgMjU2LjEwNSA1MjkuMTkyIDI1Ni4yNSA1MzAuMDQyIDI1Ni4yNUg1NzcuOTU4QzU3OC44MDYgMjU2LjI1IDU3OS42MiAyNTYuMTA1IDU4MC4zNzcgMjU1LjgzOUw1NTYuMTg2IDIzMi4xNDVMNTgwLjM3NyAyNTUuODM5Wk01NzcuOTU4IDE5My43NUg1MzAuMDQyQzUyNi4wMTUgMTkzLjc1IDUyMi43NSAxOTcuMDE1IDUyMi43NSAyMDEuMDQyVjI0OC45NThDNTIyLjc1IDI0OS44MjcgNTIyLjkwMiAyNTAuNjYgNTIzLjE4IDI1MS40MzJMNTQ3LjQ0MSAyMjcuNjc5QzU1MC45MTIgMjI0LjI4IDU1Ni4zNjUgMjI0LjExOSA1NjAuMDI0IDIyNy4xOTRMNTYwLjU1OSAyMjcuNjhMNTg0LjgxOCAyNTEuNDM2QzU4NS4wOTcgMjUwLjY2MiA1ODUuMjUgMjQ5LjgyOCA1ODUuMjUgMjQ4Ljk1OFYyMDEuMDQyQzU4NS4yNSAxOTcuMDE1IDU4MS45ODUgMTkzLjc1IDU3Ny45NTggMTkzLjc1Wk01NjcuNTUgMjAyLjA4M0M1NzIuNzMzIDIwMi4wODMgNTc2LjkzNCAyMDYuMjg1IDU3Ni45MzQgMjExLjQ2N0M1NzYuOTM0IDIxNi42NSA1NzIuNzMzIDIyMC44NTEgNTY3LjU1IDIyMC44NTFDNTYyLjM2OCAyMjAuODUxIDU1OC4xNjcgMjE2LjY1IDU1OC4xNjcgMjExLjQ2N0M1NTguMTY3IDIwNi4yODUgNTYyLjM2OCAyMDIuMDgzIDU2Ny41NSAyMDIuMDgzWk01NjcuNTUgMjA4LjMzM0M1NjUuODIgMjA4LjMzMyA1NjQuNDE3IDIwOS43MzYgNTY0LjQxNyAyMTEuNDY3QzU2NC40MTcgMjEzLjE5OCA1NjUuODIgMjE0LjYwMSA1NjcuNTUgMjE0LjYwMUM1NjkuMjgxIDIxNC42MDEgNTcwLjY4NCAyMTMuMTk4IDU3MC42ODQgMjExLjQ2N0M1NzAuNjg0IDIwOS43MzYgNTY5LjI4MSAyMDguMzMzIDU2Ny41NSAyMDguMzMzWiIgZmlsbD0iI0FDQUNBQyIvPgo8ZGVmcz4KPGZpbHRlciBpZD0iZmlsdGVyMF9iXzEzNDhfNjQwMyIgeD0iLTQiIHk9Ii00IiB3aWR0aD0iMTExNiIgaGVpZ2h0PSI0NTgiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlR2F1c3NpYW5CbHVyIGluPSJCYWNrZ3JvdW5kSW1hZ2UiIHN0ZERldmlhdGlvbj0iMiIvPgo8ZmVDb21wb3NpdGUgaW4yPSJTb3VyY2VBbHBoYSIgb3BlcmF0b3I9ImluIiByZXN1bHQ9ImVmZmVjdDFfYmFja2dyb3VuZEJsdXJfMTM0OF82NDAzIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iZWZmZWN0MV9iYWNrZ3JvdW5kQmx1cl8xMzQ4XzY0MDMiIHJlc3VsdD0ic2hhcGUiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg== style=\"max-width: 100%; width: 100%; height: auto; background-color: #fafafa;\"&gt;&lt;/div&gt;\r\n        &lt;div class=\"col-lg-6 columnBlockLayout\" style=\"display: flex; flex-direction: column; justify-content: center;\"&gt;\r\n          &lt;h3&gt;Product or service name&lt;/h3&gt;\r\n          &lt;p&gt;This section could provide testimonials, links to training or documentation, or introduce other actions your audience may want to take.&lt;/p&gt;\r\n        &lt;/div&gt;\r\n      &lt;/div&gt;\r\n    &lt;/div&gt;\r\n    ",
+  "displayorder": 1,
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "feedbackpolicy": 756150000,
+  "hiddenfromsitemap": false,
+  "isroot": true,
+  "pagetemplateid": "cabe5d40-f0c1-4676-9f87-8972abcdd2da",
+  "parentpageid": "435d2a33-2b59-420f-a537-ca97fb2cf115",
+  "partialurl": "Search-Listings-Liquid",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "sharedpageconfiguration": true,
+  "summary": "&lt;p&gt;This is a sample landing page designed to be a starting point for your website&lt;/p&gt;",
+  "title": "Subpage one"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Search Listings (Liquid)</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <searchcontent>Subpage one&lt;div class="row sectionBlockLayout sectionPrimaryColor text-start" style="display: flex; flex-wrap: wrap; height: 15px; padding: 8px; margin: 0px;"&gt;
+      &lt;div class="container" style="display: flex; flex-wrap: wrap;"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row sectionBlockLayout  text-start" style="display: flex; flex-wrap: wrap; min-height: 361px; padding: 8px; margin: 0px;"&gt;
+      &lt;div class="container" style="display: flex; flex-wrap: wrap;"&gt;
+        &lt;div class="col-lg-12 columnBlockLayout" style="display: flex; flex-direction: column;"&gt;
+          &lt;h2&gt;FEATURED ITEM 1&lt;/h2&gt;
+          &lt;p&gt;Create a short description or engaging message to motivate your audience to take action&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; min-height: 100px; padding: 8px; margin: 0px;"&gt;
+      &lt;div class="container" style="display: flex; flex-wrap: wrap;"&gt;
+        &lt;div class="col-lg-6 columnBlockLayout" style="display: flex; flex-direction: column;"&gt;&lt;img src=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEwOCIgaGVpZ2h0PSI0NTAiIHZpZXdCb3g9IjAgMCAxMTA4IDQ1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC45NSIgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfYl8xMzQ4XzY0MDMpIj4KPHJlY3Qgd2lkdGg9IjExMDgiIGhlaWdodD0iNDUwIiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSAxMTA4IDApIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSItMSIgeT0iMSIgd2lkdGg9IjExMDYiIGhlaWdodD0iNDQ4IiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSAxMTA2IDApIiBzdHJva2U9IiNEMkQwQ0UiIHN0cm9rZS13aWR0aD0iMiIvPgo8L2c+CjxwYXRoIGQ9Ik01NzcuOTU4IDE4Ny41QzU4NS40MzcgMTg3LjUgNTkxLjUgMTkzLjU2MyA1OTEuNSAyMDEuMDQyVjI0OC45NThDNTkxLjUgMjU2LjQzNyA1ODUuNDM3IDI2Mi41IDU3Ny45NTggMjYyLjVINTMwLjA0MkM1MjIuNTYzIDI2Mi41IDUxNi41IDI1Ni40MzcgNTE2LjUgMjQ4Ljk1OFYyMDEuMDQyQzUxNi41IDE5My41NjMgNTIyLjU2MyAxODcuNSA1MzAuMDQyIDE4Ny41SDU3Ny45NThaTTU4MC4zNzcgMjU1LjgzOUw1NTYuMTg2IDIzMi4xNDVDNTU1LjA4MiAyMzEuMDY0IDU1My4zNzUgMjMwLjk2NSA1NTIuMTYyIDIzMS44NUw1NTEuODEzIDIzMi4xNDVMNTI3LjYxOSAyNTUuODM4QzUyOC4zNzcgMjU2LjEwNSA1MjkuMTkyIDI1Ni4yNSA1MzAuMDQyIDI1Ni4yNUg1NzcuOTU4QzU3OC44MDYgMjU2LjI1IDU3OS42MiAyNTYuMTA1IDU4MC4zNzcgMjU1LjgzOUw1NTYuMTg2IDIzMi4xNDVMNTgwLjM3NyAyNTUuODM5Wk01NzcuOTU4IDE5My43NUg1MzAuMDQyQzUyNi4wMTUgMTkzLjc1IDUyMi43NSAxOTcuMDE1IDUyMi43NSAyMDEuMDQyVjI0OC45NThDNTIyLjc1IDI0OS44MjcgNTIyLjkwMiAyNTAuNjYgNTIzLjE4IDI1MS40MzJMNTQ3LjQ0MSAyMjcuNjc5QzU1MC45MTIgMjI0LjI4IDU1Ni4zNjUgMjI0LjExOSA1NjAuMDI0IDIyNy4xOTRMNTYwLjU1OSAyMjcuNjhMNTg0LjgxOCAyNTEuNDM2QzU4NS4wOTcgMjUwLjY2MiA1ODUuMjUgMjQ5LjgyOCA1ODUuMjUgMjQ4Ljk1OFYyMDEuMDQyQzU4NS4yNSAxOTcuMDE1IDU4MS45ODUgMTkzLjc1IDU3Ny45NTggMTkzLjc1Wk01NjcuNTUgMjAyLjA4M0M1NzIuNzMzIDIwMi4wODMgNTc2LjkzNCAyMDYuMjg1IDU3Ni45MzQgMjExLjQ2N0M1NzYuOTM0IDIxNi42NSA1NzIuNzMzIDIyMC44NTEgNTY3LjU1IDIyMC44NTFDNTYyLjM2OCAyMjAuODUxIDU1OC4xNjcgMjE2LjY1IDU1OC4xNjcgMjExLjQ2N0M1NTguMTY3IDIwNi4yODUgNTYyLjM2OCAyMDIuMDgzIDU2Ny41NSAyMDIuMDgzWk01NjcuNTUgMjA4LjMzM0M1NjUuODIgMjA4LjMzMyA1NjQuNDE3IDIwOS43MzYgNTY0LjQxNyAyMTEuNDY3QzU2NC40MTcgMjEzLjE5OCA1NjUuODIgMjE0LjYwMSA1NjcuNTUgMjE0LjYwMUM1NjkuMjgxIDIxNC42MDEgNTcwLjY4NCAyMTMuMTk4IDU3MC42ODQgMjExLjQ2N0M1NzAuNjg0IDIwOS43MzYgNTY5LjI4MSAyMDguMzMzIDU2Ny41NSAyMDguMzMzWiIgZmlsbD0iI0FDQUNBQyIvPgo8ZGVmcz4KPGZpbHRlciBpZD0iZmlsdGVyMF9iXzEzNDhfNjQwMyIgeD0iLTQiIHk9Ii00IiB3aWR0aD0iMTExNiIgaGVpZ2h0PSI0NTgiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlR2F1c3NpYW5CbHVyIGluPSJCYWNrZ3JvdW5kSW1hZ2UiIHN0ZERldmlhdGlvbj0iMiIvPgo8ZmVDb21wb3NpdGUgaW4yPSJTb3VyY2VBbHBoYSIgb3BlcmF0b3I9ImluIiByZXN1bHQ9ImVmZmVjdDFfYmFja2dyb3VuZEJsdXJfMTM0OF82NDAzIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iZWZmZWN0MV9iYWNrZ3JvdW5kQmx1cl8xMzQ4XzY0MDMiIHJlc3VsdD0ic2hhcGUiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg== style="max-width: 100%; width: 100%; height: auto; background-color: #fafafa;"&gt;&lt;/div&gt;
+        &lt;div class="col-lg-6 columnBlockLayout" style="display: flex; flex-direction: column; justify-content: center;"&gt;
+          &lt;h3&gt;Product or service name&lt;/h3&gt;
+          &lt;p&gt;This section could provide testimonials, links to training or documentation, or introduce other actions your audience may want to take.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    Search Listings (Liquid)</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

@@ -1,0 +1,20 @@
+<powerpagecomponent powerpagecomponentid="30b0605b-735f-44ad-aa4e-76fbb6fa998e">
+  <content>{
+  "powerpagesitelanguageid": "f81f1fb6-ea27-423b-85a9-56d1c6f61823",
+  "filecontent": null,
+  "display_name": "Site name",
+  "type": 756150000,
+  "value": "Contoso Real Estate"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Site name</name>
+  <powerpagecomponenttype>7</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>f81f1fb6-ea27-423b-85a9-56d1c6f61823</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

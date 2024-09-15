@@ -1,0 +1,27 @@
+<powerpagecomponent powerpagecomponentid="cf959809-0719-e791-f22a-ee7a8b9d6263">
+  <content>{
+  "displayorder": 4,
+  "pagetemplateid": "cabe5d40-f0c1-4676-9f87-8972abcdd2da",
+  "parentpageid": "72039cc9-7b49-4773-91e6-9820290aecce",
+  "partialurl": "Listing-Details-PCF",
+  "isroot": true,
+  "title": "Listing Details PCF",
+  "summary": "&lt;p&gt;This is a sample landing page designed to be a starting point for your website&lt;/p&gt;",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": true,
+  "sharedpageconfiguration": false,
+  "feedbackpolicy": 756150000
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Listing Details PCF</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <searchcontent>Listing Details PCFListing Details PCF</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

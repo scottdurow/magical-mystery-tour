@@ -1,0 +1,15 @@
+{
+    "cSpell.words": [
+        "Contoso",
+        "customizer",
+        "Dataverse",
+        "initialise",
+        "powerapps",
+        "swiper",
+        "unmanaged"
+    ],
+    "dotnet.preferCSharpExtension": true,
+    "sarif-viewer.connectToGithubCodeScanning": "off",
+    "azureFunctions.projectSubpath": "src\\azure-api\\Contoso.API.Payments",
+    "dotnet.defaultSolution": "disable"
+}

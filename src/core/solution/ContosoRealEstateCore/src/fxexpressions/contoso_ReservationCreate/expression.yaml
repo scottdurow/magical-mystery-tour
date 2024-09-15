@@ -1,0 +1,47 @@
+// Validate that the reservation is not for a period that is already booked
+If(
+    // Ideally we would call the IsListingAvailable instant plugin here, but it's not supported because you can't import
+    // a Power Fx Plugin that calls another Power Fx Plugin in the same solution
+    CountRows(
+        Filter(
+            contoso_reservation As record, 
+            // There is a bug currently when you can't import expressions that use global optionsets - it gives the error "Name isn't valid."
+            // There is workaround to compare the optionset value as a string 
+            // e.g. Text(record.'Reservation Status) <> "Cancelled"
+            // but this is not delegable so we have to filter after the initial search
+            //record.'Reservation Status' <> 'Reservation Status'.'Cancelled'
+            //&&
+            (
+                record.contoso_from < NewRecord.contoso_to && record.contoso_to > NewRecord.contoso_from
+            )
+            &&
+            record.contoso_Listing.contoso_listingid1 = NewRecord.contoso_Listing.contoso_listingid1
+        )
+    )>0,
+    Error(
+        { 
+            Kind: ErrorKind.Validation , 
+            Message: $"There is already a reservation in this date range" 
+        })
+);
+
+
+// Validate that the To is after the from date
+If(NewRecord.contoso_to<NewRecord.contoso_from,
+    Error(
+        { 
+            Kind: ErrorKind.Validation ,
+            Message: $"The To date must be after the From date" 
+        })
+);
+
+// Set the reservation date if not already
+// Note - This is in UTC because Power Fx plugins do not support local dates yet
+If(IsBlank(NewRecord.contoso_reservationdate),
+    Set(NewRecord.contoso_reservationdate,NewRecord.modifiedon);
+);
+
+// Set the name if not already set
+If(IsBlank(NewRecord.contoso_name),
+    Set(NewRecord.contoso_name,$"{NewRecord.contoso_Listing.contoso_displayname} - {NewRecord.contoso_from} - {NewRecord.contoso_to}");
+);

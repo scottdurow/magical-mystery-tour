@@ -1,0 +1,13 @@
+{
+  "fxexpression": {
+    "@uniquename": "contoso_ReservationUpdate",
+    "category": "0",
+    "context": "{\"Tables\":[\"contoso_reservation\",\"contoso_listing\"],\"CustomApis\":[],\"ConnectionReferences\":[]}",
+    "entitylogicalname": "contoso_reservation",
+    "iscustomizable": "1",
+    "messagename": "Update",
+    "name": "Reservation - Update",
+    "statecode": "0",
+    "statuscode": "1"
+  }
+}

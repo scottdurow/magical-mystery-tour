@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.24072.208" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>ContosoRealEstateCore</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Contoso Real Estate Core" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.0</Version>
+    <Managed>2</Managed>
+    <Publisher>
+      <UniqueName>ContosoRealEstate</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Contoso Real Estate" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>contoso</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>33065</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="contact" behavior="1" />
+      <RootComponent type="1" schemaName="contoso_listing" behavior="0" />
+      <RootComponent type="1" schemaName="contoso_listingfee" behavior="0" />
+      <RootComponent type="1" schemaName="contoso_listingfeetype" behavior="0" />
+      <RootComponent type="1" schemaName="contoso_listingimage" behavior="0" />
+      <RootComponent type="1" schemaName="contoso_payment" behavior="0" />
+      <RootComponent type="1" schemaName="contoso_paymentsdatasource" behavior="0" />
+      <RootComponent type="1" schemaName="contoso_reservation" behavior="0" />
+      <RootComponent type="181" id="{24b7ef90-a008-ef11-9f8a-0022480c5a42}" schemaName="PaymentsProvider" behavior="0" />
+      <RootComponent type="183" id="{b2f016fb-a008-ef11-9f8a-0022480c5a42}" schemaName="Payments Data Source" behavior="0" />
+      <RootComponent type="20" id="{3700f46f-8f09-ef11-9f8a-0022480c5a42}" behavior="0" />
+      <RootComponent type="300" schemaName="contoso_contosorealestatelistingsadmin_b38c2" behavior="0" />
+      <RootComponent type="372" id="{0fd527b4-4516-47fb-bbca-5a10356af47e}" schemaName="contoso_contoso-20payments-20api" behavior="0" />
+      <RootComponent type="372" id="{40698eb9-0663-43a9-ac72-9ef1a635570b}" schemaName="contoso_contoso-20stripe-20api" behavior="0" />
+      <RootComponent type="60" id="{144cc544-b0fa-ee11-a1fe-6045bd05a326}" behavior="0" />
+      <RootComponent type="61" schemaName="contoso_/portal-admin/mda-client-hooks.js" behavior="0" />
+      <RootComponent type="61" schemaName="contoso_IconListing" behavior="0" />
+      <RootComponent type="61" schemaName="contoso_IconListingImage" behavior="0" />
+      <RootComponent type="61" schemaName="contoso_IconListingReservation" behavior="0" />
+      <RootComponent type="61" schemaName="contoso_IconPayment" behavior="0" />
+      <RootComponent type="62" schemaName="contoso_ContosoRealEstateAdministration" behavior="0" />
+      <RootComponent type="80" schemaName="contoso_ContosoRealEstateAdministration" behavior="0" />
+      <RootComponent type="9" schemaName="contoso_reservationstatus" behavior="0" />
+      <RootComponent type="91" id="{539003b6-e003-43c6-8be6-aaa55b4e0337}" schemaName="ContosoRealEstate.BusinessLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" behavior="0" />
+      <RootComponent type="91" id="{47591d7b-2b3b-4c72-abef-a05fc384c6cf}" schemaName="PaymentVirtualTableProvider, Version=1.0.0.25, Culture=neutral, PublicKeyToken=997b77ea5fb469e5" behavior="0" />
+      <RootComponent type="92" id="{d96de364-d64d-ef11-a317-0022480bc9e8}" behavior="0" />
+      <RootComponent type="92" id="{fde4c8cc-424a-ef11-a317-0022480bc9e8}" behavior="0" />
+      <RootComponent type="92" id="{2b642ba4-754d-ef11-accd-6045bd607fbb}" behavior="0" />
+      <RootComponent type="92" id="{ecf3ecca-754d-ef11-accd-002248b05f9c}" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="60" displayName="account contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}" />
+        <Dependent type="80" schemaName="contoso_ContosoRealEstateAdministration" displayName="Contoso Real Estate Administration" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Live Persona Card Form" parentDisplayName="Contact" solution="msdynce_AppCommonPatch201904 (9.0.24064.10001)" id="{449faa0e-f471-48ec-87d0-4719909546d2}" />
+        <Dependent type="80" schemaName="contoso_ContosoRealEstateAdministration" displayName="Contoso Real Estate Administration" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Contact Quick Create" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{661157fe-2fc9-4eaa-835f-5bfa2f7b64f7}" />
+        <Dependent type="80" schemaName="contoso_ContosoRealEstateAdministration" displayName="Contoso Real Estate Administration" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{707fc57b-c5e6-471b-a180-e37ed28a38e2}" />
+        <Dependent type="80" schemaName="contoso_ContosoRealEstateAdministration" displayName="Contoso Real Estate Administration" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Social Profiles" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{7bb87dfd-ec3e-4ed9-8e3e-5725d3067295}" />
+        <Dependent type="80" schemaName="contoso_ContosoRealEstateAdministration" displayName="Contoso Real Estate Administration" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Contact Quick Form" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{bdb0ae1c-32fa-4374-b637-8dafe107bc44}" />
+        <Dependent type="80" schemaName="contoso_ContosoRealEstateAdministration" displayName="Contoso Real Estate Administration" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contact" solution="PowerPages_RuntimeCore (1.0.2402.1)" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}">
+          <package>PowerPages_Core (1.0.2407.112)</package>
+        </Required>
+        <Dependent type="80" schemaName="contoso_ContosoRealEstateAdministration" displayName="Contoso Real Estate Administration" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Contact Reference Panel" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{d880c3cf-80e2-42f3-82f9-24d040d09f17}" />
+        <Dependent type="80" schemaName="contoso_ContosoRealEstateAdministration" displayName="Contoso Real Estate Administration" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Recent Cases and Entitlements" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{f3b707fb-3b5f-45f9-9c6b-5e573bb5d19e}" />
+        <Dependent type="80" schemaName="contoso_ContosoRealEstateAdministration" displayName="Contoso Real Estate Administration" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
+        <Dependent type="80" schemaName="contoso_ContosoRealEstateAdministration" displayName="Contoso Real Estate Administration" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="contoso_Contoso.ImageGrid" displayName="contoso_Contoso.ImageGrid" solution="ContosoRealEstateCustomControls (1.0.9.0)" />
+        <Dependent type="300" schemaName="contoso_contosorealestatelistingsadmin_b38c2" displayName="Contoso Real Estate Listings Admin" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="contoso_Contoso.ImageGrid" displayName="contoso_Contoso.ImageGrid" solution="ContosoRealEstateCustomControls (1.0.9.0)" />
+        <Dependent type="60" displayName="Listing" parentDisplayName="Listing" id="{530bff54-7d3d-ef11-8409-0022480bc9e8}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="contoso_Contoso.ImageGrid" displayName="contoso_Contoso.ImageGrid" solution="ContosoRealEstateCustomControls (1.0.9.0)" />
+        <Dependent type="60" displayName="Listing (Portal)" parentDisplayName="Listing" id="{bf74b35e-7d3d-ef11-8409-0022480bc9e8}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.ActivityCalendarControl.ActivityCalendarControl" displayName="MscrmControls.ActivityCalendarControl.ActivityCalendarControl" solution="msdyn_UCICalendar (1.0.0.4073)" />
+        <Dependent type="60" displayName="Listing" parentDisplayName="Listing" id="{530bff54-7d3d-ef11-8409-0022480bc9e8}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.ActivityCalendarControl.ActivityCalendarControl" displayName="MscrmControls.ActivityCalendarControl.ActivityCalendarControl" solution="msdyn_UCICalendar (1.0.0.4073)" />
+        <Dependent type="60" displayName="Listing (Portal)" parentDisplayName="Listing" id="{bf74b35e-7d3d-ef11-8409-0022480bc9e8}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.Grid.PCFGridControl" displayName="MscrmControls.Grid.PCFGridControl" solution="BaseCustomControlsCore (9.0.2407.2024)" />
+        <Dependent type="60" displayName="Listing" parentDisplayName="Listing" id="{530bff54-7d3d-ef11-8409-0022480bc9e8}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.Grid.PCFGridControl" displayName="MscrmControls.Grid.PCFGridControl" solution="BaseCustomControlsCore (9.0.2407.2024)" />
+        <Dependent type="60" displayName="Listing (Portal)" parentDisplayName="Listing" id="{bf74b35e-7d3d-ef11-8409-0022480bc9e8}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.PowerFx.Evaluator, Microsoft.PowerFx.PlexPlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.PowerFx.Evaluator" solution="msft_PowerfxRuleSolution (1.0.0.61)" id="{462b3e8f-beb4-4981-9b87-a60c2162a9f7}" />
+        <Dependent type="92" id="{d96de364-d64d-ef11-a317-0022480bc9e8}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.PowerFx.Evaluator, Microsoft.PowerFx.PlexPlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.PowerFx.Evaluator" solution="msft_PowerfxRuleSolution (1.0.0.61)" id="{462b3e8f-beb4-4981-9b87-a60c2162a9f7}" />
+        <Dependent type="92" id="{fde4c8cc-424a-ef11-a317-0022480bc9e8}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.PowerFx.Evaluator, Microsoft.PowerFx.PlexPlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.PowerFx.Evaluator" solution="msft_PowerfxRuleSolution (1.0.0.61)" id="{462b3e8f-beb4-4981-9b87-a60c2162a9f7}" />
+        <Dependent type="CustomAPI" displayName="contoso_IsListingAvailable" id.uniquename="contoso_IsListingAvailable" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.PowerFx.Evaluator, Microsoft.PowerFx.PlexPlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.PowerFx.Evaluator" solution="msft_PowerfxRuleSolution (1.0.0.61)" id="{462b3e8f-beb4-4981-9b87-a60c2162a9f7}" />
+        <Dependent type="CustomAPI" displayName="contoso_ReserveListing" id.uniquename="contoso_ReserveListing" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.11)" id.uniquename="AppChannel" />
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=contoso_ContosoRealEstateAdministration,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="contoso_ContosoRealEstateAdministration" id.settingdefinitionid.uniquename="AppChannel" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

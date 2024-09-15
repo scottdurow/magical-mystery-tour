@@ -1,0 +1,13 @@
+<powerpagecomponent powerpagecomponentid="c8a32bd6-c06e-ef11-a670-0022480a2deb">
+  <content>{
+  "source": "{% manifest %} \r\n    { \r\n    \"type\": \"Functional\", \r\n    \"displayName\": \"Portal UI Component\", \r\n    \"description\": \"Renders the Portal React UI Component using the given Route\", \r\n    \"params\": [ \r\n        { \r\n        \"id\": \"input_route\", \r\n        \"displayName\": \"Route\", \r\n        \"description\": \"UI Route to pass to the control (SearchListings, ListingDetails, CheckoutComplete)\" \r\n        }] \r\n    } \r\n{% endmanifest %} \r\n\r\n{{ snippets[\"GlobalJavaScriptConstants\" ] }}\r\n{% codecomponent name: contoso_Contoso.PortalReactUI Route: input_route Route_ofType: SingleLine.Text customControlId: 91b022b7-767e-4e31-8c2b-16317f0ce2b4 %}"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>PortalUIComponent</name>
+  <powerpagecomponenttype>8</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

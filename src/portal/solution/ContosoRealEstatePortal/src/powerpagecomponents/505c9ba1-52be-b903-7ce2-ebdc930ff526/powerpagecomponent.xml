@@ -1,0 +1,21 @@
+<powerpagecomponent powerpagecomponentid="505c9ba1-52be-b903-7ce2-ebdc930ff526">
+  <content>{
+  "displayorder": 4,
+  "weblinksetid": "f841de81-9ccf-4051-807e-87c8ac214f82",
+  "pageid": "cf959809-0719-e791-f22a-ee7a8b9d6263",
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "displaypagevalidation": false,
+  "displayimageonly": false,
+  "displaypagechildlinks": false,
+  "openinnewwindow": false,
+  "robotsfollowlink": true
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Listing Details PCF</name>
+  <powerpagecomponenttype>5</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>1</statecode>
+  <statuscode>2</statuscode>
+</powerpagecomponent>

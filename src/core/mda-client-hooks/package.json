@@ -1,0 +1,40 @@
+{
+  "name": "web-resource",
+  "version": "1.0.0",
+  "description": "Model-driven web-resource project",
+  "scripts": {
+    "build": "webpack --mode=production --define-process-env-node-env=production",
+    "build:dev": "npm run lint & webpack --mode=development & npm run test",
+    "build:prod": "npm run lint & webpack --mode=production --define-process-env-node-env=production & npm run test",
+    "watch": "webpack --watch",
+    "lint": "eslint **/*.ts",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest unit. --collectCoverage"
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "@microsoft/eslint-plugin-power-apps": "^0.2.51",
+    "@types/jest": "^29.5.12",
+    "@types/jquery": "^3.5.30",
+    "@types/node": "^18.8.2",
+    "@types/xrm": "^9.0.80",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@webpack-cli/generators": "^3.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-promise": "^7.0.0",
+    "eslint-plugin-sonarjs": "^0.25.1",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "xrm-mock": "^3.6.1"
+  }
+}

@@ -1,0 +1,52 @@
+﻿src/core/plugins/payments-virtual-table-provider/.vs/PaymentVirtualTableProvider/config/applicationhost.config
+src/core/plugins/payments-virtual-table-provider/.vs/PaymentVirtualTableProvider/copilot-chat/a707a60a/sessions/2fe0bab2-cc43-4b98-9aec-fc89e342d932
+src/core/plugins/payments-virtual-table-provider/.vs/PaymentVirtualTableProvider/copilot-chat/a707a60a/sessions/8a1f176e-e474-4020-81cc-1a5c8d2b1825
+src/core/plugins/payments-virtual-table-provider/.vs/PaymentVirtualTableProvider/copilot-chat/a707a60a/sessions/59114eac-c64e-485f-8218-4fbe353034ea
+src/core/plugins/payments-virtual-table-provider/.vs/PaymentVirtualTableProvider/copilot-chat/a707a60a/sessions/e7b8435e-faef-4f87-869b-a3990f3766d8
+src/core/plugins/payments-virtual-table-provider/.vs/PaymentVirtualTableProvider/v17/.suo
+src/core/plugins/payments-virtual-table-provider/.vs/PaymentVirtualTableProvider/v17/DocumentLayout.json
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# msbuild output directories
+/bin
+/obj
+
+# vs intermediate directory
+/.vs
+# Ignore .vs folders
+**/.vs/
+
+# MSBuild Binary and Structured Log
+*.binlog
+
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+
+# Backup & report files from converting an old project file
+# to a newer Visual Studio version. Backup files are not needed,
+# because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+ServiceFabricBackup/
+*.rptproj.bak
+NuGetUpgradeLog.html
+
+# Backup folder for Package Reference Convert tool in Visual Studio 2017
+MigrationBackup/
+
+/src/core/mda-client-hooks/node_modules
+/src/core/mda-client-hooks/dist
+/src/controls/image-grid-pcf/coverage
+/src/core/mda-client-hooks/coverage
+src/core/plugins/payments-virtual-table-provider/.vs/*
+src/azure-api/Contoso.API.Payments/Properties/ServiceDependencies/ContosoAPIPaymentsEntra - Zip Deploy/*
+src/azure-api/Contoso.API.Payments/Properties/serviceDependencies.ContosoAPIPaymentsEntra - Zip Deploy.json
+temp-*
+temp_*
+temp_releases
+coverage
+/src/core/solution/ContosoRealEstateCore/src/WebResources/contoso_/portal-admin/mda-client-hooks.js
