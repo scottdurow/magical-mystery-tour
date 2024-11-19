@@ -1,3 +1,8 @@
+# ⚠️Repository Archived⚠️
+**This repository has been archived and is no longer maintained. Please visit the new repository at new-repo-url: [github.com/microsoft/contoso-real-estate-power-platform](https://github.com/microsoft/contoso-real-estate-power-platform)**
+> [!IMPORTANT]
+> Repo moved to [github.com/microsoft/contoso-real-estate-power-platform](https://github.com/microsoft/contoso-real-estate-power-platform)
+
 # Contoso Real Estate - Power Platform Edition
 ![Build Status](../../actions/workflows/build.yml/badge.svg)  ![Deploy Status](../../actions/workflows/deploy-release.yml/badge.svg)
 
